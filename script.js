@@ -55,14 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Array of descriptions
   const descriptions = [
-    'Lead Sales Systems Analyst',
-    'Certified Salesforce Administrator',
-    'Tech Wizard',
+    'Lead CRM Systems Analyst',
+    'Certified Salesforce Platform Administrator',
+    'AI Virtuoso',
     'Digital Artist',
-    'Licensed Remote Pilot',
-    'Entrepreneur',
-    'Photographer',
-    'A.I. Virtuoso'
+    'FAA Lic. Remote Pilot',
+    'Serial Entreprenuer',
+    'Music Producer'
   ];
 
   // Index and character index initialization
