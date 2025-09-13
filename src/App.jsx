@@ -5,16 +5,18 @@ import { Leva } from 'leva'
 import { Suspense, useState, useEffect } from 'react'
 import { GalaxyBackground } from './components/particles/GalaxyBackground'
 import { GPGPUParticles } from './components/particles/GPGPUParticles'
-import { SimpleTextParticles } from './components/particles/SimpleTextParticles'
+import { FluidTextParticles } from './components/particles/FluidTextParticles'
 import { Projects } from './components/sections/Projects'
+import { LoadingScreen } from './components/LoadingScreen'
 import { useKonamiCode } from './hooks/useKonamiCode'
 import './App.css'
 
 function App() {
   const showDebug = window.location.hash.includes('debug')
-  const [visitorName, setVisitorName] = useState('')
+  const [visitorName, setVisitorName] = useState('Zachary Sluss')
   const [showProjects, setShowProjects] = useState(false)
   const [konamiActivated, setKonamiActivated] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   const particleCount = isMobile ? 16384 : 65536
   
@@ -25,23 +27,17 @@ function App() {
   })
   
   useEffect(() => {
-    // Clear localStorage for testing - remove this line later
-    localStorage.removeItem('visitorName')
-    
-    // Simple prompt after 2 seconds
+    // Show projects after 3 seconds
     const timeoutId = setTimeout(() => {
-      const name = prompt('Welcome! What\'s your name?')
-      const finalName = name || 'Explorer'
-      setVisitorName(finalName)
-      // Show projects 3 seconds after name is set
-      setTimeout(() => setShowProjects(true), 3000)
-    }, 2000)
+      setShowProjects(true)
+    }, 3000)
     
     return () => clearTimeout(timeoutId)
   }, [])
 
   return (
     <>
+      {isLoading && <LoadingScreen onLoadComplete={() => setIsLoading(false)} />}
       <Leva hidden={!showDebug} />
       
       <Canvas
@@ -85,11 +81,12 @@ function App() {
           {/* GPGPU Particle System - Temporarily disabled for debugging */}
           {/* <GPGPUParticles /> */}
           
-          {/* Text Particles - Using canvas-based approach */}
+          {/* Text Particles - Fluid physics-based approach */}
           {visitorName && (
-            <SimpleTextParticles 
+            <FluidTextParticles 
+              key={visitorName}
               text={visitorName.toUpperCase()} 
-              size={80}
+              size={50}
             />
           )}
         </Suspense>
@@ -98,7 +95,7 @@ function App() {
       {/* UI Overlay */}
       <div className="overlay">
         <h1 className="title">
-          {visitorName ? `Welcome, ${visitorName}` : 'Particle Universe'}
+          Welcome to the Particle Universe
         </h1>
         <p className="subtitle">
           {particleCount.toLocaleString()} particles running at 60 FPS
@@ -107,6 +104,24 @@ function App() {
           <span className="stat-badge">🚀 GPU Accelerated</span>
           <span className="stat-badge">⚡ WebGL 2.0</span>
           <span className="stat-badge">🌌 Real-time Physics</span>
+        </div>
+        
+        {/* Name Input Field */}
+        <div className="name-input-container" style={{ marginTop: '30px' }}>
+          <input
+            type="text"
+            className="name-input"
+            placeholder="Enter your name"
+            value={visitorName}
+            onChange={(e) => setVisitorName(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.target.blur() // Trigger blur to apply the change
+              }
+            }}
+            maxLength={20}
+          />
+          <p className="input-hint">Type your name to see it form in particles</p>
         </div>
         
         {/* Navigation hint */}
