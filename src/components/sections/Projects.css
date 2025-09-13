@@ -1,0 +1,118 @@
+.projects-container {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.projects-title {
+  font-size: 2rem;
+  color: #00ff88;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  pointer-events: auto;
+}
+
+.project-card {
+  background: rgba(0, 8, 20, 0.8);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+}
+
+.project-card.hovered .project-particles {
+  opacity: 1;
+}
+
+.project-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, var(--accent-color), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.1; }
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-tag {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.project-link:hover {
+  border-bottom-color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color);
+}

@@ -1,0 +1,116 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 100;
+  color: white;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(120deg, #00ff88, #0088ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+}
+
+.stats {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #00ff88;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.stat-badge:hover {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+}
+
+/* Konami Code Easter Egg */
+.konami-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+  animation: konami-appear 0.5s ease-out;
+}
+
+@keyframes konami-appear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5) rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+  }
+}
+
+.konami-text {
+  font-size: 3rem;
+  background: linear-gradient(45deg, #ff006e, #00ff88, #0088ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 50px rgba(0, 255, 136, 0.5);
+  animation: rainbow-shift 2s infinite;
+}
+
+@keyframes rainbow-shift {
+  0%, 100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+}
+
+.konami-subtitle {
+  font-size: 1.5rem;
+  color: #00ff88;
+  margin-top: 10px;
+  animation: pulse-glow 1s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; text-shadow: 0 0 20px #00ff88; }
+}
