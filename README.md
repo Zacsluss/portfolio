@@ -25,7 +25,7 @@ An interactive 3D portfolio experience featuring 65,536+ GPU-accelerated particl
 ### 🎮 Interactive Elements
 - **Personalized name input** - Watch particles rearrange to spell any name
 - Mouse-reactive particle system
-- Hidden Konami Code easter egg (↑↑↓↓←→←→BA)
+- Hidden Secret Code easter egg (↑↑↓↓←→←→BA)
 - Smooth camera controls with auto-rotation
 
 ### 🛠️ Technical Stack
@@ -70,7 +70,7 @@ npm run deploy
 - [x] Interactive name customization
 - [x] Project showcase cards
 - [x] Loading screen with particles
-- [x] Konami code easter egg
+- [x] Secret code easter egg
 - [ ] Navigation menu
 - [ ] About section with skills visualization
 - [ ] Contact form with particle effects

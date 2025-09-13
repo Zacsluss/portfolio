@@ -76,7 +76,7 @@ function App() {
         
         <Suspense fallback={null}>
           {/* Galaxy Background - 100k particles */}
-          <GalaxyBackground count={isMobile ? 30000 : 50000} />
+          <GalaxyBackground count={isMobile ? 30000 : 50000} konamiActivated={konamiActivated} />
           
           {/* GPGPU Particle System - Temporarily disabled for debugging */}
           {/* <GPGPUParticles /> */}
@@ -87,6 +87,7 @@ function App() {
               key={visitorName}
               text={visitorName.toUpperCase()} 
               size={50}
+              konamiActivated={konamiActivated}
             />
           )}
         </Suspense>
@@ -126,20 +127,14 @@ function App() {
         
         {/* Navigation hint */}
         <p className="hint" style={{ marginTop: '20px', fontSize: '0.9rem', opacity: 0.6 }}>
-          Psst... Try the Konami Code: ↑↑↓↓←→←→BA
+          Psst... Try the Secret Code: ↑↑↓↓←→←→BA
         </p>
       </div>
       
       {/* Projects Section */}
       {showProjects && <Projects />}
       
-      {/* Konami Code Easter Egg */}
-      {konamiActivated && (
-        <div className="konami-overlay">
-          <h1 className="konami-text">🎮 ACHIEVEMENT UNLOCKED!</h1>
-          <p className="konami-subtitle">Full Stack Ninja Mode Activated</p>
-        </div>
-      )}
+      {/* Konami effect is now in the particle system */}
     </>
   )
 }

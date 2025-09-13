@@ -10,6 +10,8 @@ const FluidParticleMaterial = shaderMaterial(
     time: 0,
     morphProgress: 0,
     mousePosition: new THREE.Vector2(0, 0),
+    blackHoleEffect: 0,
+    explosionEffect: 0,
     colorA: new THREE.Color('#00ff88'),
     colorB: new THREE.Color('#0088ff'),
     colorC: new THREE.Color('#ff006e'),
@@ -21,6 +23,8 @@ const FluidParticleMaterial = shaderMaterial(
     uniform float time;
     uniform float morphProgress;
     uniform vec2 mousePosition;
+    uniform float blackHoleEffect;
+    uniform float explosionEffect;
     
     attribute vec3 targetPosition;
     attribute float randomness;
@@ -49,6 +53,42 @@ const FluidParticleMaterial = shaderMaterial(
       
       vec3 morphedPos = mix(pos, targetPosition, elasticT);
       
+      // Black hole effect
+      if (blackHoleEffect > 0.0) {
+        vec3 blackHoleCenter = vec3(0.0, 0.0, 0.0);
+        vec3 toCenter = blackHoleCenter - morphedPos;
+        float distance = length(toCenter);
+        
+        // Spiral into black hole
+        float pullStrength = blackHoleEffect * (1.0 - smoothstep(0.0, 30.0, distance));
+        morphedPos += toCenter * pullStrength;
+        
+        // Add rotation for spiral effect
+        float angle = blackHoleEffect * 10.0 + distance * 0.5;
+        float cosAngle = cos(angle);
+        float sinAngle = sin(angle);
+        float x = morphedPos.x;
+        float z = morphedPos.z;
+        morphedPos.x = x * cosAngle - z * sinAngle;
+        morphedPos.z = x * sinAngle + z * cosAngle;
+      }
+      
+      // Supernova explosion effect with smooth transition
+      if (explosionEffect > 0.0) {
+        vec3 explosionCenter = vec3(0.0, 0.0, 0.0);
+        vec3 fromCenter = morphedPos - explosionCenter;
+        
+        // Smoother explosion curve
+        float smoothExplosion = smoothstep(0.0, 1.0, explosionEffect);
+        float explosionForce = smoothExplosion * 30.0 * (1.0 - smoothExplosion * 0.5);
+        morphedPos += normalize(fromCenter) * explosionForce;
+        
+        // Reduced randomness for smoother motion
+        morphedPos.x += sin(offset * 10.0) * smoothExplosion * 2.0;
+        morphedPos.y += cos(offset * 7.0) * smoothExplosion * 2.0;
+        morphedPos.z += sin(offset * 13.0) * smoothExplosion * 1.0;
+      }
+      
       // Add mouse influence
       vec2 mouseOffset = (mousePosition - vec2(morphedPos.x, morphedPos.y)) * 0.1;
       float mouseDistance = length(mouseOffset);
@@ -68,11 +108,17 @@ const FluidParticleMaterial = shaderMaterial(
       float sizeBase = 3.0;
       float depthSize = sizeBase * (300.0 / -mvPosition.z);
       float morphSize = mix(2.0, depthSize, t);
-      gl_PointSize = morphSize * (1.0 + pulse * 0.2);
+      
+      // Slightly increase size during effects (was 3.0, now 0.5)
+      float effectSize = 1.0 + max(blackHoleEffect, explosionEffect) * 0.5;
+      gl_PointSize = morphSize * (1.0 + pulse * 0.2) * effectSize;
+      
+      // Enhanced colors during effects
+      float effectBoost = max(blackHoleEffect, explosionEffect);
       
       // Gradient sweep across the text horizontally
-      float normalizedX = (targetPosition.x + 15.0) / 30.0; // Normalize X position to 0-1
-      float gradientPosition = normalizedX + time * 0.2; // Add time for animated sweep
+      float normalizedX = (targetPosition.x + 15.0) / 30.0;
+      float gradientPosition = normalizedX + time * 0.2 + effectBoost * 5.0; // Speed up during effects
       
       // Create smooth rainbow gradient across letters
       vec3 color1 = vec3(0.0, 1.0, 0.53); // cyan
@@ -96,11 +142,18 @@ const FluidParticleMaterial = shaderMaterial(
         vColor = mix(color5, color1, colorPhase - 4.0);
       }
       
-      // Subtle shimmer effect
+      // Subtle shimmer effect, enhanced during effects
       vColor += vec3(0.1) * sin(time * 8.0 + normalizedX * 10.0) * t;
       
-      // Alpha based on morph progress - reduced glow
+      // Make colors slightly more vibrant during effects
+      if (effectBoost > 0.0) {
+        vColor = mix(vColor, vec3(1.0, 0.5, 0.0), effectBoost * 0.2); // Subtle golden tint
+        vColor *= 1.0 + effectBoost * 0.3; // Much less brightness boost
+      }
+      
+      // Alpha based on morph progress - slightly enhanced during effects
       vAlpha = mix(0.1, 0.3, t) * (0.8 + pulse * 0.1);
+      vAlpha = mix(vAlpha, 0.4, effectBoost * 0.5); // Much less brightness during effects
     }
   `,
   // Fragment shader
@@ -109,29 +162,26 @@ const FluidParticleMaterial = shaderMaterial(
     varying float vAlpha;
     
     void main() {
-      // Create star-like particle shape
+      // Simple circular particle shape (no rays)
       vec2 center = gl_PointCoord - vec2(0.5);
       float dist = length(center);
-      float angle = atan(center.y, center.x);
       
-      // Create sparkle effect with rays
-      float rays = sin(angle * 8.0) * 0.1 + 0.9;
+      // No sparkle rays for cleaner look
+      float rays = 1.0;
       
-      // Reduced glow - sharper particles
-      float core = 1.0 - smoothstep(0.0, 0.15, dist);
-      float innerGlow = 1.0 - smoothstep(0.0, 0.3, dist / rays);
-      float outerGlow = 1.0 - smoothstep(0.3, 0.5, dist);
+      // Much sharper, smaller particles
+      float core = 1.0 - smoothstep(0.0, 0.2, dist);
+      float innerGlow = 1.0 - smoothstep(0.2, 0.4, dist);
       
-      float alpha = core * 0.8 + innerGlow * 0.3 + outerGlow * 0.1;
+      float alpha = core * 0.6 + innerGlow * 0.2;
       alpha *= vAlpha;
       
       if (alpha < 0.01) discard;
       
-      // Reduced brightness and glow
+      // Much less brightness and glow
       vec3 finalColor = vColor;
-      finalColor = mix(finalColor, vec3(1.0), core * 0.3); // Less white in center
-      finalColor += vColor * innerGlow * 0.15; // Less colored glow
-      finalColor *= 1.0 + core * 0.5; // Reduced brightness boost
+      finalColor = mix(finalColor, vec3(1.0), core * 0.1); // Minimal white
+      finalColor *= 1.0 + core * 0.2; // Very reduced brightness
       
       gl_FragColor = vec4(finalColor, alpha);
     }
@@ -140,13 +190,15 @@ const FluidParticleMaterial = shaderMaterial(
 
 extend({ FluidParticleMaterial })
 
-export function FluidTextParticles({ text = 'HELLO', size = 100, key }) {
+export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated = false }) {
   const points = useRef()
   const material = useRef()
   const { viewport, mouse } = useThree()
   const morphStartTime = useRef(Date.now())
   const isForming = useRef(false)
   const previousText = useRef(text)
+  const blackHoleStartTime = useRef(0)
+  const explosionStartTime = useRef(0)
   
   // Generate text particles with physics attributes
   const { positions, targetPositions, randomness, speeds, offsets, colorSeeds, particleCount } = useMemo(() => {
@@ -270,6 +322,17 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, key }) {
     }
   }, [text])
   
+  // Handle Konami code activation
+  useEffect(() => {
+    if (konamiActivated) {
+      blackHoleStartTime.current = Date.now()
+      // Start explosion after black hole
+      setTimeout(() => {
+        explosionStartTime.current = Date.now()
+      }, 2000)
+    }
+  }, [konamiActivated])
+  
   // Animation loop
   useFrame((state) => {
     if (material.current) {
@@ -281,6 +344,41 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, key }) {
         material.current.morphProgress = Math.min(elapsed, 1)
       } else {
         material.current.morphProgress = 0
+      }
+      
+      // Black hole effect (0-2 seconds)
+      if (blackHoleStartTime.current > 0) {
+        const blackHoleElapsed = (Date.now() - blackHoleStartTime.current) / 2000
+        if (blackHoleElapsed < 1) {
+          material.current.blackHoleEffect = blackHoleElapsed
+        } else if (blackHoleElapsed < 2) {
+          material.current.blackHoleEffect = 2 - blackHoleElapsed
+        } else {
+          material.current.blackHoleEffect = 0
+        }
+      } else {
+        material.current.blackHoleEffect = 0
+      }
+      
+      // Explosion effect (starts at 2 seconds, lasts 3 seconds with smooth fade)
+      if (explosionStartTime.current > 0) {
+        const explosionElapsed = (Date.now() - explosionStartTime.current) / 3000
+        if (explosionElapsed < 0.5) {
+          // Ramp up explosion
+          material.current.explosionEffect = explosionElapsed * 2
+        } else if (explosionElapsed < 1) {
+          // Fade out explosion smoothly
+          material.current.explosionEffect = 2 - (explosionElapsed * 2)
+        } else {
+          material.current.explosionEffect = 0
+          // Clean reset after animation completes
+          if (explosionElapsed > 1.2) {
+            blackHoleStartTime.current = 0
+            explosionStartTime.current = 0
+          }
+        }
+      } else {
+        material.current.explosionEffect = 0
       }
       
       // Update mouse position for interactivity

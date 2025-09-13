@@ -12,7 +12,9 @@ export function useKonamiCode(callback) {
   
   useEffect(() => {
     const handleKeyPress = (e) => {
-      const newSequence = [...sequence, e.key].slice(-10)
+      // Convert to lowercase for letters, keep arrows as-is
+      const key = e.key.length === 1 ? e.key.toLowerCase() : e.key
+      const newSequence = [...sequence, key].slice(-10)
       setSequence(newSequence)
       
       if (JSON.stringify(newSequence) === JSON.stringify(konamiCode)) {
