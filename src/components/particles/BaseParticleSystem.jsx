@@ -43,10 +43,16 @@ export function BaseParticleSystem({ count = 5000 }) {
 
   return (
     <>
-      <pointLight ref={light} position={[0, 0, 0]} intensity={0.5} color="#00ff88" />
+      <pointLight ref={light} position={[0, 0, 0]} intensity={0.2} color="#4169e1" />
       <instancedMesh ref={mesh} args={[null, null, count]}>
-        <sphereGeometry args={[0.05]} />
-        <meshPhongMaterial color="#ffffff" emissive="#00ff88" emissiveIntensity={0.1} />
+        <dodecahedronGeometry args={[0.15]} />
+        <meshPhongMaterial
+          color="#ff69b4"
+          emissive="#ff00ff"
+          emissiveIntensity={0.5}
+          transparent={true}
+          opacity={1}
+        />
       </instancedMesh>
     </>
   )

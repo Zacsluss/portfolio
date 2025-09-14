@@ -4,6 +4,7 @@ import { Perf } from 'r3f-perf'
 import { Leva } from 'leva'
 import { Suspense, useState, useEffect } from 'react'
 import { GalaxyBackground } from './components/particles/GalaxyBackground'
+import { BaseParticleSystem } from './components/particles/BaseParticleSystem'
 import { GPGPUParticles } from './components/particles/GPGPUParticles'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
 import { Projects } from './components/sections/Projects'
@@ -55,14 +56,15 @@ function App() {
         {showDebug && <Perf position="top-left" />}
         {showDebug && <Stats />}
         
-        {/* Background */}
-        <color attach="background" args={['#000814']} />
-        <fog attach="fog" args={['#000814', 50, 200]} />
+        {/* Deep Space Background */}
+        <color attach="background" args={['#000011']} />
+        <fog attach="fog" args={['#000033', 10, 100]} />
         
-        {/* Lights */}
-        <ambientLight intensity={0.2} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} color="#00ff88" />
-        <pointLight position={[-10, -10, -10]} intensity={0.3} color="#0088ff" />
+        {/* Deep Space Lighting */}
+        <ambientLight intensity={0.05} color="#4169e1" />
+        <pointLight position={[20, 20, 20]} intensity={0.3} color="#ff00ff" />
+        <pointLight position={[-20, -20, -20]} intensity={0.2} color="#00ffff" />
+        <pointLight position={[0, 30, 0]} intensity={0.1} color="#ffffff" />
         
         {/* Camera controls */}
         <OrbitControls 
@@ -77,10 +79,13 @@ function App() {
         <Suspense fallback={null}>
           {/* Galaxy Background - 100k particles */}
           <GalaxyBackground count={isMobile ? 30000 : 50000} konamiActivated={konamiActivated} />
-          
+
+          {/* Main Dodecahedron Particles */}
+          <BaseParticleSystem count={isMobile ? 1000 : 5000} />
+
           {/* GPGPU Particle System - Temporarily disabled for debugging */}
           {/* <GPGPUParticles /> */}
-          
+
           {/* Text Particles - Fluid physics-based approach */}
           {visitorName && (
             <FluidTextParticles 
