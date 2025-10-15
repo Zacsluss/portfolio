@@ -1,0 +1,301 @@
+.projects-wrapper {
+  position: relative;
+  padding: 80.0px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16.0px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.title-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #00ff88, transparent);
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16.0px;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the grid */
+  pointer-events: auto;
+}
+
+.project-card {
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  border: 1px solid rgba(0, 255, 136, 0.44);
+  border-radius: 15px;
+  padding: 24.0px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  animation: shimmer 5.6s ease-in-out infinite;
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ff88;
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.44);
+  animation-play-state: running;
+}
+
+.project-card.hovered .project-particles {
+  opacity: 1;
+}
+
+.project-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #00ff88, transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.1; }
+}
+
+.project-title {
+  font-size: 1.04rem;
+  color: #00ff88;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  line-height: 1.26;
+  position: relative;
+  z-index: 1;
+}
+
+.project-long-description {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+  font-size: 0.68rem;
+  line-height: 1.26;
+  position: relative;
+  z-index: 1;
+}
+
+.project-features {
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.features-label {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6.4px;
+  margin-bottom: 6px;
+  font-size: 0.68rem;
+  line-height: 1.26;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.feature-bullet {
+  color: #00ff88;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.4px;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-tag {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 3.2px 10px;
+  border-radius: 15px;
+  font-size: 0.64rem;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.project-links {
+  display: flex;
+  gap: 12.0px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-link {
+  color: #00ff88;
+  text-decoration: none;
+  font-size: 0.72rem;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  animation: shimmer 5.6s ease-in-out infinite;
+  animation-play-state: paused;
+  border-bottom: 1px solid transparent;
+}
+
+.project-link:hover {
+  border-bottom-color: #00ff88;
+  text-shadow: 0 0 10px #00ff88;
+  animation-play-state: running;
+}
+
+/* Case Study Format */
+.case-study-section {
+  margin-bottom: 20px;
+  padding: 24.0px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #00ff88;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.case-study-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.case-study-text {
+  font-size: 0.72rem;
+  line-height: 1.44;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.case-study-impact {
+  background: rgba(0, 255, 136, 0.05);
+  border-left-color: #00ff88;
+}
+
+.case-study-impact .case-study-label {
+  color: #00ff88;
+}
+
+.case-study-impact .case-study-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-wrapper {
+    padding: 64.0px 30px;
+  }
+
+  .section-title {
+    font-size: 1.44rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12.0px;
+  }
+
+  .project-card {
+    padding: 24.0px;
+  }
+}
+
+
+/* Glassism flash effect for gradient elements */
+.about-bio::before,
+.quick-facts-card::before,
+.contact-card::before,
+.experience-card::before,
+.link-card::before,
+.metric-card::before,
+.principle-card::before,
+.project-card::before,
+.skill-category-card::before,
+.story-card::before,
+.story-card-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.about-bio:hover::before,
+.quick-facts-card:hover::before,
+.contact-card:hover::before,
+.experience-card:hover::before,
+.link-card:hover::before,
+.metric-card:hover::before,
+.principle-card:hover::before,
+.project-card:hover::before,
+.skill-category-card:hover::before,
+.story-card:hover::before,
+.story-card-highlight:hover::before {
+  left: 100%;
+}
+.about-bio:hover,
+.quick-facts-card:hover,
+.contact-card:hover,
+.experience-card:hover,
+.link-card:hover,
+.metric-card:hover,
+.principle-card:hover,
+.project-card:hover,
+.skill-category-card:hover,
+.story-card:hover,
+.story-card-highlight:hover {
+  backdrop-filter: blur(15px) !important;
+}
