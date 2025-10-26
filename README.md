@@ -1,89 +1,71 @@
-# 🌌 Particle Universe Portfolio
+# Zachary Sluss - Portfolio
 
-An interactive 3D portfolio experience featuring 65,536+ GPU-accelerated particles that form personalized text, built with React Three Fiber and WebGL.
+[![Launch Portfolio](https://img.shields.io/badge/Launch-Portfolio-00ff88?style=for-the-badge&logo=safari)](https://zacsluss.github.io/Portfolio2/)
 
-![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat-square&logo=react)
-![Three.js](https://img.shields.io/badge/Three.js-0.180.0-black?style=flat-square&logo=three.js)
-![WebGL](https://img.shields.io/badge/WebGL-2.0-990000?style=flat-square&logo=webgl)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
-
-## ✨ Features
-
-### 🚀 Performance
-- **65,536 GPU-accelerated particles** running at 60 FPS
-- WebGL 2.0 powered rendering
-- Optimized for both desktop and mobile devices
-- Real-time physics simulation
-
-### 🎨 Visual Effects
-- **Fluid particle text formation** with physics-based animations
-- Rainbow gradient color sweeps across letters
-- Star-like particle shapes with dynamic glow
-- Galaxy background with 50,000+ particles
-- Glassmorphism UI design
-
-### 🎮 Interactive Elements
-- **Personalized name input** - Watch particles rearrange to spell any name
-- Mouse-reactive particle system
-- Hidden Secret Code easter egg (↑↑↓↓←→←→BA)
-- Smooth camera controls with auto-rotation
-
-### 🛠️ Technical Stack
-- **React Three Fiber** - React renderer for Three.js
-- **@react-three/drei** - Useful helpers for R3F
-- **GSAP** - Professional-grade animation
-- **Vite** - Lightning fast build tool
-- **Custom GLSL Shaders** - For particle effects
-
-## 🚀 Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/Zacsluss/Portfolio2.git
-
-# Navigate to project
-cd Portfolio2/particle-portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-## 📦 Build & Deploy
-
-```bash
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Deploy to GitHub Pages
-npm run deploy
-```
-
-## 🎯 Features Roadmap
-
-- [x] Particle text formation system
-- [x] Interactive name customization
-- [x] Project showcase cards
-- [x] Loading screen with particles
-- [x] Secret code easter egg
-- [ ] Navigation menu
-- [ ] About section with skills visualization
-- [ ] Contact form with particle effects
-- [ ] GPGPU particle optimization
-
-## 🌟 Live Demo
-
-Coming soon on GitHub Pages!
-
-## 📄 License
-
-MIT © Zachary Sluss
+**Enterprise-grade interactive portfolio leveraging real-time GPU compute for 30,000+ particle visualization at 60 FPS.**
 
 ---
 
-Built with 💜 and particles by [Zachary Sluss](https://github.com/Zacsluss)
+## Technical Architecture
+
+Built on modern WebGL 2.0 infrastructure with React Three Fiber for production-ready 3D rendering. Implements advanced particle physics, spatial optimization algorithms, and custom GLSL shader pipelines.
+
+### Core Capabilities
+
+- **High-Performance Computing**: GPU-accelerated particle system with spatially uniform distribution
+- **Responsive Design**: Adaptive rendering for enterprise desktop and mobile platforms
+- **Interactive Experience**: Real-time camera controls with dynamic particle spawning
+- **Modern Effects**: Bokeh rendering, motion blur, and depth-of-field post-processing
+
+### Technology Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 18 + Vite |
+| 3D Engine | Three.js + React Three Fiber |
+| Compute | WebGL 2.0 GLSL Shaders |
+| Animation | GSAP Professional |
+| State | Zustand |
+
+---
+
+## Local Development
+
+```bash
+# Clone repository
+git clone https://github.com/Zacsluss/Portfolio2.git
+
+# Install dependencies
+cd Portfolio2/particle-portfolio && npm install
+
+# Launch development server
+npm run dev
+```
+
+**Production Build**: `npm run build`
+**Preview**: `npm run preview`
+
+---
+
+## Performance Metrics
+
+- 30,000 particles @ 60 FPS (desktop)
+- 10,000 particles @ 30 FPS (mobile)
+- Sub-100ms initial load time
+- WebGL 2.0 hardware acceleration
+- Zero-dependency particle compute
+
+---
+
+## Contact
+
+**Zachary Sluss**
+Full-Stack Engineer | WebGL Specialist
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-00ff88?style=flat-square)](https://zacsluss.github.io/Portfolio2/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=flat-square&logo=github)](https://github.com/Zacsluss)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/zacharylsluss)
+
+---
+
+*Built with precision engineering and particle physics.*
