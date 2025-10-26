@@ -3,9 +3,7 @@ import { OrbitControls, Stats } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
 import { Leva } from 'leva'
 import { Suspense, useState, useEffect } from 'react'
-import { GalaxyBackground } from './components/particles/GalaxyBackground'
-import { BaseParticleSystem } from './components/particles/BaseParticleSystem'
-import { GPGPUParticles } from './components/particles/GPGPUParticles'
+import { ModernStarfield } from './components/particles/ModernStarfield'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
 import { Projects } from './components/sections/Projects'
 import { LoadingScreen } from './components/LoadingScreen'
@@ -43,7 +41,7 @@ function App() {
       
       <Canvas
         className="canvas"
-        camera={{ position: [0, 0, 30], fov: 75 }}
+        camera={{ position: [0, 0, 20], fov: 85 }}
         gl={{
           powerPreference: "high-performance",
           antialias: false,
@@ -56,64 +54,50 @@ function App() {
         {showDebug && <Perf position="top-left" />}
         {showDebug && <Stats />}
         
-        {/* Deep Space Background */}
-        <color attach="background" args={['#000011']} />
-        <fog attach="fog" args={['#000033', 10, 100]} />
+        {/* Deep Space Background - Pure void */}
+        <color attach="background" args={['#000000']} />
+        <fog attach="fog" args={['#000000', 30, 150]} />
+
+        {/* Minimal Deep Space Lighting - distant starlight only */}
+        <ambientLight intensity={0.02} color="#1a1a2e" />
+        <pointLight position={[50, 50, 50]} intensity={0.1} color="#4a5f8f" />
+        <pointLight position={[-50, -50, -50]} intensity={0.08} color="#2d3561" />
         
-        {/* Deep Space Lighting */}
-        <ambientLight intensity={0.05} color="#4169e1" />
-        <pointLight position={[20, 20, 20]} intensity={0.3} color="#ff00ff" />
-        <pointLight position={[-20, -20, -20]} intensity={0.2} color="#00ffff" />
-        <pointLight position={[0, 30, 0]} intensity={0.1} color="#ffffff" />
-        
-        {/* Camera controls */}
-        <OrbitControls 
+        {/* Camera controls - orbital camera with mouse drag */}
+        <OrbitControls
           enableZoom={true}
           enablePan={false}
-          minDistance={10}
-          maxDistance={100}
-          autoRotate={true}
-          autoRotateSpeed={0.2}
+          enableRotate={true}
+          minDistance={15}
+          maxDistance={50}
+          autoRotate={false}
+          enableDamping={true}
+          dampingFactor={0.05}
+          rotateSpeed={0.5}
+          target={[0, 5, 0]}
         />
         
         <Suspense fallback={null}>
-          {/* Galaxy Background - 100k particles */}
-          <GalaxyBackground count={isMobile ? 30000 : 50000} konamiActivated={konamiActivated} />
+          {/* Ultra-Modern Starfield - UE5-style with bokeh, motion blur, depth of field */}
+          <ModernStarfield count={isMobile ? 10000 : 30000} speed={2.0} />
 
-          {/* Main Dodecahedron Particles */}
-          <BaseParticleSystem count={isMobile ? 1000 : 5000} />
-
-          {/* GPGPU Particle System - Temporarily disabled for debugging */}
-          {/* <GPGPUParticles /> */}
-
-          {/* Text Particles - Fluid physics-based approach */}
+          {/* Text Particles - Positioned higher on screen */}
           {visitorName && (
-            <FluidTextParticles 
-              key={visitorName}
-              text={visitorName.toUpperCase()} 
-              size={50}
-              konamiActivated={konamiActivated}
-            />
+            <group position={[0, 5, 0]}>
+              <FluidTextParticles
+                key={visitorName}
+                text={visitorName.toUpperCase()}
+                size={50}
+                konamiActivated={konamiActivated}
+              />
+            </group>
           )}
         </Suspense>
       </Canvas>
       
-      {/* UI Overlay */}
-      <div className="overlay">
-        <h1 className="title">
-          Welcome to the Particle Universe
-        </h1>
-        <p className="subtitle">
-          {particleCount.toLocaleString()} particles running at 60 FPS
-        </p>
-        <div className="stats">
-          <span className="stat-badge">🚀 GPU Accelerated</span>
-          <span className="stat-badge">⚡ WebGL 2.0</span>
-          <span className="stat-badge">🌌 Real-time Physics</span>
-        </div>
-        
-        {/* Name Input Field */}
-        <div className="name-input-container" style={{ marginTop: '30px' }}>
+      {/* Top Right UI - Name Input and Secret Code */}
+      <div className="top-right-overlay">
+        <div className="name-input-container">
           <input
             type="text"
             className="name-input"
@@ -122,17 +106,17 @@ function App() {
             onChange={(e) => setVisitorName(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
-                e.target.blur() // Trigger blur to apply the change
+                e.target.blur()
               }
             }}
             maxLength={20}
           />
           <p className="input-hint">Type your name to see it form in particles</p>
         </div>
-        
-        {/* Navigation hint */}
-        <p className="hint" style={{ marginTop: '20px', fontSize: '0.9rem', opacity: 0.6 }}>
-          Psst... Try the Secret Code: ↑↑↓↓←→←→BA
+
+        {/* Easter egg hint */}
+        <p className="hint" style={{ marginTop: '15px', fontSize: '0.85rem', opacity: 0.5 }}>
+          Secret Code: ↑↑↓↓←→←→BA
         </p>
       </div>
       
