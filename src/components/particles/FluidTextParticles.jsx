@@ -40,11 +40,14 @@ const FluidParticleMaterial = shaderMaterial(
       float t = morphProgress;
       vec3 pos = position;
       
-      // Add turbulence and flow
-      float turbulence = sin(time * speed + offset * 6.28) * (1.0 - t) * randomness * 5.0;
-      pos.x += sin(time * 0.5 + offset * 3.14) * turbulence;
-      pos.y += cos(time * 0.3 + offset * 2.0) * turbulence;
-      pos.z += sin(time * 0.7 + offset * 4.0) * turbulence * 0.5;
+      // Turbulence ONLY when forming (when t < 1.0), then completely stable
+      float turbulence = 0.0;
+      if (t < 1.0) {
+        turbulence = sin(time * 1.0 + offset * 6.28) * (1.0 - t) * (1.0 - t) * 1.5;
+        pos.x += sin(time * 0.5 + offset * 3.14) * turbulence;
+        pos.y += cos(time * 0.3 + offset * 2.0) * turbulence;
+        pos.z += sin(time * 0.7 + offset * 4.0) * turbulence * 0.5;
+      }
       
       // Morph to target position with elastic easing
       float elasticT = t < 0.5 
@@ -96,9 +99,10 @@ const FluidParticleMaterial = shaderMaterial(
         morphedPos.xy -= mouseOffset * (1.0 - mouseDistance / 5.0) * 2.0;
       }
       
-      // Subtle pulsing effect when in position
-      float pulse = sin(time * 3.0 + offset * 10.0) * 0.02 * t;
-      morphedPos *= 1.0 + pulse;
+      // DISABLE pulsing entirely for maximum stability
+      // float pulse = sin(time * 2.0 + offset * 10.0) * 0.008 * t;
+      // morphedPos *= 1.0 + pulse;
+      float pulse = 0.0;  // No pulsing at all
       
       // Set final position
       vec4 mvPosition = modelViewMatrix * vec4(morphedPos, 1.0);
@@ -199,7 +203,7 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
   const previousText = useRef(text)
   const blackHoleStartTime = useRef(0)
   const explosionStartTime = useRef(0)
-  
+
   // Generate text particles with physics attributes
   const { positions, targetPositions, randomness, speeds, offsets, colorSeeds, particleCount } = useMemo(() => {
     // Create canvas for text sampling
