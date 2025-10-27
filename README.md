@@ -3,7 +3,7 @@
 <!-- Hero Header with Name -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Engineer%20%7C%20WebGL%20Enthusiast&descSize=20&descAlignY=55&descAlign=50"/>
 
-<br/>
+<br/><br/>
 
 <!-- Animated Typing Subtitle -->
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=Building+things+that+make+people+go+%22wait%2C+how%3F%22;30%2C000+Particles+%E2%80%A2+Custom+GLSL+Shaders;React+19+%E2%80%A2+Three.js+%E2%80%A2+WebGL+2.0;Open+Source+%E2%80%A2+Feel+Free+to+Fork!" alt="Typing SVG" />
@@ -49,8 +49,25 @@ I spent way too many late nights learning WebGL, writing custom GLSL shaders, an
 
 <div align="center">
 
-**Now let's talk about what's under the hood →**
+### See it in action:
 
+![Portfolio Preview](public/preview.gif)
+*30,000 particles morphing in real-time*
+
+</div>
+
+---
+
+## ⚡ Highlights
+
+<div align="center">
+
+**30,000 GPU particles** • **60 FPS desktop** • **10K mobile** • **303KB bundle** • **Open source MIT** • **5-min setup**
+
+</div>
+
+<div align="center">
+<img width="800" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
 </div>
 
 ---
@@ -472,7 +489,7 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 **Please do!** I spent way too many hours on this to not share it.
 Fork it, make it yours, no credit needed (but a star would be cool ⭐)
 
-<img src="https://img.shields.io/badge/No_Credit_Required-Just_Appreciated-00ff88?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/No_Credit_Required-Just_Appreciated-555555?style=for-the-badge&logo=github&logoColor=white"/>
 
 </div>
 
