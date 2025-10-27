@@ -39,7 +39,7 @@ export function About() {
           <div className="headshot-container">
             <div className="headshot-frame">
               <img
-                src={import.meta.env.BASE_URL + 'portfolio-images/headshot.jpg'}
+                src={import.meta.env.BASE_URL + 'portfolio-images/headshot.jpeg'}
                 alt="Zachary Sluss"
                 className="headshot-image"
                 onError={(e) => {
@@ -50,7 +50,7 @@ export function About() {
               />
               <div className="headshot-placeholder" style={{display: 'none'}}>
                 <div className="placeholder-icon">👤</div>
-                <p className="placeholder-text">Add headshot.jpg</p>
+                <p className="placeholder-text">Add headshot.jpeg</p>
               </div>
             </div>
             <p className="headshot-caption">Zachary Sluss</p>
