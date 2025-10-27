@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Hero Header with Name -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Engineer%20%7C%20WebGL%20Enthusiast&descSize=20&descAlignY=60&descAlign=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=30&desc=Full-Stack%20Engineer%20%7C%20WebGL%20Enthusiast&descSize=20&descAlignY=55&descAlign=50"/>
 
 <br/><br/>
 
