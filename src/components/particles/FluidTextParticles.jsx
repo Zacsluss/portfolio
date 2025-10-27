@@ -1,4 +1,4 @@
-import { useRef, useMemo, useEffect } from 'react'
+import { useRef, useMemo, useEffect, useState } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { shaderMaterial } from '@react-three/drei'
@@ -9,7 +9,9 @@ const FluidParticleMaterial = shaderMaterial(
   {
     time: 0,
     morphProgress: 0,
+    scrollMorphProgress: 0,  // 0-1 for scroll-based morphing
     mousePosition: new THREE.Vector2(0, 0),
+    mouseVelocity: 0,
     blackHoleEffect: 0,
     explosionEffect: 0,
     colorA: new THREE.Color('#00ff88'),
@@ -22,11 +24,14 @@ const FluidParticleMaterial = shaderMaterial(
   `
     uniform float time;
     uniform float morphProgress;
+    uniform float scrollMorphProgress;
     uniform vec2 mousePosition;
+    uniform float mouseVelocity;
     uniform float blackHoleEffect;
     uniform float explosionEffect;
-    
+
     attribute vec3 targetPosition;
+    attribute vec3 scrollTargetPosition;  // Second text for scroll morph
     attribute float randomness;
     attribute float speed;
     attribute float offset;
@@ -50,11 +55,15 @@ const FluidParticleMaterial = shaderMaterial(
       }
       
       // Morph to target position with elastic easing
-      float elasticT = t < 0.5 
-        ? 4.0 * t * t * t 
+      float elasticT = t < 0.5
+        ? 4.0 * t * t * t
         : 1.0 - pow(-2.0 * t + 2.0, 3.0) / 2.0;
-      
-      vec3 morphedPos = mix(pos, targetPosition, elasticT);
+
+      // First morph: random → name
+      vec3 baseTarget = mix(pos, targetPosition, elasticT);
+
+      // Second morph: name → tagline (scroll-based)
+      vec3 morphedPos = mix(baseTarget, scrollTargetPosition, scrollMorphProgress);
       
       // Black hole effect
       if (blackHoleEffect > 0.0) {
@@ -92,18 +101,44 @@ const FluidParticleMaterial = shaderMaterial(
         morphedPos.z += sin(offset * 13.0) * smoothExplosion * 1.0;
       }
       
-      // Add mouse influence
-      vec2 mouseOffset = (mousePosition - vec2(morphedPos.x, morphedPos.y)) * 0.1;
-      float mouseDistance = length(mouseOffset);
-      if (mouseDistance < 5.0) {
-        morphedPos.xy -= mouseOffset * (1.0 - mouseDistance / 5.0) * 2.0;
+      // Magnetic attraction to mouse (gentle, playful)
+      vec2 toMouse = mousePosition - vec2(morphedPos.x, morphedPos.y);
+      float mouseDistance = length(toMouse);
+      float attractionRadius = 6.0; // Sweet spot radius
+
+      if (mouseDistance < attractionRadius && mouseDistance > 0.1) {
+        // Gentle pull toward mouse, stronger when closer
+        float attractionStrength = (1.0 - mouseDistance / attractionRadius) * 0.8; // More noticeable pull
+
+        // TRAIL EFFECT - When mouse moves fast, add extra drag/momentum
+        // Increased multiplier from 0.5 to 2.0 for more visible trail
+        float trailEffect = mouseVelocity * 2.0; // Velocity from mouse speed
+        attractionStrength += trailEffect * (1.0 - mouseDistance / attractionRadius);
+
+        morphedPos.xy += normalize(toMouse) * attractionStrength * t; // Only when formed
       }
+
+      // DEPTH/PARALLAX - Particles at different z-depths move differently with mouse
+      // Closer particles (negative z) move more, creating depth illusion
+      float depthFactor = (morphedPos.z + 1.0) * 0.5; // Normalize z to 0-1
+      vec2 parallaxOffset = mousePosition * 0.05 * (1.0 - depthFactor) * t;
+      morphedPos.xy += parallaxOffset;
       
       // DISABLE pulsing entirely for maximum stability
       // float pulse = sin(time * 2.0 + offset * 10.0) * 0.008 * t;
       // morphedPos *= 1.0 + pulse;
       float pulse = 0.0;  // No pulsing at all
-      
+
+      // QUANTUM FIELD EFFECT - Fluid hive mind oscillation when fully formed
+      if (t >= 1.0) {
+        // Slower, larger range for organic hive mind effect
+        float quantumFreq = time * 15.0 + offset * 50.0;  // Slower frequency
+        float quantumJitter = 0.12; // Larger range for fluid movement
+        morphedPos.x += sin(quantumFreq) * quantumJitter * randomness;
+        morphedPos.y += cos(quantumFreq * 1.3) * quantumJitter * randomness;
+        morphedPos.z += sin(quantumFreq * 0.7) * quantumJitter * randomness * 0.5;
+      }
+
       // Set final position
       vec4 mvPosition = modelViewMatrix * vec4(morphedPos, 1.0);
       gl_Position = projectionMatrix * mvPosition;
@@ -155,8 +190,11 @@ const FluidParticleMaterial = shaderMaterial(
         vColor *= 1.0 + effectBoost * 0.3; // Much less brightness boost
       }
       
-      // Alpha based on morph progress - slightly enhanced during effects
-      vAlpha = mix(0.1, 0.3, t) * (0.8 + pulse * 0.1);
+      // Alpha based on morph progress - HIDE completely until morph starts
+      // When t < 0.05, alpha = 0 (invisible)
+      // When t >= 0.05, fade in smoothly
+      float fadeIn = smoothstep(0.0, 0.15, t);
+      vAlpha = mix(0.0, 0.3, fadeIn) * (0.8 + pulse * 0.1);
       vAlpha = mix(vAlpha, 0.4, effectBoost * 0.5); // Much less brightness during effects
     }
   `,
@@ -194,7 +232,14 @@ const FluidParticleMaterial = shaderMaterial(
 
 extend({ FluidParticleMaterial })
 
-export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated = false }) {
+export function FluidTextParticles({
+  text = 'HELLO',
+  morphToText = null,  // Text to morph into on scroll
+  scrollProgress = 0,   // 0-1 scroll progress (0 = main text, 1 = morph text)
+  size = 100,
+  konamiActivated = false,
+  onMorphComplete = null  // Callback when morphing completes
+}) {
   const points = useRef()
   const material = useRef()
   const { viewport, mouse } = useThree()
@@ -203,34 +248,45 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
   const previousText = useRef(text)
   const blackHoleStartTime = useRef(0)
   const explosionStartTime = useRef(0)
+  const morphCompleteCallbackFired = useRef(false)  // Track if callback already called
 
-  // Generate text particles with physics attributes
-  const { positions, targetPositions, randomness, speeds, offsets, colorSeeds, particleCount } = useMemo(() => {
-    // Create canvas for text sampling
-    const canvas = document.createElement('canvas')
-    const ctx = canvas.getContext('2d')
-    canvas.width = 1024
-    canvas.height = 256
-    
-    // Draw text
+  // Track mouse velocity for trail effect
+  const previousMouse = useRef(new THREE.Vector2(0, 0))
+  const mouseVelocity = useRef(0)
+
+  // Track font loading status - this is the KEY to fixing white blob
+  const [fontReady, setFontReady] = useState(false)
+
+  // Explicitly load Orbitron font before generating particles
+  useEffect(() => {
+    // Use document.fonts.load() to explicitly download and wait for font
+    document.fonts.load('bold 100px Orbitron').then(() => {
+      console.log('Orbitron font loaded successfully')
+      setFontReady(true)
+    }).catch((error) => {
+      console.error('Failed to load Orbitron font:', error)
+      // Fallback: proceed anyway after a delay
+      setTimeout(() => setFontReady(true), 1000)
+    })
+  }, [])
+
+
+  // Helper function to generate positions for a given text
+  const generateTextPositions = (textString, canvas, ctx, size) => {
+    // Clear canvas
     ctx.fillStyle = '#000000'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = '#ffffff'
-    ctx.font = `bold ${size}px Arial`
+    ctx.font = `bold ${size}px Orbitron, Arial`
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText(text, canvas.width / 2, canvas.height / 2)
-    
-    // Get actual bounds of the rendered text
+    ctx.fillText(textString, canvas.width / 2, canvas.height / 2)
+
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
     const pixels = imageData.data
-    
-    // Find actual text bounds
-    let minX = canvas.width
-    let maxX = 0
-    let minY = canvas.height
-    let maxY = 0
-    
+
+    // Find text bounds
+    let minX = canvas.width, maxX = 0, minY = canvas.height, maxY = 0
     for (let x = 0; x < canvas.width; x++) {
       for (let y = 0; y < canvas.height; y++) {
         const index = (y * canvas.width + x) * 4
@@ -242,74 +298,131 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
         }
       }
     }
-    
+
     const textCenterX = (minX + maxX) / 2
     const textCenterY = (minY + maxY) / 2
-    const textWidth = maxX - minX
-    const textHeight = maxY - minY
-    
-    // Pixels already loaded above
-    
     const positions = []
-    const targetPositions = []
-    const randomness = []
-    const speeds = []
-    const offsets = []
-    const colorSeeds = []
-    
-    // Sample more densely for fluid effect
+
     const step = 1
     for (let x = 0; x < canvas.width; x += step) {
       for (let y = 0; y < canvas.height; y += step) {
         const index = (y * canvas.width + x) * 4
-        const brightness = pixels[index]
-        
-        if (brightness > 128) {
-          // Target position centered at origin
-          const scale = 0.12 // 2x bigger for better visibility
+        if (pixels[index] > 128) {
+          const scale = 0.12
           const px = (x - textCenterX) * scale
           const py = -(y - textCenterY) * scale
           const pz = (Math.random() - 0.5) * 2
-          
-          targetPositions.push(px, py, pz)
-          
-          // Starting position (scattered in space)
-          const angle = Math.random() * Math.PI * 2
-          const radius = 20 + Math.random() * 30
-          const startX = Math.cos(angle) * radius
-          const startY = Math.sin(angle) * radius
-          const startZ = (Math.random() - 0.5) * 20
-          
-          positions.push(startX, startY, startZ)
-          
-          // Physics attributes
-          randomness.push(Math.random())
-          speeds.push(0.5 + Math.random() * 2)
-          offsets.push(Math.random() * Math.PI * 2)
-          colorSeeds.push(Math.random())
+          positions.push(px, py, pz)
         }
       }
     }
-    
+    return positions
+  }
+
+  // Generate text particles with physics attributes
+  const { positions, targetPositions, scrollTargetPositions, randomness, speeds, offsets, colorSeeds, particleCount } = useMemo(() => {
+    // CRITICAL: Don't generate particles until Orbitron font is loaded
+    // This prevents the white blob caused by Arial fallback
+    if (!fontReady) {
+      return {
+        positions: new Float32Array(0),
+        targetPositions: new Float32Array(0),
+        scrollTargetPositions: new Float32Array(0),
+        randomness: new Float32Array(0),
+        speeds: new Float32Array(0),
+        offsets: new Float32Array(0),
+        colorSeeds: new Float32Array(0),
+        particleCount: 0
+      }
+    }
+
+    const canvas = document.createElement('canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.width = 1024
+    canvas.height = 256
+
+    // Generate positions for primary text
+    const mainTextPositions = generateTextPositions(text, canvas, ctx, size)
+
+    // Generate positions for scroll morph text (or reuse main if no morph text)
+    const scrollTextPositions = morphToText
+      ? generateTextPositions(morphToText, canvas, ctx, size)
+      : [...mainTextPositions] // Clone array if no morph text
+
+    // Use mainTextPositions as our base
+    const positions = []
+    const targetPositions = []
+    const scrollTargetPositions = []
+    const randomness = []
+    const speeds = []
+    const offsets = []
+    const colorSeeds = []
+
+    // Generate particles from main text positions
+    for (let i = 0; i < mainTextPositions.length; i += 3) {
+      // Target position from main text
+      targetPositions.push(
+        mainTextPositions[i],
+        mainTextPositions[i + 1],
+        mainTextPositions[i + 2]
+      )
+
+      // Scroll target position (for morphing)
+      // If we have scroll positions, use them, otherwise use same as target
+      if (scrollTextPositions.length > i + 2) {
+        scrollTargetPositions.push(
+          scrollTextPositions[i],
+          scrollTextPositions[i + 1],
+          scrollTextPositions[i + 2]
+        )
+      } else {
+        // Fallback: scatter particles if scroll text has fewer particles
+        scrollTargetPositions.push(
+          (Math.random() - 0.5) * 30,
+          (Math.random() - 0.5) * 30,
+          (Math.random() - 0.5) * 10
+        )
+      }
+
+      // Starting position (scattered in space)
+      const angle = Math.random() * Math.PI * 2
+      const radius = 20 + Math.random() * 30
+      const startX = Math.cos(angle) * radius
+      const startY = Math.sin(angle) * radius
+      const startZ = (Math.random() - 0.5) * 20
+
+      positions.push(startX, startY, startZ)
+
+      // Physics attributes
+      randomness.push(Math.random())
+      speeds.push(0.5 + Math.random() * 2)
+      offsets.push(Math.random() * Math.PI * 2)
+      colorSeeds.push(Math.random())
+    }
+
     return {
       positions: new Float32Array(positions),
       targetPositions: new Float32Array(targetPositions),
+      scrollTargetPositions: new Float32Array(scrollTargetPositions),
       randomness: new Float32Array(randomness),
       speeds: new Float32Array(speeds),
       offsets: new Float32Array(offsets),
       colorSeeds: new Float32Array(colorSeeds),
       particleCount: positions.length / 3
     }
-  }, [text, size, viewport])
+  }, [text, morphToText, size, viewport, fontReady])
   
   // Start morph animation and handle text changes
   useEffect(() => {
+    // Don't start animation until font is ready
+    if (!fontReady) return
+
     // Reset morph when text changes
     if (previousText.current !== text) {
       isForming.current = false
       morphStartTime.current = Date.now() + 500
       previousText.current = text
-      
+
       // Start morphing to new text
       const timer = setTimeout(() => {
         isForming.current = true
@@ -324,7 +437,7 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
       }, 1000)
       return () => clearTimeout(timer)
     }
-  }, [text])
+  }, [text, fontReady])
   
   // Handle Konami code activation
   useEffect(() => {
@@ -341,14 +454,24 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
   useFrame((state) => {
     if (material.current) {
       material.current.time = state.clock.elapsedTime
-      
+
       // Update morph progress with smooth easing
+      // ENSURE morphProgress starts at exactly 0 to hide particles completely
       if (isForming.current) {
         const elapsed = (Date.now() - morphStartTime.current) / 3000 // 3 second morph
-        material.current.morphProgress = Math.min(elapsed, 1)
+        material.current.morphProgress = Math.max(0, Math.min(elapsed, 1))
+
+        // Call onMorphComplete callback when morphing finishes
+        if (material.current.morphProgress >= 1.0 && !morphCompleteCallbackFired.current && onMorphComplete) {
+          morphCompleteCallbackFired.current = true
+          onMorphComplete()
+        }
       } else {
         material.current.morphProgress = 0
       }
+
+      // Update scroll-based morph progress
+      material.current.scrollMorphProgress = scrollProgress
       
       // Black hole effect (0-2 seconds)
       if (blackHoleStartTime.current > 0) {
@@ -386,8 +509,25 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
       }
       
       // Update mouse position for interactivity
-      material.current.mousePosition.x = mouse.x * viewport.width / 2
-      material.current.mousePosition.y = mouse.y * viewport.height / 2
+      // Simple viewport mapping - works perfectly at default zoom
+      const currentMouseX = mouse.x * (viewport.width / 2)
+      const currentMouseY = mouse.y * (viewport.height / 2)
+
+      // Calculate mouse velocity for trail effect
+      const deltaX = currentMouseX - previousMouse.current.x
+      const deltaY = currentMouseY - previousMouse.current.y
+      const velocity = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+
+      // Smooth velocity with exponential decay
+      mouseVelocity.current = mouseVelocity.current * 0.9 + velocity * 0.1
+
+      // Update uniforms
+      material.current.mousePosition.x = currentMouseX
+      material.current.mousePosition.y = currentMouseY
+      material.current.mouseVelocity = Math.min(mouseVelocity.current, 5.0) // Cap at 5.0 for dramatic trails
+
+      // Store current mouse position for next frame
+      previousMouse.current.set(currentMouseX, currentMouseY)
     }
     
     // Keep text centered at origin
@@ -400,53 +540,64 @@ export function FluidTextParticles({ text = 'HELLO', size = 100, konamiActivated
       }
     }
   })
-  
+
+  // Don't render if no particles (font not loaded yet)
+  if (particleCount === 0) {
+    return null
+  }
+
   return (
     <points ref={points} key={text}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={particleCount}
-          array={positions}
-          itemSize={3}
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={particleCount}
+            array={positions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-targetPosition"
+            count={particleCount}
+            array={targetPositions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-scrollTargetPosition"
+            count={particleCount}
+            array={scrollTargetPositions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-randomness"
+            count={particleCount}
+            array={randomness}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-speed"
+            count={particleCount}
+            array={speeds}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-offset"
+            count={particleCount}
+            array={offsets}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-colorSeed"
+            count={particleCount}
+            array={colorSeeds}
+            itemSize={1}
+          />
+        </bufferGeometry>
+        <fluidParticleMaterial
+          ref={material}
+          transparent
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
         />
-        <bufferAttribute
-          attach="attributes-targetPosition"
-          count={particleCount}
-          array={targetPositions}
-          itemSize={3}
-        />
-        <bufferAttribute
-          attach="attributes-randomness"
-          count={particleCount}
-          array={randomness}
-          itemSize={1}
-        />
-        <bufferAttribute
-          attach="attributes-speed"
-          count={particleCount}
-          array={speeds}
-          itemSize={1}
-        />
-        <bufferAttribute
-          attach="attributes-offset"
-          count={particleCount}
-          array={offsets}
-          itemSize={1}
-        />
-        <bufferAttribute
-          attach="attributes-colorSeed"
-          count={particleCount}
-          array={colorSeeds}
-          itemSize={1}
-        />
-      </bufferGeometry>
-      <fluidParticleMaterial
-        ref={material}
-        transparent
-        depthWrite={false}
-        blending={THREE.AdditiveBlending}
-      />
-    </points>
+      </points>
   )
 }

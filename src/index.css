@@ -20,10 +20,11 @@
 
 html, body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -36,3 +37,15 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* Force hide any Leva debug panels */
+.leva-c-kWgxhW,
+.leva__root,
+[class*="leva"],
+[class*="Leva"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Production clean */
