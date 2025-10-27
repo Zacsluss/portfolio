@@ -3,6 +3,8 @@
 <!-- Hero Header with Name -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Engineer%20%7C%20WebGL%20Enthusiast&descSize=20&descAlignY=55&descAlign=50"/>
 
+<br/>
+
 <!-- Animated Typing Subtitle -->
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=Building+things+that+make+people+go+%22wait%2C+how%3F%22;30%2C000+Particles+%E2%80%A2+Custom+GLSL+Shaders;React+19+%E2%80%A2+Three.js+%E2%80%A2+WebGL+2.0;Open+Source+%E2%80%A2+Feel+Free+to+Fork!" alt="Typing SVG" />
 
