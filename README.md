@@ -253,7 +253,7 @@ I'm always up for chatting about tech, projects, or opportunities!
 
 <div align="center">
 
-<img width="800" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=120&section=footer&text=Built%20with%20❤️%2C%20React%2C%20and%20way%20too%20much%20caffeine&fontSize=20&fontColor=00ff88&animation=twinkling&fontAlignY=70"/>
+<img width="800" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=120&section=footer&text=Built%20with%20❤️%20and%20way%20too%20much%20caffeine&fontSize=20&fontColor=00ff88&animation=twinkling&fontAlignY=70"/>
 
 **30,000+ particles • 60 FPS • Zero regrets**
 
