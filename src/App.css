@@ -40,6 +40,14 @@
   animation: smoothFadeIn 0.6s ease-out 1.5s forwards !important;
 }
 
+.fade-in-8 {
+  animation: smoothFadeIn 0.6s ease-out 1.7s forwards !important;
+}
+
+.fade-in-9 {
+  animation: smoothFadeIn 0.6s ease-out 1.9s forwards !important;
+}
+
 @keyframes smoothFadeIn {
   from {
     opacity: 0;
