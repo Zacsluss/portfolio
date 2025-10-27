@@ -9,7 +9,6 @@ import { Projects } from './components/sections/Projects'
 import { Skills } from './components/sections/Skills'
 import { AdditionalWork } from './components/sections/AdditionalWork'
 import { Contact } from './components/sections/Contact'
-import { LoadingScreen } from './components/LoadingScreen'
 import { SimpleCursor } from './components/ui/SimpleCursor'
 import { useKonamiCode } from './hooks/useKonamiCode'
 import './App.css'
@@ -37,7 +36,6 @@ function App() {
   const [visitorName, setVisitorName] = useState('Zachary Sluss')
   const [particlesFormed, setParticlesFormed] = useState(false) // Track when particles finish morphing
   const [konamiActivated, setKonamiActivated] = useState(false)
-  const [isLoading, setIsLoading] = useState(false) // Disabled loading screen to fix green circle bug
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 
@@ -95,7 +93,6 @@ function App() {
 
   return (
     <>
-      {isLoading && <LoadingScreen onLoadComplete={() => setIsLoading(false)} />}
       <SimpleCursor />
       
       <Canvas

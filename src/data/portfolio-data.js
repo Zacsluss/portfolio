@@ -254,7 +254,7 @@ export const portfolioData = {
       description: "Custom AI/ML projects and experiments",
       url: "https://drive.google.com/drive/folders/1v-1Ce2hVIsn5dIwpV8wD7068f3Hv5qcM?usp=drive_link",
       category: "AI & Technology",
-      image: "/Portfolio2/portfolio-images/ai.webp",
+      image: "/portfolio-images/ai.webp",
     },
     {
       id: "link-2",
@@ -262,7 +262,7 @@ export const portfolioData = {
       description: "Creative artwork and digital illustrations",
       url: "https://www.deviantart.com/theoryart777",
       category: "Art & Design",
-      image: "/Portfolio2/portfolio-images/images.webp",
+      image: "/portfolio-images/images.webp",
     },
     {
       id: "link-3",
@@ -270,7 +270,7 @@ export const portfolioData = {
       description: "Original music compositions and productions",
       url: "https://drive.google.com/drive/folders/1ET30TX7_lST5Cp3EsNp7ak-S4WcLffar?usp=drive_link",
       category: "Art & Design",
-      image: "/Portfolio2/portfolio-images/music.webp",
+      image: "/portfolio-images/music.webp",
     },
     {
       id: "link-4",
@@ -278,7 +278,7 @@ export const portfolioData = {
       description: "Graphic design and visual branding projects",
       url: "https://drive.google.com/drive/folders/1giTNNrjznLS9RILHq9C9vCQQjWxCYgxD?usp=sharing",
       category: "Art & Design",
-      image: "/Portfolio2/portfolio-images/digitaldesign.webp",
+      image: "/portfolio-images/digitaldesign.webp",
     },
     {
       id: "link-5",
@@ -286,7 +286,7 @@ export const portfolioData = {
       description: "Interactive 360-degree aerial photography experiences",
       url: "https://www.kuula.co/profile/Drone_360_Aerial_Photography",
       category: "Drone 360 Aerial Photography",
-      image: "/Portfolio2/portfolio-images/360Photo.webp",
+      image: "/portfolio-images/360Photo.webp",
     },
     {
       id: "link-6",
@@ -294,7 +294,7 @@ export const portfolioData = {
       description: "Professional drone photography collection",
       url: "https://drive.google.com/drive/folders/1aJG3T-TVUoJ-Xc6CdCvK2HZTf-PCBpDW?usp=sharing",
       category: "Drone 360 Aerial Photography",
-      image: "/Portfolio2/portfolio-images/DronePhoto.webp",
+      image: "/portfolio-images/DronePhoto.webp",
     },
     {
       id: "link-7",
@@ -302,7 +302,7 @@ export const portfolioData = {
       description: "Cinematic drone video productions",
       url: "https://www.youtube.com/channel/UCjnD1inIRh9eKjrl4LfwLcQ",
       category: "Drone 360 Aerial Photography",
-      image: "/Portfolio2/portfolio-images/Video.webp",
+      image: "/portfolio-images/Video.webp",
     },
     {
       id: "link-8",
@@ -310,7 +310,7 @@ export const portfolioData = {
       description: "Custom logo design and branding work",
       url: "https://drive.google.com/drive/folders/1xKHfCiKdYp973GWFykSA0XSZARwhduqt?usp=sharing",
       category: "Art & Design",
-      image: "/Portfolio2/portfolio-images/Drone 360 Aerial Photography & Adobe CS.webp",
+      image: "/portfolio-images/Drone 360 Aerial Photography & Adobe CS.webp",
     },
   ],
 };
