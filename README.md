@@ -25,8 +25,8 @@
   <img src="https://img.shields.io/github/stars/Zacsluss/portfolio?style=social" alt="Stars"/>
   <img src="https://img.shields.io/github/forks/Zacsluss/portfolio?style=social" alt="Forks"/>
   <img src="https://img.shields.io/github/watchers/Zacsluss/portfolio?style=social" alt="Watchers"/>
-  <img src="https://img.shields.io/github/license/Zacsluss/portfolio?style=flat-square&color=00ff88" alt="License"/>
-  <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolio?style=flat-square&color=00ff88" alt="Last Commit"/>
+  <img src="https://img.shields.io/github/license/Zacsluss/portfolio?style=flat-square&color=555555" alt="License"/>
+  <img src="https://img.shields.io/github/last-commit/Zacsluss/portfolio?style=flat-square&color=666666" alt="Last Commit"/>
 </p>
 
 </div>
@@ -251,7 +251,7 @@ Multi-layer 3D with independent particle motion
 
 ### What I Used to Build This
 
-<img src="https://skillicons.dev/icons?i=react,vite,threejs,webgl,html,css,js,github" alt="Tech Stack" />
+<img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Tech Stack" />
 
 ### Core Dependencies
 
@@ -538,9 +538,11 @@ Use it for your portfolio • Learn from it • Remix it • Even sell it if you
 
 **Just one thing:** If you fork this, swap out my name and info with yours. Otherwise people might think I'm applying to jobs I didn't apply to. Awkward. 😅
 
+Full license text available in the [LICENSE](LICENSE) file.
+
 <br/>
 
-<img src="https://img.shields.io/badge/License-MIT-00ff88?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-555555?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
 
 </div>
 
