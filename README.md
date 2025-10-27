@@ -1,14 +1,14 @@
 <div align="center">
 
 <!-- Hero Header with Name -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=30&desc=Enterprise%20Technology%20Leader%20%7C%20Lead%20CRM%20Systems%20Analyst&descSize=20&descAlignY=55&descAlign=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=FFFFFF&animation=twinkling&fontAlignY=30&desc=Enterprise%20Technology%20Leader%20%7C%20Lead%20CRM%20Systems%20Analyst&descSize=20&descAlignY=55&descAlign=50"/>
 
-<br/><br/>
+<br/>
 
 <!-- Animated Typing Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=%245M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+22+Countries;Proving+I+Can+Still+Ship+Code+at+60+FPS;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=%245M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+22+Countries;Proving+I+Can+Still+Ship+Code+at+60+FPS;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
-<br/><br/>
+<br/>
 
 <!-- Main Action Buttons -->
 <p align="center">
