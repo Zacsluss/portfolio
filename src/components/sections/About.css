@@ -58,6 +58,19 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /* Glass panel styling */
+  background: rgba(0, 8, 20, 0.8);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.about-bio:hover {
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.1);
+  transform: translateY(-5px);
 }
 
 .bio-text {
@@ -153,6 +166,10 @@
   .about-content {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .about-bio {
+    padding: 25px;
   }
 
   .bio-text {
