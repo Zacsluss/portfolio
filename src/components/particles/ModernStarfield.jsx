@@ -4,7 +4,7 @@ import { shaderMaterial } from '@react-three/drei'
 import { extend } from '@react-three/fiber'
 import * as THREE from 'three'
 
-// Modern shader with motion blur, bokeh, and depth effects
+// Enhanced shader with realistic star colors, twinkling, and chromatic aberration
 const StarfieldMaterial = shaderMaterial(
   {
     time: 0,
@@ -16,27 +16,53 @@ const StarfieldMaterial = shaderMaterial(
     uniform float speed;
     attribute float size;
     attribute float brightness;
+    attribute float colorTemp; // Star color temperature
+    attribute float twinklePhase; // Random phase for twinkling
     varying float vBrightness;
     varying float vDistance;
+    varying float vColorTemp;
+    varying float vTwinkle;
 
     void main() {
       vBrightness = brightness;
+      vColorTemp = colorTemp;
 
       vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
       vDistance = -mvPosition.z;
+
+      // Twinkling effect - stars shimmer over time
+      vTwinkle = 0.7 + 0.3 * sin(time * (2.0 + twinklePhase) + twinklePhase * 100.0);
 
       // Size based on distance for depth of field
       float depthScale = 300.0 / vDistance;
       depthScale = clamp(depthScale, 0.1, 5.0);
 
-      gl_PointSize = size * depthScale;
+      gl_PointSize = size * depthScale * vTwinkle;
       gl_Position = projectionMatrix * mvPosition;
     }
   `,
-  // Fragment shader - creates bokeh and glow
+  // Fragment shader - creates bokeh, glow, and realistic colors
   `
+    uniform float time;
     varying float vBrightness;
     varying float vDistance;
+    varying float vColorTemp;
+    varying float vTwinkle;
+
+    // Convert color temperature to RGB (black body radiation)
+    vec3 temperatureToColor(float temp) {
+      // temp: 0.0 = cool blue, 0.5 = white, 1.0 = red giant
+      if (temp < 0.33) {
+        // Blue-white stars (hot)
+        return mix(vec3(0.7, 0.8, 1.0), vec3(0.95, 0.95, 1.0), temp / 0.33);
+      } else if (temp < 0.66) {
+        // White-yellow stars (medium)
+        return mix(vec3(0.95, 0.95, 1.0), vec3(1.0, 0.95, 0.8), (temp - 0.33) / 0.33);
+      } else {
+        // Yellow-red stars (cool)
+        return mix(vec3(1.0, 0.95, 0.8), vec3(1.0, 0.7, 0.5), (temp - 0.66) / 0.34);
+      }
+    }
 
     void main() {
       vec2 center = gl_PointCoord - vec2(0.5);
@@ -52,17 +78,36 @@ const StarfieldMaterial = shaderMaterial(
         bokeh = smoothstep(0.5, 0.4, hexDist);
       }
 
-      // Soft glow falloff
+      // Soft glow falloff with enhanced bloom
       float alpha = 1.0 - smoothstep(0.0, 0.5, dist);
-      alpha = pow(alpha, 1.5) * bokeh;
+      alpha = pow(alpha, 1.2) * bokeh;
 
-      // Brightness varies by star
-      alpha *= vBrightness;
+      // Apply twinkling to brightness
+      alpha *= vBrightness * vTwinkle;
 
-      // Subtle blue tint for distant stars
-      vec3 color = vec3(1.0);
+      // Realistic star color based on temperature
+      vec3 color = temperatureToColor(vColorTemp);
+
+      // Chromatic aberration for bright close stars (lens effect)
+      if (vDistance < 80.0 && vBrightness > 0.7) {
+        float aberration = 0.02;
+        vec2 redOffset = center * (1.0 + aberration);
+        vec2 blueOffset = center * (1.0 - aberration);
+
+        float redDist = length(redOffset);
+        float blueDist = length(blueOffset);
+
+        vec3 aberratedColor;
+        aberratedColor.r = color.r * (1.0 - smoothstep(0.0, 0.5, redDist));
+        aberratedColor.g = color.g * (1.0 - smoothstep(0.0, 0.5, dist));
+        aberratedColor.b = color.b * (1.0 - smoothstep(0.0, 0.5, blueDist));
+
+        color = mix(color, aberratedColor, 0.3);
+      }
+
+      // Distance-based color shift (atmospheric perspective)
       if (vDistance > 150.0) {
-        color = vec3(0.9, 0.95, 1.0); // Blue-white
+        color = mix(color, vec3(0.8, 0.85, 1.0), 0.2);
       }
 
       gl_FragColor = vec4(color, alpha);
@@ -72,18 +117,102 @@ const StarfieldMaterial = shaderMaterial(
 
 extend({ StarfieldMaterial })
 
+// Nebula background shader for atmospheric depth
+const NebulaMaterial = shaderMaterial(
+  {
+    time: 0,
+    color1: new THREE.Color(0.05, 0.0, 0.15), // Deep purple
+    color2: new THREE.Color(0.0, 0.1, 0.2),   // Dark blue
+    color3: new THREE.Color(0.15, 0.0, 0.1),  // Dark magenta
+  },
+  // Vertex shader
+  `
+    varying vec2 vUv;
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `,
+  // Fragment shader - creates moving nebula clouds
+  `
+    uniform float time;
+    uniform vec3 color1;
+    uniform vec3 color2;
+    uniform vec3 color3;
+    varying vec2 vUv;
+
+    // Simple noise function
+    float noise(vec2 p) {
+      return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+    }
+
+    float smoothNoise(vec2 p) {
+      vec2 i = floor(p);
+      vec2 f = fract(p);
+      f = f * f * (3.0 - 2.0 * f);
+
+      float a = noise(i);
+      float b = noise(i + vec2(1.0, 0.0));
+      float c = noise(i + vec2(0.0, 1.0));
+      float d = noise(i + vec2(1.0, 1.0));
+
+      return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+    }
+
+    float fractalNoise(vec2 p) {
+      float value = 0.0;
+      float amplitude = 0.5;
+      for (int i = 0; i < 4; i++) {
+        value += smoothNoise(p) * amplitude;
+        p *= 2.0;
+        amplitude *= 0.5;
+      }
+      return value;
+    }
+
+    void main() {
+      vec2 uv = vUv * 2.0 - 1.0;
+
+      // Multiple layers of noise moving at different speeds
+      float noise1 = fractalNoise(vUv * 3.0 + time * 0.02);
+      float noise2 = fractalNoise(vUv * 5.0 - time * 0.03);
+      float noise3 = fractalNoise(vUv * 7.0 + time * 0.01);
+
+      // Combine noise layers
+      float combinedNoise = (noise1 + noise2 + noise3) / 3.0;
+
+      // Create color variation
+      vec3 nebulaColor = mix(color1, color2, noise1);
+      nebulaColor = mix(nebulaColor, color3, noise2);
+
+      // Radial falloff from center for depth
+      float distFromCenter = length(uv);
+      float radialMask = 1.0 - smoothstep(0.0, 1.5, distFromCenter);
+
+      float alpha = combinedNoise * 0.15 * radialMask;
+
+      gl_FragColor = vec4(nebulaColor, alpha);
+    }
+  `
+)
+
+extend({ NebulaMaterial })
+
 export function ModernStarfield({ count = 10000, speed = 2.0 }) {
   const starsRef = useRef()
   const streaksRef = useRef()
   const material = useRef()
+  const nebulaMaterial = useRef()
   const { camera } = useThree()
   const travelDirection = useRef(new THREE.Vector3(0, 0, 1))
 
-  // Stars with varying sizes and brightness - SPHERICAL distribution for full coverage
-  const [starPositions, starSizes, starBrightness] = useMemo(() => {
+  // Stars with varying sizes, brightness, colors, and twinkle - SPHERICAL distribution for full coverage
+  const [starPositions, starSizes, starBrightness, starColorTemp, starTwinklePhase] = useMemo(() => {
     const positions = new Float32Array(count * 3)
     const sizes = new Float32Array(count)
     const brightness = new Float32Array(count)
+    const colorTemp = new Float32Array(count)
+    const twinklePhase = new Float32Array(count)
 
     for(let i = 0; i < count; i++) {
       const i3 = i * 3
@@ -113,9 +242,25 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
 
       // Brightness variation - brighter at edges
       brightness[i] = 0.3 + Math.random() * 0.7
+
+      // Realistic star color distribution (most stars are white/yellow)
+      const colorRoll = Math.random()
+      if (colorRoll < 0.15) {
+        // 15% blue-white (hot stars)
+        colorTemp[i] = Math.random() * 0.3
+      } else if (colorRoll < 0.80) {
+        // 65% white-yellow (main sequence like our sun)
+        colorTemp[i] = 0.3 + Math.random() * 0.36
+      } else {
+        // 20% yellow-red (cool stars, red giants)
+        colorTemp[i] = 0.66 + Math.random() * 0.34
+      }
+
+      // Random phase for twinkling (makes each star twinkle at different times)
+      twinklePhase[i] = Math.random() * Math.PI * 2
     }
 
-    return [positions, sizes, brightness]
+    return [positions, sizes, brightness, colorTemp, twinklePhase]
   }, [count])
 
   // Motion streak lines for close stars
@@ -297,6 +442,11 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
     if (material.current) {
       material.current.time = state.clock.elapsedTime
     }
+
+    // Update nebula time
+    if (nebulaMaterial.current) {
+      nebulaMaterial.current.time = state.clock.elapsedTime
+    }
   })
 
   return (
@@ -320,6 +470,18 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
             attach="attributes-brightness"
             count={count}
             array={starBrightness}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-colorTemp"
+            count={count}
+            array={starColorTemp}
+            itemSize={1}
+          />
+          <bufferAttribute
+            attach="attributes-twinklePhase"
+            count={count}
+            array={starTwinklePhase}
             itemSize={1}
           />
         </bufferGeometry>
@@ -350,6 +512,18 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
           depthWrite={false}
         />
       </lineSegments>
+
+      {/* Nebula background clouds for atmospheric depth */}
+      <mesh position={[0, 0, -250]} scale={[300, 300, 1]}>
+        <planeGeometry args={[1, 1, 1, 1]} />
+        <nebulaMaterial
+          ref={nebulaMaterial}
+          transparent
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
     </group>
   )
 }

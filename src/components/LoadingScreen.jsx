@@ -37,22 +37,6 @@ export function LoadingScreen({ onLoadComplete }) {
   
   return (
     <div className={`loading-screen ${progress >= 100 ? 'fade-out' : ''}`}>
-      {/* Animated particles */}
-      {particles.map(particle => (
-        <div
-          key={particle.id}
-          className="loading-particle"
-          style={{
-            left: `${particle.x}%`,
-            top: `${particle.y}%`,
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-            animationDuration: `${particle.duration}s`,
-            animationDelay: `${particle.delay}s`
-          }}
-        />
-      ))}
-      
       {/* Loading content */}
       <div className="loading-content">
         <h1 className="loading-title">INITIALIZING UNIVERSE</h1>

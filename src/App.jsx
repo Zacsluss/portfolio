@@ -1,43 +1,103 @@
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Stats } from '@react-three/drei'
-import { Perf } from 'r3f-perf'
-import { Leva } from 'leva'
+import { Canvas, useThree } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { Suspense, useState, useEffect } from 'react'
 import { ModernStarfield } from './components/particles/ModernStarfield'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
+import { About } from './components/sections/About'
+import { Experience } from './components/sections/Experience'
 import { Projects } from './components/sections/Projects'
+import { Skills } from './components/sections/Skills'
+import { AdditionalWork } from './components/sections/AdditionalWork'
+import { Contact } from './components/sections/Contact'
 import { LoadingScreen } from './components/LoadingScreen'
+import { SimpleCursor } from './components/ui/SimpleCursor'
 import { useKonamiCode } from './hooks/useKonamiCode'
 import './App.css'
 
+// Component to track global mouse position even when hovering over HTML elements
+function GlobalMouseTracker() {
+  const { size, mouse } = useThree()
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      // Convert screen coordinates to normalized device coordinates (-1 to 1)
+      mouse.x = (event.clientX / size.width) * 2 - 1
+      mouse.y = -(event.clientY / size.height) * 2 + 1
+    }
+
+    // Listen on document level to catch all mouse movements
+    document.addEventListener('mousemove', handleMouseMove)
+    return () => document.removeEventListener('mousemove', handleMouseMove)
+  }, [size, mouse])
+
+  return null
+}
+
 function App() {
-  const showDebug = window.location.hash.includes('debug')
   const [visitorName, setVisitorName] = useState('Zachary Sluss')
-  const [showProjects, setShowProjects] = useState(false)
+  const [particlesFormed, setParticlesFormed] = useState(false) // Track when particles finish morphing
   const [konamiActivated, setKonamiActivated] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false) // Disabled loading screen to fix green circle bug
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true)
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   const particleCount = isMobile ? 16384 : 65536
-  
+
+  // Hide scroll indicator when user scrolls down
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollIndicator(false)
+      } else {
+        setShowScrollIndicator(true)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Force browser to calculate scroll height AFTER content renders
+  // This ensures scrolling works immediately without needing to click nav first
+  useEffect(() => {
+    // Wait for React to finish rendering all content, then force height recalculation
+    const timer = setTimeout(() => {
+      // Force browser to recalculate document height
+      document.body.style.height = 'auto'
+
+      // Scroll down 1px then back to top - forces browser to recognize page is scrollable
+      window.scrollTo(0, 1)
+      window.scrollTo(0, 0)
+    }, 100) // Small delay to let all components render
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Handle wheel events on Canvas to enable page scrolling
+  // The Canvas is position:fixed and covers the viewport, so it intercepts wheel events
+  // We manually translate wheel events to page scrolls so both drag AND scroll work
+  const handleCanvasWheel = (event) => {
+    // Scroll the page by the wheel delta
+    window.scrollBy({
+      top: event.deltaY,
+      behavior: 'auto' // Instant scroll, not smooth (for responsiveness)
+    })
+  }
+
   // Konami code easter egg
   useKonamiCode(() => {
     setKonamiActivated(true)
     setTimeout(() => setKonamiActivated(false), 5000)
   })
-  
-  useEffect(() => {
-    // Show projects after 3 seconds
-    const timeoutId = setTimeout(() => {
-      setShowProjects(true)
-    }, 3000)
-    
-    return () => clearTimeout(timeoutId)
-  }, [])
+
+  // Callback when particles finish forming
+  const handleParticlesFormed = () => {
+    setParticlesFormed(true)
+  }
 
   return (
     <>
       {isLoading && <LoadingScreen onLoadComplete={() => setIsLoading(false)} />}
-      <Leva hidden={!showDebug} />
+      <SimpleCursor />
       
       <Canvas
         className="canvas"
@@ -49,10 +109,9 @@ function App() {
           depth: true,
           alpha: false
         }}
+        onWheel={handleCanvasWheel}
       >
-        {/* Debug tools */}
-        {showDebug && <Perf position="top-left" />}
-        {showDebug && <Stats />}
+        {/* Debug tools - removed for production */}
         
         {/* Deep Space Background - Pure void */}
         <color attach="background" args={['#000000']} />
@@ -65,18 +124,19 @@ function App() {
         
         {/* Camera controls - orbital camera with mouse drag */}
         <OrbitControls
-          enableZoom={true}
+          enableZoom={false}
           enablePan={false}
           enableRotate={true}
-          minDistance={15}
-          maxDistance={50}
           autoRotate={false}
           enableDamping={true}
           dampingFactor={0.05}
           rotateSpeed={0.5}
           target={[0, 5, 0]}
         />
-        
+
+        {/* Global mouse tracker - updates mouse position even when hovering over HTML elements */}
+        <GlobalMouseTracker />
+
         <Suspense fallback={null}>
           {/* Ultra-Modern Starfield - UE5-style with bokeh, motion blur, depth of field */}
           <ModernStarfield count={isMobile ? 10000 : 30000} speed={2.0} />
@@ -89,14 +149,36 @@ function App() {
                 text={visitorName.toUpperCase()}
                 size={50}
                 konamiActivated={konamiActivated}
+                onMorphComplete={handleParticlesFormed}
               />
             </group>
           )}
         </Suspense>
       </Canvas>
       
+      {/* Scroll Indicator - Bottom Center */}
+      <div className={`scroll-indicator ${particlesFormed && showScrollIndicator ? 'fade-in-1' : ''} ${!showScrollIndicator ? 'hide-scroll' : ''}`}>
+        <div className="mouse-icon">
+          <div className="mouse-wheel"></div>
+        </div>
+        <p className="scroll-text">Scroll to explore</p>
+      </div>
+
       {/* Top Right UI - Name Input and Secret Code */}
-      <div className="top-right-overlay">
+      <div className={`top-right-overlay ${particlesFormed ? 'fade-in-1' : ''}`}>
+        {/* Header */}
+        <div className="portfolio-header">
+          <h1 className="portfolio-title">Zachary Sluss</h1>
+          <p className="portfolio-subtitle">Portfolio</p>
+        </div>
+
+        {/* User Instructions */}
+        <div className="user-instructions">
+          <p className="instruction-item">→ Drag to rotate view</p>
+          <p className="instruction-item">→ Scroll to explore content</p>
+          <p className="instruction-item">→ Hover over particles</p>
+        </div>
+
         <div className="name-input-container">
           <input
             type="text"
@@ -119,10 +201,52 @@ function App() {
           Secret Code: ↑↑↓↓←→←→BA
         </p>
       </div>
-      
-      {/* Projects Section */}
-      {showProjects && <Projects />}
-      
+
+      {/* Sticky Navigation */}
+      <nav className={`sticky-nav ${particlesFormed ? 'fade-in-1' : ''}`}>
+        <div className="nav-container">
+          <a href="#about" className="nav-link">About</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#additional-work" className="nav-link">Additional Work</a>
+          <a href="#contact" className="nav-link">Contact</a>
+        </div>
+      </nav>
+
+      {/* Main Content Sections - All fade in after particles */}
+      <div className="main-content">
+        {/* About Section - has 100vh margin to start after hero */}
+        <div id="about" className={`content-section ${particlesFormed ? 'fade-in-2' : ''}`}>
+          <About />
+        </div>
+
+        {/* Experience Section */}
+        <div id="experience" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
+          <Experience />
+        </div>
+
+        {/* Projects Section */}
+        <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-4' : ''}`}>
+          <Projects />
+        </div>
+
+        {/* Skills Section */}
+        <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
+          <Skills />
+        </div>
+
+        {/* Additional Work Section */}
+        <div id="additional-work" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+          <AdditionalWork />
+        </div>
+
+        {/* Contact Section */}
+        <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
+          <Contact />
+        </div>
+      </div>
+
       {/* Konami effect is now in the particle system */}
     </>
   )
