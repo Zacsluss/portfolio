@@ -56,7 +56,7 @@ export function Contact() {
         {/* Resume Download */}
         <div className="resume-section">
           <a
-            href="/Portfolio2/resume.pdf"
+            href="/portfolio/resume.pdf"
             download
             className="resume-button"
           >
