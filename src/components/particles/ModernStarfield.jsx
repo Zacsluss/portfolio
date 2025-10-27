@@ -204,7 +204,6 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
   const material = useRef()
   const nebulaMaterial = useRef()
   const { camera } = useThree()
-  const travelDirection = useRef(new THREE.Vector3(0, 0, 1))
 
   // Stars with varying sizes, brightness, colors, and twinkle - SPHERICAL distribution for full coverage
   const [starPositions, starSizes, starBrightness, starColorTemp, starTwinklePhase] = useMemo(() => {
@@ -261,10 +260,10 @@ export function ModernStarfield({ count = 10000, speed = 2.0 }) {
     }
 
     return [positions, sizes, brightness, colorTemp, twinklePhase]
-  }, [count])
+  }, [count, camera.position.x, camera.position.y, camera.position.z])
 
   // Motion streak lines for close stars
-  const [streakPositions, streakOpacity] = useMemo(() => {
+  const [streakPositions] = useMemo(() => {
     const streakCount = 200
     const positions = new Float32Array(streakCount * 6) // 2 points per line
     const opacity = new Float32Array(streakCount)

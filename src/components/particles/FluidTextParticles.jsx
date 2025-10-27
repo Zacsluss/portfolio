@@ -261,10 +261,8 @@ export function FluidTextParticles({
   useEffect(() => {
     // Use document.fonts.load() to explicitly download and wait for font
     document.fonts.load('bold 100px Orbitron').then(() => {
-      console.log('Orbitron font loaded successfully')
       setFontReady(true)
-    }).catch((error) => {
-      console.error('Failed to load Orbitron font:', error)
+    }).catch(() => {
       // Fallback: proceed anyway after a delay
       setTimeout(() => setFontReady(true), 1000)
     })
@@ -410,7 +408,7 @@ export function FluidTextParticles({
       colorSeeds: new Float32Array(colorSeeds),
       particleCount: positions.length / 3
     }
-  }, [text, morphToText, size, viewport, fontReady])
+  }, [text, morphToText, size, fontReady])
   
   // Start morph animation and handle text changes
   useEffect(() => {
