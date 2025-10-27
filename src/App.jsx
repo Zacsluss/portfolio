@@ -40,7 +40,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(false) // Disabled loading screen to fix green circle bug
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-  const particleCount = isMobile ? 16384 : 65536
 
   // Hide scroll indicator when user scrolls down
   useEffect(() => {

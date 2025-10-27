@@ -15,7 +15,7 @@ export function Experience() {
 
         {/* Timeline */}
         <div className="timeline">
-          {experience.map((exp, index) => (
+          {experience.map((exp) => (
             <div key={exp.id} className="timeline-item">
               {/* Timeline dot */}
               <div className="timeline-dot" />

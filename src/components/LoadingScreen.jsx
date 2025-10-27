@@ -3,23 +3,8 @@ import './LoadingScreen.css'
 
 export function LoadingScreen({ onLoadComplete }) {
   const [progress, setProgress] = useState(0)
-  const [particles, setParticles] = useState([])
-  
+
   useEffect(() => {
-    // Create loading particles
-    const particleArray = []
-    for (let i = 0; i < 50; i++) {
-      particleArray.push({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 3 + 1,
-        duration: Math.random() * 3 + 2,
-        delay: Math.random() * 2
-      })
-    }
-    setParticles(particleArray)
-    
     // Simulate loading progress
     const interval = setInterval(() => {
       setProgress(prev => {
