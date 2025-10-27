@@ -46,7 +46,7 @@ export function AdditionalWork() {
                       {link.image && (
                         <div className="link-image">
                           <img
-                            src={link.image}
+                            src={import.meta.env.BASE_URL + link.image}
                             alt={link.title}
                           />
                         </div>
