@@ -1,17 +1,19 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Suspense, useState, useEffect } from 'react'
+import { Suspense, useState, useEffect, lazy } from 'react'
 import { ModernStarfield } from './components/particles/ModernStarfield'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
-import { About } from './components/sections/About'
-import { Experience } from './components/sections/Experience'
-import { Projects } from './components/sections/Projects'
-import { Skills } from './components/sections/Skills'
-import { AdditionalWork } from './components/sections/AdditionalWork'
-import { Contact } from './components/sections/Contact'
 import { SimpleCursor } from './components/ui/SimpleCursor'
 import { useKonamiCode } from './hooks/useKonamiCode'
 import './App.css'
+
+// Lazy load section components for better code splitting
+const About = lazy(() => import('./components/sections/About').then(m => ({ default: m.About })))
+const Experience = lazy(() => import('./components/sections/Experience').then(m => ({ default: m.Experience })))
+const Projects = lazy(() => import('./components/sections/Projects').then(m => ({ default: m.Projects })))
+const Skills = lazy(() => import('./components/sections/Skills').then(m => ({ default: m.Skills })))
+const AdditionalWork = lazy(() => import('./components/sections/AdditionalWork').then(m => ({ default: m.AdditionalWork })))
+const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })))
 
 // Component to track global mouse position even when hovering over HTML elements
 function GlobalMouseTracker() {
@@ -193,7 +195,7 @@ function App() {
         </div>
 
         {/* Easter egg hint */}
-        <p className="hint" style={{ marginTop: '15px', fontSize: '0.85rem', opacity: 0.5 }}>
+        <p className="hint easter-egg-hint">
           Secret Code: ↑↑↓↓←→←→BA
         </p>
       </div>
@@ -212,35 +214,37 @@ function App() {
 
       {/* Main Content Sections - All fade in after particles */}
       <div className="main-content">
-        {/* About Section - has 100vh margin to start after hero */}
-        <div id="about" className={`content-section ${particlesFormed ? 'fade-in-2' : ''}`}>
-          <About />
-        </div>
+        <Suspense fallback={<div className="section-loading">Loading...</div>}>
+          {/* About Section - has 100vh margin to start after hero */}
+          <div id="about" className={`content-section ${particlesFormed ? 'fade-in-2' : ''}`}>
+            <About />
+          </div>
 
-        {/* Experience Section */}
-        <div id="experience" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
-          <Experience />
-        </div>
+          {/* Experience Section */}
+          <div id="experience" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
+            <Experience />
+          </div>
 
-        {/* Projects Section */}
-        <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-4' : ''}`}>
-          <Projects />
-        </div>
+          {/* Projects Section */}
+          <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-4' : ''}`}>
+            <Projects />
+          </div>
 
-        {/* Skills Section */}
-        <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
-          <Skills />
-        </div>
+          {/* Skills Section */}
+          <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
+            <Skills />
+          </div>
 
-        {/* Additional Work Section */}
-        <div id="additional-work" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
-          <AdditionalWork />
-        </div>
+          {/* Additional Work Section */}
+          <div id="additional-work" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+            <AdditionalWork />
+          </div>
 
-        {/* Contact Section */}
-        <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
-          <Contact />
-        </div>
+          {/* Contact Section */}
+          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
+            <Contact />
+          </div>
+        </Suspense>
       </div>
 
       {/* Konami effect is now in the particle system */}
