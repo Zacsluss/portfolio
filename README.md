@@ -1,12 +1,12 @@
 <div align="center">
 
 <!-- Hero Header with Name -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=30&desc=Full-Stack%20Engineer%20%7C%20WebGL%20Enthusiast&descSize=20&descAlignY=55&descAlign=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=00FF88&animation=twinkling&fontAlignY=30&desc=Enterprise%20Technology%20Leader%20%7C%20Lead%20CRM%20Systems%20Analyst&descSize=20&descAlignY=55&descAlign=50"/>
 
 <br/><br/>
 
 <!-- Animated Typing Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=Building+things+that+make+people+go+%22wait%2C+how%3F%22;30%2C000+Particles+%E2%80%A2+Custom+GLSL+Shaders;React+19+%E2%80%A2+Three.js+%E2%80%A2+WebGL+2.0;Open+Source+%E2%80%A2+Feel+Free+to+Fork!" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=Governing+%245M%2B+Platforms+%E2%80%A2+3%2C000%2B+Users+%E2%80%A2+22+Countries;Proving+I+Can+Still+Ship+Code+at+60+FPS;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
 <br/><br/>
 
@@ -37,15 +37,19 @@
 
 ## 👋 Hey, I'm Zac
 
-I'm a full-stack engineer who got tired of seeing the same cookie-cutter portfolios everywhere. You know the ones — static text, a contact form, maybe a CSS animation if you're lucky. **Boring.**
+By day, I'm a **Lead CRM Systems Analyst at Computershare** — governing $5M+ platform portfolios for 3,000+ users across 22 countries, leading digital transformation programs that deliver 40% productivity gains, and managing enterprise architecture for Fortune 500-scale operations.
 
-So I built something different. Something that makes you go "wait, how did they do that?"
+**But here's the thing:** When you lead at the enterprise level, people assume you don't code anymore. That you've traded the terminal for PowerPoint. That you're "too strategic" for the technical trenches.
 
-**This portfolio uses 30,000 GPU-accelerated particles to spell out your name in 3D space.** Type anything you want and watch it morph in real-time. It's equal parts portfolio and tech demo — a way to show what I can build while actually showing off the skills I'm talking about.
+**I built this portfolio to prove otherwise.**
 
-I spent way too many late nights learning WebGL, writing custom GLSL shaders, and optimizing performance to hit 60 FPS. Was it overkill? Probably. Do I regret it? Not even a little.
+**30,000 GPU-accelerated particles** running at 60 FPS with custom GLSL shaders — not because my job requires WebGL, but because I'm on a never-ending quest for knowledge. I'm **AWS & Tableau certified**, I automate everything I touch, and I believe the best leaders never stop learning.
 
-**And here's the best part:** I'm open-sourcing the whole thing. If you want to fork this and make your own particle-powered portfolio, go for it. I learned from the community, so I'm giving back.
+This portfolio is proof that I understand both the boardroom AND the codebase. I can architect Salesforce integrations with MuleSoft by day and ship production-quality front-end experiences by night. I lead with data-driven insights and build with efficiency-obsessed automation.
+
+**I'm multi-passionate:** AI/ML, digital art, music production, 360° drone photography (FAA-licensed), analytics, strategy, and continuous learning. If it's a challenge worth solving, I'm interested.
+
+**Currently seeking Director/VP roles** in Enterprise Platforms or Global CRM Strategy — where technical depth meets strategic leadership. And yes, I'm open-sourcing this entire portfolio because I learned from the community, and I believe in giving back.
 
 <div align="center">
 
@@ -151,23 +155,74 @@ I spent way too many late nights learning WebGL, writing custom GLSL shaders, an
 
 ## 💡 Why I Built This
 
-**Three reasons:**
+**Three strategic reasons:**
 
-1. **I needed a portfolio that actually impressed people.** Not just "looks nice" — I wanted recruiters to stop scrolling and think "okay, this person knows their stuff."
+1. **To prove technical credibility at the leadership level.** When you're governing $5M+ budgets and architecting enterprise integrations, people question if you can still code. This portfolio demonstrates I'm technical, not just strategic. I can review a pull request, debug a shader, and optimize performance — while also presenting to the C-suite.
 
-2. **I wanted to master WebGL and shader programming.** These technologies scared me, which is exactly why I needed to learn them. Nothing teaches you faster than building something real.
+2. **To stay sharp and challenge myself.** Enterprise platform leadership demands continuous learning. WebGL and GPU programming keep my skills cutting-edge while I'm directing vendor portfolios, leading global change management, and ensuring SOX compliance. I learn by building — and I built this from scratch.
 
-3. **To give back to the dev community.** I learned everything from open source projects and random tutorials at 2am. This is my contribution back. Fork it, learn from it, make it yours.
+3. **To demonstrate my philosophy: efficiency, automation, analytics.** This isn't just a portfolio — it's a case study in optimization. 60 FPS with 30K particles. 303KB gzipped bundle. Adaptive rendering. Real-time morphing. Every decision was data-driven, every feature was performance-tested. This is how I approach enterprise architecture too.
 
 <div align="center">
 
 ### What this portfolio proves about me:
 
-✅ I can write **performant, production-quality code** (60 FPS with 30K particles)
-✅ I can master **complex technologies** (WebGL, GLSL, GPU optimization)
-✅ I **care about user experience** (works beautifully on mobile, adaptive rendering)
-✅ I **ship real projects** (you're looking at one right now)
-✅ I can **explain complex things simply** (see this README)
+✅ I lead with **technical depth**, not just strategy (still ship production code)
+✅ I'm **relentlessly curious** (never-ending quest for knowledge)
+✅ I **optimize everything** (60 FPS with 30K particles, 70% bundle compression)
+✅ I **automate by instinct** (lazy loading, code splitting, GPU acceleration)
+✅ I make **data-driven decisions** (performance benchmarks, analytics, metrics)
+✅ I'm **multi-passionate** (AI/ML, art, music, photography, analytics, strategy)
+✅ I **ship real projects** (this one + $5M+ enterprise platforms at scale)
+
+</div>
+
+---
+
+## 🎯 Beyond This Portfolio
+
+While this site showcases WebGL and front-end skills, **my day job is enterprise-scale technology leadership:**
+
+<table>
+<tr>
+<td width="50%">
+
+### 💼 Professional Role
+
+**Lead CRM Systems Analyst** @ Computershare
+- 📊 Govern **$5M+ annual platform portfolio**
+- 🌍 Manage **3,000+ users across 22 countries**
+- 📈 Led programs delivering **40% productivity gains**
+- ⚡ Automated **12,000+ hours annually**
+- 🎯 **100% SOX compliance** with zero breaches
+- 👥 Matrix leadership across **12 global teams**
+- 💰 Oversee **$3M+ vendor portfolio** (11 contracts)
+
+</td>
+<td width="50%">
+
+### 🏆 Certifications & Credentials
+
+- ☁️ **AWS Certified**
+- 📊 **Tableau Certified**
+- 🎯 **Seeking Director/VP roles** in:
+  - Enterprise Platforms
+  - Global CRM Strategy
+  - Digital Transformation Leadership
+
+### 📄 Professional Materials
+
+- [Resume (PDF)](public/resume.pdf)
+- [LinkedIn Profile](https://linkedin.com/in/zacharylsluss)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+**I architect Salesforce Multi-Cloud • MuleSoft integrations • Enterprise data strategy • API-led architecture**
+**I also build particle systems at 60 FPS • Because the best leaders never stop coding**
 
 </div>
 
