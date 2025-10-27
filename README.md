@@ -51,7 +51,10 @@ I spent way too many late nights learning WebGL, writing custom GLSL shaders, an
 
 ### See it in action:
 
-![Portfolio Preview](public/preview.gif)
+<img src="public/preview.gif" alt="Portfolio Preview" width="800"/>
+
+<br/>
+
 *30,000 particles morphing in real-time*
 
 </div>
