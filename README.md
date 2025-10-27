@@ -37,19 +37,17 @@
 
 ## 👋 Hey, I'm Zac
 
-By day, I'm a **Lead CRM Systems Analyst at Computershare** — governing $5M+ platform portfolios for 3,000+ users across 22 countries, leading digital transformation programs that deliver 40% productivity gains, and managing enterprise architecture for Fortune 500-scale operations.
+**Lead CRM Systems Analyst at Computershare** — governing $5M+ platforms for 3,000+ users across 22 countries. I lead digital transformation programs that deliver 40% productivity gains and manage enterprise architecture at Fortune 500 scale.
 
-**But here's the thing:** When you lead at the enterprise level, people assume you don't code anymore. That you've traded the terminal for PowerPoint. That you're "too strategic" for the technical trenches.
+**But here's the thing:** When you lead at the enterprise level, people assume you don't code anymore. That you're "too strategic" for the technical trenches.
 
 **I built this portfolio to prove otherwise.**
 
-**30,000 GPU-accelerated particles** running at 60 FPS with custom GLSL shaders — not because my job requires WebGL, but because I'm on a never-ending quest for knowledge. I'm **AWS & Tableau certified**, I automate everything I touch, and I believe the best leaders never stop learning.
+**30,000 GPU-accelerated particles at 60 FPS** with custom GLSL shaders — because I'm on a never-ending quest for knowledge. I'm **AWS & Tableau certified**, I automate everything, and I believe the best leaders never stop learning.
 
-This portfolio is proof that I understand both the boardroom AND the codebase. I can architect Salesforce integrations with MuleSoft by day and ship production-quality front-end experiences by night. I lead with data-driven insights and build with efficiency-obsessed automation.
+**I understand both the boardroom AND the codebase.** I architect Salesforce integrations by day, ship production code by night. I'm **multi-passionate**: AI/ML, digital art, music, 360° drone photography, analytics, strategy.
 
-**I'm multi-passionate:** AI/ML, digital art, music production, 360° drone photography (FAA-licensed), analytics, strategy, and continuous learning. If it's a challenge worth solving, I'm interested.
-
-**Currently seeking Director/VP roles** in Enterprise Platforms or Global CRM Strategy — where technical depth meets strategic leadership. And yes, I'm open-sourcing this entire portfolio because I learned from the community, and I believe in giving back.
+**Seeking Director/VP roles** in Enterprise Platforms or Global CRM Strategy — where technical depth meets strategic leadership.
 
 <div align="center">
 
@@ -155,25 +153,25 @@ This portfolio is proof that I understand both the boardroom AND the codebase. I
 
 ## 💡 Why I Built This
 
-**Three strategic reasons:**
+**Three reasons:**
 
-1. **To prove technical credibility at the leadership level.** When you're governing $5M+ budgets and architecting enterprise integrations, people question if you can still code. This portfolio demonstrates I'm technical, not just strategic. I can review a pull request, debug a shader, and optimize performance — while also presenting to the C-suite.
+1. **Prove technical credibility at the leadership level.** When you govern $5M+ budgets, people question if you can still code. This demonstrates I can review PRs, debug shaders, optimize performance — AND present to the C-suite.
 
-2. **To stay sharp and challenge myself.** Enterprise platform leadership demands continuous learning. WebGL and GPU programming keep my skills cutting-edge while I'm directing vendor portfolios, leading global change management, and ensuring SOX compliance. I learn by building — and I built this from scratch.
+2. **Stay sharp and challenged.** WebGL and GPU programming keep my skills cutting-edge while directing vendor portfolios and ensuring SOX compliance. I learn by building.
 
-3. **To demonstrate my philosophy: efficiency, automation, analytics.** This isn't just a portfolio — it's a case study in optimization. 60 FPS with 30K particles. 303KB gzipped bundle. Adaptive rendering. Real-time morphing. Every decision was data-driven, every feature was performance-tested. This is how I approach enterprise architecture too.
+3. **Demonstrate my philosophy: efficiency, automation, analytics.** 60 FPS with 30K particles. 303KB gzipped. Adaptive rendering. Every decision data-driven, every feature performance-tested. This is how I approach enterprise architecture.
 
 <div align="center">
 
-### What this portfolio proves about me:
+### What this proves:
 
-✅ I lead with **technical depth**, not just strategy (still ship production code)
-✅ I'm **relentlessly curious** (never-ending quest for knowledge)
-✅ I **optimize everything** (60 FPS with 30K particles, 70% bundle compression)
-✅ I **automate by instinct** (lazy loading, code splitting, GPU acceleration)
-✅ I make **data-driven decisions** (performance benchmarks, analytics, metrics)
-✅ I'm **multi-passionate** (AI/ML, art, music, photography, analytics, strategy)
-✅ I **ship real projects** (this one + $5M+ enterprise platforms at scale)
+✅ **Technical depth** at leadership level (still ship production code)
+✅ **Relentlessly curious** (never-ending quest for knowledge)
+✅ **Optimize everything** (60 FPS, 30K particles, 70% compression)
+✅ **Automate by instinct** (lazy loading, code splitting, GPU acceleration)
+✅ **Data-driven decisions** (benchmarks, analytics, metrics)
+✅ **Multi-passionate** (AI/ML, art, music, photography, strategy)
+✅ **Ship at scale** ($5M+ enterprise platforms + this)
 
 </div>
 
