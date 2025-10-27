@@ -470,7 +470,7 @@ export function FluidTextParticles({
 
       // Update scroll-based morph progress
       material.current.scrollMorphProgress = scrollProgress
-      
+
       // Black hole effect (0-2 seconds)
       if (blackHoleStartTime.current > 0) {
         const blackHoleElapsed = (Date.now() - blackHoleStartTime.current) / 2000
@@ -484,7 +484,7 @@ export function FluidTextParticles({
       } else {
         material.current.blackHoleEffect = 0
       }
-      
+
       // Explosion effect (starts at 2 seconds, lasts 3 seconds with smooth fade)
       if (explosionStartTime.current > 0) {
         const explosionElapsed = (Date.now() - explosionStartTime.current) / 3000
@@ -505,11 +505,30 @@ export function FluidTextParticles({
       } else {
         material.current.explosionEffect = 0
       }
-      
-      // Update mouse position for interactivity
-      // Simple viewport mapping - works perfectly at default zoom
-      const currentMouseX = mouse.x * (viewport.width / 2)
-      const currentMouseY = mouse.y * (viewport.height / 2)
+
+      // Update mouse position for interactivity - NOW ACCOUNTS FOR CAMERA ROTATION
+      // Use raycasting to project mouse into 3D world space at the text's plane
+      const raycaster = new THREE.Raycaster()
+      raycaster.setFromCamera(mouse, state.camera)
+
+      // Create a plane at z=0 in world space (text particles are at z≈0, group at y=5)
+      // The plane normal should face the camera for accurate intersection
+      const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0)
+      const intersectionPoint = new THREE.Vector3()
+      raycaster.ray.intersectPlane(plane, intersectionPoint)
+
+      // If we have points group, transform intersection to local space
+      let currentMouseX, currentMouseY
+      if (points.current && intersectionPoint) {
+        // Convert world space intersection to local space of the points group
+        const localPoint = points.current.worldToLocal(intersectionPoint.clone())
+        currentMouseX = localPoint.x
+        currentMouseY = localPoint.y
+      } else {
+        // Fallback to old method if intersection fails
+        currentMouseX = mouse.x * (viewport.width / 2)
+        currentMouseY = mouse.y * (viewport.height / 2)
+      }
 
       // Calculate mouse velocity for trail effect
       const deltaX = currentMouseX - previousMouse.current.x
