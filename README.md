@@ -49,8 +49,8 @@
 
 <br/>
 
-**An interactive 3D portfolio powered by WebGL & custom GLSL shaders**
-*Built to impress, optimized for performance, designed to share*
+**My portfolio • Where pixels meet particles and code becomes art**
+*I built this to showcase my work, learned a ton along the way, and now I'm sharing it with you*
 
 </div>
 
@@ -83,17 +83,17 @@
 <div align="center">
 
 ```diff
-+ An interactive 3D portfolio that uses 30,000 particles to spell your name
++ My portfolio website where 30,000 particles spell out your name in 3D space
 + Type anything in the input box and watch it morph in real-time
 + Drag to rotate • Scroll to explore • Try the Konami code (↑↑↓↓←→←→BA)
 ```
 
 </div>
 
-**This project is:**
-- 🎨 **A Portfolio** - Showcasing my work with style
-- 🔬 **A Tech Demo** - Pushing WebGL performance limits
-- 📚 **An Open Template** - Free for anyone to fork and customize
+**Why I made this:**
+- 🎨 **To showcase my work** - I needed a portfolio that stands out from the crowd
+- 🔬 **To push my limits** - WebGL and GLSL shaders were intimidating, so I dove in headfirst
+- 📚 **To give back** - I learned from open source, so I'm sharing this back. Fork it, make it yours!
 
 <table>
 <tr>
@@ -130,7 +130,7 @@
 ## 🔬 Advanced Shader Effects
 
 <div align="center">
-<i>This isn't just particles moving around — it's a <b>full physics simulation</b> running on your GPU</i>
+<i>I didn't just make particles move — I simulated actual physics on your GPU</i>
 </div>
 
 <br/>
@@ -193,7 +193,7 @@ Multi-layer 3D with independent particle motion
 
 <div align="center">
 
-**All written in custom GLSL and computed on the GPU at 60 FPS**
+**I wrote every shader from scratch in GLSL — all running at 60 FPS on the GPU**
 
 <img width="600" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
 
@@ -263,7 +263,7 @@ Multi-layer 3D with independent particle motion
 
 <div align="center">
 
-### Get up and running in 30 seconds
+### Want to try it locally? Takes about 30 seconds
 
 </div>
 
@@ -287,22 +287,22 @@ npm run deploy
 ```
 
 <details>
-<summary><b>🔧 Customization Guide</b></summary>
+<summary><b>🔧 How to customize it</b></summary>
 
 <br/>
 
-**Make it yours in 5 minutes:**
+**Make it yours (takes about 5 minutes):**
 
-1. **Edit content**: `src/data/portfolio-data.js` - Replace my info
-2. **Add images**: `public/portfolio-images/` - Swap project images
-3. **Update meta**: `index.html` - Change SEO tags
-4. **Adjust colors**: `src/App.css` - Tweak color scheme
-5. **Deploy**: `npm run deploy` - Push to GitHub Pages
+1. **Your content**: Edit `src/data/portfolio-data.js` — swap my info with yours
+2. **Your images**: Drop your project screenshots in `public/portfolio-images/`
+3. **Your SEO**: Update meta tags in `index.html`
+4. **Your colors**: Tweak the color scheme in `src/App.css`
+5. **Your domain**: Run `npm run deploy` to push it live
 
-**Change the particle text:**
+**Want to change what the particles spell?**
 - Open `src/App.jsx`
 - Line 38: Change `'Zachary Sluss'` to your name
-- Done! The particles will morph to your text
+- Save and watch the magic happen ✨
 
 </details>
 
@@ -312,7 +312,7 @@ npm run deploy
 
 <div align="center">
 
-### Measured on Production Build
+### Real numbers from my production build
 
 </div>
 
@@ -412,7 +412,7 @@ Give back to the community with a production-ready template
 
 <div align="center">
 
-### Everything you need for a professional portfolio
+### Everything you need — I've done the hard parts
 
 </div>
 
@@ -445,41 +445,41 @@ Give back to the community with a production-ready template
 </tr>
 </table>
 
-**Sections included:**
+**All the sections you'd expect:**
 ```
-1. About       - Bio, skills, quick facts
-2. Experience  - Work history timeline
-3. Projects    - Portfolio showcase
-4. Skills      - Technical competencies
-5. Additional  - Side projects & links
-6. Contact     - Social links & email
+1. About       - Who I am, what I do
+2. Experience  - Where I've worked
+3. Projects    - Cool stuff I've built
+4. Skills      - What I'm good at
+5. Additional  - Side projects & experiments
+6. Contact     - Let's connect!
 ```
 
 ---
 
-## 🤝 Use This Template
+## 🤝 Want to Use This for Your Portfolio?
 
 <div align="center">
 
-**I built this to be shared.** Fork it, customize it, make it yours!
+**Please do!** I spent way too many hours on this to not share it. Fork it, make it yours, no credit needed (but a star would be cool ⭐)
 
 <img src="https://img.shields.io/badge/No_Credit_Required-Just_Appreciated-00ff88?style=for-the-badge&logo=github&logoColor=white"/>
 
 </div>
 
-### 5-Minute Setup
+### Here's how (literally 5 minutes):
 
 ```diff
 ! Clone or download this repo
-+ Edit src/data/portfolio-data.js (replace my info with yours)
-+ Swap images in public/portfolio-images/
-+ Update meta tags in index.html
-~ npm run deploy
++ Open src/data/portfolio-data.js and replace my info with yours
++ Swap the images in public/portfolio-images/ with your project screenshots
++ Update the meta tags in index.html (for SEO)
+~ Run npm run deploy and boom — you're live
 ```
 
-### Why Use This Template?
+### Why use mine instead of starting from scratch?
 
-| Feature | This Template | Typical Portfolio |
+| Feature | My Template | Most Portfolios |
 |---------|---------------|-------------------|
 | **Uniqueness** | 🌟 30K particle system | 😐 Static text |
 | **Performance** | ⚡ 60 FPS GPU-accelerated | 🐌 Often sluggish |
@@ -494,7 +494,7 @@ Give back to the community with a production-ready template
 
 <div align="center">
 
-I'm always up for chatting about tech, projects, or opportunities!
+I love meeting new people! Whether you want to chat about tech, collaborate on a project, or just say hi — reach out!
 
 <br/>
 
@@ -523,11 +523,11 @@ I'm always up for chatting about tech, projects, or opportunities!
 
 <div align="center">
 
-**MIT License** - Do whatever you want!
+**MIT License** — Seriously, do whatever you want with this!
 
-Use it for your portfolio • Learn from it • Remix it • Even sell it (I guess?)
+Use it for your portfolio • Learn from it • Remix it • Even sell it if you want (though that would be weird lol)
 
-**One request:** Don't copy it verbatim with my name still on it. That would be... awkward. 😅
+**Just one thing:** If you fork this, swap out my name and info with yours. Otherwise people might think I'm applying to jobs I didn't apply to. Awkward. 😅
 
 <br/>
 
