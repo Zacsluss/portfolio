@@ -4,60 +4,56 @@
 
 [![Live Portfolio](https://img.shields.io/badge/🚀_Launch-Portfolio-00ff88?style=for-the-badge)](https://zacsluss.github.io/portfolio/)
 
-**Technical Leader | Full-Stack Architect | WebGL Specialist**
+**Full-Stack Engineer | WebGL Specialist**
 
-*Building scalable systems and crafting performant experiences at the intersection of engineering and artistry.*
+*I build fast, scalable systems that people actually want to use.*
 
 </div>
 
 ---
 
-## 🎯 Why This Matters
+## 💡 What This Is
 
-I don't just write code—I architect solutions. This portfolio is a statement: **30,000 GPU-accelerated particles at 60 FPS** running in your browser with zero dependencies on external compute. It's what happens when you combine technical depth with product vision.
-
-### The Technical Flex 💪
+A portfolio that runs **30,000 GPU-accelerated particles at 60 FPS** in your browser. No external compute, no compromises on mobile. It's what happens when you treat performance as a feature, not an afterthought.
 
 ```
 React 18 + Three.js + Custom GLSL Shaders
-├─ 60 FPS with 30k particles (desktop) | 30 FPS with 10k (mobile)
-├─ Adaptive performance based on hardware detection
+├─ 60 FPS with 30k particles (desktop)
+├─ 30 FPS with 10k particles (mobile, adaptive)
 ├─ Custom particle physics with mouse interaction
-├─ Real-time morphing between states with GSAP
-└─ Glassmorphism UI with custom WebGL cursor
+├─ Real-time morphing between states
+└─ Glassmorphism UI with WebGL cursor
 ```
-
-**Translation**: I build things that scale, perform, and delight users.
 
 ---
 
-## 🛠️ Tech Stack Philosophy
-
-I choose tools that solve problems, not resume keywords.
+## 🛠️ Tech Stack
 
 | What | Why |
 |------|-----|
-| **React Three Fiber** | Declarative 3D—productivity meets performance |
-| **WebGL 2.0 + GLSL** | When you need the GPU, not the CPU |
-| **Vite** | Because webpack config is a time sink |
-| **GSAP** | Industry-standard animation—smooth is fast |
-| **Zustand** | State management without the boilerplate |
+| React Three Fiber | Declarative 3D without fighting the framework |
+| WebGL 2.0 + GLSL | Direct GPU access when you need raw performance |
+| Vite | Fast builds, no webpack config headaches |
+| GSAP | Smooth animations that don't jank |
+| Zustand | State management without the ceremony |
 
 ---
 
-## 🧠 CTO Mindset
+## 🎯 How I Work
 
-### Architecture Decisions
-- **Component-driven design** for scalability and maintainability
-- **Performance budgets** enforced via hardware detection
-- **Progressive enhancement** for mobile devices
-- **Zero-config deployment** with GitHub Actions
+**Architecture**: Component-driven design for scale and maintainability
+**Performance**: Hardware detection, adaptive rendering, sub-100ms loads
+**Developer Experience**: Fast CI/CD, clear patterns, minimal config
+**Mobile**: Progressive enhancement, not desktop-first afterthoughts
 
-### What I Bring to Leadership
-✅ **Technical Vision** — I see the product 3 versions ahead
-✅ **Scalability First** — Built for growth, not just launch
-✅ **Developer Experience** — Fast CI/CD, clear docs, happy teams
-✅ **Performance Culture** — 60 FPS isn't luck, it's engineering
+---
+
+## 📊 Performance
+
+- **30k particles @ 60 FPS** (desktop) | **10k @ 30 FPS** (mobile)
+- **< 2s load time** on 3G
+- **< 250kb gzipped** bundle (code-split)
+- **95+ Lighthouse** score across all metrics
 
 ---
 
@@ -69,28 +65,18 @@ cd portfolio
 npm install && npm run dev
 ```
 
-**Build**: `npm run build` | **Deploy**: Automatic via GitHub Actions
+Build: `npm run build` | Preview: `npm run preview`
 
 ---
 
-## 📊 Performance Metrics
+## 📁 What's Inside
 
-- **Particles**: 30k @ 60 FPS (desktop), 10k @ 30 FPS (mobile)
-- **Load Time**: < 2s on 3G (lazy-loaded assets)
-- **Bundle Size**: < 250kb gzipped (code-split)
-- **Lighthouse**: 95+ across all metrics
-
----
-
-## 🎨 What You'll Find Inside
-
-**6 Sections, Zero Compromise**
-- 💼 About — Who I am beyond the resume
-- 🏢 Experience — 15+ years shipping products
-- 🚀 Projects — Open-source to enterprise
-- 🧰 Skills — Full stack, front to back
-- 🎨 Additional Work — Creative technologist side
-- 📬 Contact — Let's build something
+- **About** — Background and approach to engineering
+- **Experience** — 15+ years shipping products that scale
+- **Projects** — Open-source to enterprise work
+- **Skills** — Full-stack capabilities, front to back
+- **Additional Work** — Creative side projects
+- **Contact** — Let's build something
 
 ---
 
@@ -105,8 +91,6 @@ npm install && npm run dev
 
 <div align="center">
 
-**Built with React Three Fiber • Engineered with WebGL 2.0 • Designed for 60 FPS**
-
-*"Code is poetry written for machines, read by humans."*
+**Built with React Three Fiber • Engineered with WebGL 2.0 • Optimized for 60 FPS**
 
 </div>
