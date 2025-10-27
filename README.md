@@ -1,8 +1,10 @@
-# Hey! I'm Zac 👋
-
 <div align="center">
 
-### Full-Stack Engineer • WebGL Enthusiast • Creator of Unnecessarily Cool Things
+# 🌌 Hey! I'm Zac 👋
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00FF88&center=true&vCenter=true&random=false&width=700&lines=Full-Stack+Engineer;WebGL+Enthusiast;Creator+of+Unnecessarily+Cool+Things;30%2C000+Particles+%E2%80%A2+60+FPS+%E2%80%A2+Pure+GPU+Magic" alt="Typing SVG" />
+
+<br>
 
 **Welcome to my particle-powered portfolio! Where 30,000+ particles come together to say hello.**
 
@@ -12,6 +14,8 @@
 [![⬇️ DOWNLOAD & USE](https://img.shields.io/badge/⬇️_DOWNLOAD-USE_THIS_TEMPLATE-d97706?style=for-the-badge&labelColor=000000)](https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip)
 
 **This is both my portfolio AND a tech demo** — feel free to fork it and make it your own!
+
+<img width="800" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=150&section=header&text=&fontSize=0&animation=twinkling"/>
 
 </div>
 
@@ -29,10 +33,17 @@ React 19 • Three.js • WebGL 2.0 • Custom GLSL Shaders
 **The Numbers:**
 - 🌟 **30,000 particles** running at 60 FPS on desktop
 - ⚡ **10,000 particles** on mobile (adaptive rendering)
-- 📦 **~295KB gzipped** total bundle size
-- 🎯 **5.4 second** production build time
+- 📦 **~303KB gzipped** total bundle size
+- 🎯 **6.78 second** production build time
 - 🎨 **Custom shaders** written in GLSL
 - 🚀 **Zero dependencies** for particle rendering (pure WebGL)
+
+<div align="center">
+<img src="https://img.shields.io/badge/Performance-60_FPS-00ff88?style=flat-square&logo=speedtest&logoColor=white"/>
+<img src="https://img.shields.io/badge/Particles-30K_GPU-0088ff?style=flat-square&logo=atom&logoColor=white"/>
+<img src="https://img.shields.io/badge/Bundle-303KB-ff6b6b?style=flat-square&logo=webpack&logoColor=white"/>
+<img src="https://img.shields.io/badge/Build-6.78s-ffd93d?style=flat-square&logo=lightning&logoColor=white"/>
+</div>
 
 ---
 
@@ -42,9 +53,55 @@ React 19 • Three.js • WebGL 2.0 • Custom GLSL Shaders
 |---------|---------|
 | **Performance** | 60 FPS on desktop, 30 FPS on mobile (adaptive) |
 | **Particles** | 30K desktop / 10K mobile (real-time GPU rendering) |
-| **Bundle** | 295KB gzipped (code-split, optimized) |
+| **Bundle** | 303KB gzipped (code-split, optimized) |
 | **Tech** | React 19 + Three.js + Custom GLSL shaders |
 | **Easter Egg** | ↑↑↓↓←→←→BA (try it!) |
+
+---
+
+## 🔬 Advanced Shader Effects
+
+This isn't just particles moving around — it's a **full physics simulation** running on your GPU:
+
+<div align="center">
+
+### 🌠 Astrophysics & Optics
+
+</div>
+
+- **🌡️ Black Body Radiation** - Temperature-based star colors using real physics
+- **✨ Bokeh Depth of Field** - Hexagonal lens shapes for realistic distant stars
+- **🌈 Chromatic Aberration** - RGB color splitting on bright stars (lens distortion)
+- **💫 Twinkling Physics** - Stars shimmer with sine wave timing algorithms
+
+<div align="center">
+
+### 🪐 Particle Physics & Celestial Events
+
+</div>
+
+- **🕳️ Black Hole Spiral** - Particles spiral into the center with gravitational pull
+- **💥 Supernova Explosion** - Explosive particle dispersion on Konami code
+- **🧲 Magnetic Mouse Trails** - Particles follow your cursor with realistic momentum
+- **⚛️ Quantum Field Oscillation** - Organic "hive mind" particle behavior when formed
+- **🌌 Parallax Depth Layers** - Multi-layer 3D with independent particle motion
+
+<div align="center">
+
+### 🎨 Real-Time Morphing & Interaction
+
+</div>
+
+- **✍️ Text-to-Particle Morphing** - Type any name to see it form in real-time
+- **🔄 Elastic Easing Animations** - Smooth, natural transitions between states
+- **🖱️ Global Mouse Physics** - Attraction, repulsion, and velocity-based trails
+- **📐 Perspective-Correct Parallax** - Depth-aware particle positioning
+
+**All written in custom GLSL and computed on the GPU at 60 FPS.**
+
+<div align="center">
+<img width="600" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
+</div>
 
 ---
 
@@ -115,16 +172,17 @@ This portfolio proves I can:
 
 ### 🌟 The Particle System
 - **GPU-accelerated** with custom GLSL shaders
-- **Real-time physics** - particles react to your mouse
-- **Morphing animations** - smooth transitions between text states
+- **Real-time physics** - particles react to your mouse with momentum
+- **Morphing animations** - smooth elastic transitions between text states
 - **Adaptive rendering** - automatically scales down on mobile
+- **Astrophysics simulation** - black body radiation, chromatic aberration, bokeh
 
 ### 💎 Production Quality
 - **Optimized bundle** - Smart code splitting (React, Three.js, R3F in separate chunks)
 - **Lazy loading** - All sections load on-demand
 - **Gzip compression** - 70% smaller files
 - **Clean code** - ESLint configured, zero unused dependencies
-- **Fast builds** - 5.4 seconds from code to production
+- **Fast builds** - 6.78 seconds from code to production
 
 ### 🎯 Developer Experience
 - **Hot Module Reload** - See changes instantly
@@ -138,9 +196,9 @@ This portfolio proves I can:
 
 - ✅ Complete portfolio with 6 sections (About, Experience, Projects, Skills, Additional Work, Contact)
 - ✅ 30,000-particle interactive 3D name morphing
-- ✅ Starfield background with depth of field
+- ✅ Starfield background with depth of field, bokeh, and chromatic aberration
 - ✅ Custom WebGL cursor
-- ✅ Konami code easter egg
+- ✅ Konami code easter egg (black hole + supernova!)
 - ✅ Fully responsive (desktop → mobile)
 - ✅ Production-ready build configuration
 - ✅ GitHub Pages deployment script
@@ -195,7 +253,7 @@ I'm always up for chatting about tech, projects, or opportunities!
 
 <div align="center">
 
-### Built with ❤️, React, and way too much caffeine
+<img width="800" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=120&section=footer&text=Built%20with%20❤️%2C%20React%2C%20and%20way%20too%20much%20caffeine&fontSize=20&fontColor=00ff88&animation=twinkling&fontAlignY=70"/>
 
 **30,000+ particles • 60 FPS • Zero regrets**
 
