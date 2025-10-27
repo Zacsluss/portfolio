@@ -8,8 +8,8 @@
 
 <br>
 
-[![🚀 OPEN LIVE SITE](https://img.shields.io/badge/🚀_OPEN-LIVE_SITE-00ff88?style=for-the-badge&labelColor=000000)](https://zacsluss.github.io/portfolio/)
-[![⬇️ DOWNLOAD & USE](https://img.shields.io/badge/⬇️_DOWNLOAD-USE_THIS_TEMPLATE-0088ff?style=for-the-badge&labelColor=000000)](https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip)
+[![🚀 OPEN LIVE SITE](https://img.shields.io/badge/🚀_OPEN-LIVE_SITE-2e8b57?style=for-the-badge&labelColor=000000)](https://zacsluss.github.io/portfolio/)
+[![⬇️ DOWNLOAD & USE](https://img.shields.io/badge/⬇️_DOWNLOAD-USE_THIS_TEMPLATE-d97706?style=for-the-badge&labelColor=000000)](https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip)
 
 **This is both my portfolio AND a tech demo** — feel free to fork it and make it your own!
 
