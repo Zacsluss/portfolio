@@ -39,7 +39,7 @@ export function About() {
           <div className="headshot-container">
             <div className="headshot-frame">
               <img
-                src="/portfolio-images/headshot.jpg"
+                src={import.meta.env.BASE_URL + 'portfolio-images/headshot.jpg'}
                 alt="Zachary Sluss"
                 className="headshot-image"
                 onError={(e) => {
