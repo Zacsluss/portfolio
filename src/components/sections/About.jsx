@@ -35,6 +35,28 @@ export function About() {
         </div>
 
         <div className="about-content">
+          {/* Professional Headshot */}
+          <div className="headshot-container">
+            <div className="headshot-frame">
+              <img
+                src="/portfolio-images/headshot.jpg"
+                alt="Zachary Sluss"
+                className="headshot-image"
+                onError={(e) => {
+                  // Fallback to placeholder if image doesn't exist
+                  e.target.style.display = 'none'
+                  e.target.nextElementSibling.style.display = 'flex'
+                }}
+              />
+              <div className="headshot-placeholder" style={{display: 'none'}}>
+                <div className="placeholder-icon">👤</div>
+                <p className="placeholder-text">Add headshot.jpg</p>
+              </div>
+            </div>
+            <p className="headshot-caption">Zachary Sluss</p>
+            <p className="headshot-role">Lead CRM Systems Analyst</p>
+          </div>
+
           {/* Bio */}
           <div className="about-bio">
             <p className="bio-text">{personal.bio}</p>

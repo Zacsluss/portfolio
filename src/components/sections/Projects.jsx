@@ -25,22 +25,25 @@ export function Projects() {
             <h3 className="project-title">{project.title}</h3>
             <p className="project-description">{project.description}</p>
 
-            {project.longDescription && (
-              <p className="project-long-description">{project.longDescription}</p>
+            {/* Case Study Format: Problem → Solution → Impact */}
+            {project.problem && (
+              <div className="case-study-section">
+                <h4 className="case-study-label">🎯 The Problem</h4>
+                <p className="case-study-text">{project.problem}</p>
+              </div>
             )}
 
-            {/* Features */}
-            {project.features && project.features.length > 0 && (
-              <div className="project-features">
-                <p className="features-label">Key Features:</p>
-                <ul className="features-list">
-                  {project.features.slice(0, 3).map((feature, i) => (
-                    <li key={i} className="feature-item">
-                      <span className="feature-bullet">▹</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+            {project.solution && (
+              <div className="case-study-section">
+                <h4 className="case-study-label">🔧 The Solution</h4>
+                <p className="case-study-text">{project.solution}</p>
+              </div>
+            )}
+
+            {project.impact && (
+              <div className="case-study-section case-study-impact">
+                <h4 className="case-study-label">📈 The Impact</h4>
+                <p className="case-study-text">{project.impact}</p>
               </div>
             )}
 
