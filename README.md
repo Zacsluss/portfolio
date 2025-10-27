@@ -176,10 +176,10 @@ I'm always up for chatting about tech, projects, or opportunities!
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-zacsluss.github.io-00ff88?style=flat-square)](https://zacsluss.github.io/portfolio/)
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-zacsluss.github.io-2e7d5a?style=flat-square)](https://zacsluss.github.io/portfolio/)
 [![GitHub](https://img.shields.io/badge/💻_GitHub-@Zacsluss-181717?style=flat-square&logo=github)](https://github.com/Zacsluss)
-[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Zachary_Sluss-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/zacharylsluss)
-[![Email](https://img.shields.io/badge/📧_Email-zacharyjsluss@gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:zacharyjsluss@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Zachary_Sluss-064789?style=flat-square&logo=linkedin)](https://linkedin.com/in/zacharylsluss)
+[![Email](https://img.shields.io/badge/📧_Email-zacharyjsluss@gmail.com-b91c1c?style=flat-square&logo=gmail)](mailto:zacharyjsluss@gmail.com)
 
 </div>
 
