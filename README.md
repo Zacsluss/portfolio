@@ -375,8 +375,6 @@ I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 36
 
 **Quick setup:** `git clone` → `npm install` → `npm run dev` → `npm run deploy`
 
-**Just one thing:** If you fork this, swap out my name and info with yours. Otherwise people might think I'm applying to jobs I didn't apply to. Awkward. 😅
-
 <details>
 <summary><b>📋 Full customization instructions</b></summary>
 
