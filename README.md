@@ -400,15 +400,3 @@ Full license text in [LICENSE](LICENSE) file.
 
 </div>
 
----
-
-<div align="center">
-
-[![Star this repo](https://img.shields.io/github/stars/Zacsluss/portfolio?style=social)](https://github.com/Zacsluss/portfolio)
-[![Follow @Zacsluss](https://img.shields.io/github/followers/Zacsluss?style=social)](https://github.com/Zacsluss)
-
-<br/>
-
-*Made by Zac | October 2025*
-
-</div>
