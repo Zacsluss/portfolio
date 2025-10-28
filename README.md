@@ -37,117 +37,45 @@
 
 ## 👋 Hey, I'm Zac
 
-**Lead CRM Systems Analyst at Computershare** — governing $5M+ platforms for 3,000+ users across 22 countries. I lead digital transformation programs that deliver 40% productivity gains and manage enterprise architecture at Fortune 500 scale.
+**Lead CRM Systems Analyst @ Computershare** | AWS & Tableau Certified | Seeking Director/VP Roles
 
-**But here's the thing:** When you lead at the enterprise level, people assume you don't code anymore. That you're "too strategic" for the technical trenches.
+**Leadership Scale:**
+- 💰 Govern **$5M+ platform portfolio** across 22 countries
+- 👥 **3,000+ users** • 12 global teams • $3M vendor portfolio
+- 📈 **40% productivity gains** • 12,000+ hours automated annually
+- 🎯 **100% SOX compliance** • Zero security breaches
 
-**I built this portfolio to prove otherwise.**
+**This portfolio proves:** I still ship production code at 60 FPS while leading enterprise architecture.
+30,000 GPU-accelerated particles • Custom GLSL shaders • 303KB optimized bundle.
 
-**30,000 GPU-accelerated particles at 60 FPS** with custom GLSL shaders — because I'm on a never-ending quest for knowledge. I'm **AWS & Tableau certified**, I automate everything, and I believe the best leaders never stop learning.
-
-**I understand both the boardroom AND the codebase.** I architect Salesforce integrations by day, ship production code by night. I'm **multi-passionate**: AI/ML, digital art, music, 360° drone photography, analytics, strategy.
-
-**Seeking Director/VP roles** in Enterprise Platforms or Global CRM Strategy — where technical depth meets strategic leadership.
+**Seeking:** Director/VP roles in Enterprise Platforms, Global CRM Strategy, Digital Transformation
 
 <div align="center">
-
-### See it in action:
 
 <img src="public/preview.gif" alt="Portfolio Preview" width="800"/>
 
-<br/>
-
-*30,000 particles morphing in real-time*
+*Real-time particle morphing — type any text to see it transform*
 
 </div>
 
 ---
 
-## ⚡ Highlights
+## ⚡ What This Does
 
 <div align="center">
 
-**30,000 GPU particles** • **60 FPS desktop** • **10K mobile** • **303KB bundle** • **Open source MIT** • **5-min setup**
+**Real-time 3D particle text morphing** • **30K GPU particles at 60 FPS** • **303KB bundle** • **Mobile adaptive**
 
 </div>
 
-<div align="center">
-<img width="800" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
-</div>
+**Key Features:**
+- ✨ Type any text → watch 30,000 particles morph in real-time 3D
+- 🎮 Interactive physics: drag to rotate, particles react to mouse
+- 🔬 Custom GLSL shaders (black hole spiral, supernova explosion, chromatic aberration)
+- 📱 Automatically scales to 10K particles on mobile (30 FPS)
+- 🎯 Production-ready: lazy loading, code splitting, 72% compression
 
----
-
-## 🎯 What This Thing Does
-
-<div align="center">
-
-```diff
-+ 30,000 particles render your name in real-time 3D space
-+ Type anything in the input box — watch it morph instantly
-+ Drag to rotate the camera • Scroll to explore • Find the Konami code easter egg
-+ Works on mobile (scaled down to 10K particles for performance)
-```
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<!-- Performance Metrics -->
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Performance-60_FPS-00ff88?style=flat-square&logo=speedtest&logoColor=white"/><br/>
-      <sub><b>Desktop FPS</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Particles-30K_GPU-0088ff?style=flat-square&logo=atom&logoColor=white"/><br/>
-      <sub><b>GPU Rendering</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Bundle-303KB-ff6b6b?style=flat-square&logo=webpack&logoColor=white"/><br/>
-      <sub><b>Gzipped Size</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Build-6.78s-ffd93d?style=flat-square&logo=vite&logoColor=white"/><br/>
-      <sub><b>Prod Build</b></sub>
-    </td>
-  </tr>
-</table>
-
-</div>
-
-<br/>
-
-<table>
-<tr>
-<td width="50%">
-
-### 🎯 What Makes It Special
-
-- **Real-time particle morphing** - Not pre-rendered, fully interactive
-- **GPU-accelerated** - Custom GLSL shaders for performance
-- **Mouse physics** - Particles react to your cursor with momentum
-- **Adaptive rendering** - Automatically scales down on mobile
-- **Production-ready** - Optimized bundle, lazy loading, code splitting
-
-</td>
-<td width="50%">
-
-### 📈 The Numbers
-
-| Metric | Value |
-|--------|-------|
-| Desktop Particles | 30,000 |
-| Mobile Particles | 10,000 |
-| Target FPS | 60 (Desktop) |
-| Bundle Size | 303KB gzipped |
-| Build Time | 6.78s |
-
-</td>
-</tr>
-</table>
+**Tech:** React 19 • Three.js 0.180 • Vite • Custom WebGL shaders
 
 ---
 
@@ -160,8 +88,8 @@
 - [🔬 Advanced Shader Effects](#-advanced-shader-effects)
 - [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
-- [🤝 Want to Fork This?](#-want-to-fork-this)
-- [💡 Why I Built This](#-why-i-built-this)
+- [🤝 Open Source](#-open-source-mit-license)
+- [💡 What This Proves](#-what-this-proves)
 - [🎯 Beyond This Portfolio](#-beyond-this-portfolio)
 - [📬 Let's Connect](#-lets-connect)
 - [📄 License](#-license)
@@ -233,9 +161,10 @@ I wrote all the shaders from scratch. No particle libraries, no animation librar
 
 ## 🔬 Advanced Shader Effects
 
-<div align="center">
-<i>I didn't just make particles move — I simulated actual physics on your GPU</i>
-</div>
+Custom GLSL shaders written from scratch — all GPU-accelerated at 60 FPS.
+
+<details>
+<summary><b>🌌 See all shader effects (astrophysics, particle physics, morphing)</b></summary>
 
 <br/>
 
@@ -295,13 +224,9 @@ Multi-layer 3D with independent particle motion
 </tr>
 </table>
 
-<div align="center">
+**Every shader written from scratch in GLSL**
 
-**I wrote every shader from scratch in GLSL — all running at 60 FPS on the GPU**
-
-<img width="600" src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,12,20&height=2"/>
-
-</div>
+</details>
 
 ---
 
@@ -415,63 +340,38 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 
 ---
 
-## 🤝 Want to Fork This?
+## 🤝 Open Source (MIT License)
 
-<div align="center">
+Fork it, customize it, deploy it in 5 minutes. No credit needed (but a ⭐ appreciated).
 
-**Please do!** I spent way too many hours on this to not share it.
-Fork it, make it yours, no credit needed (but a star would be cool ⭐)
+**Quick setup:** `git clone` → `npm install` → `npm run dev` → `npm run deploy`
 
-<img src="https://img.shields.io/badge/No_Credit_Required-Just_Appreciated-555555?style=for-the-badge&logo=github&logoColor=white"/>
+<details>
+<summary><b>📋 Full customization instructions</b></summary>
 
-</div>
+<br/>
 
-### Here's how (literally 5 minutes):
+**Make it yours (5 minutes):**
+1. Edit `src/data/portfolio-data.js` — replace my info with yours
+2. Drop your project screenshots in `public/portfolio-images/`
+3. Update meta tags in `index.html` (for SEO)
+4. Run `npm run deploy` — you're live!
 
-```diff
-! Clone or download this repo
-+ Open src/data/portfolio-data.js and replace my info with yours
-+ Swap the images in public/portfolio-images/ with your project screenshots
-+ Update the meta tags in index.html (for SEO)
-~ Run npm run deploy and boom — you're live
-```
+**Change particle text:** Edit `src/App.jsx` line 38
 
-### Why use mine instead of starting from scratch?
-
-| Feature | My Template | Most Portfolios |
-|---------|---------------|-------------------|
-| **Uniqueness** | 🌟 30K particle system | 😐 Static text |
-| **Performance** | ⚡ 60 FPS GPU-accelerated | 🐌 Often sluggish |
-| **Tech Showcase** | 🔬 Custom GLSL shaders | 📄 HTML/CSS only |
-| **Mobile Support** | 📱 Adaptive rendering | ❌ Often broken |
-| **Bundle Size** | 📦 303KB optimized | 💾 Often 1MB+ |
-| **Setup Time** | ⏱️ 5 minutes | ⏰ Hours/days |
+</details>
 
 ---
 
-## 💡 Why I Built This
+## 💡 What This Proves
 
-**Three reasons:**
+**Technical leadership at scale:**
 
-1. **Prove technical credibility at the leadership level.** When you govern $5M+ budgets, people question if you can still code. This demonstrates I can review PRs, debug shaders, optimize performance — AND present to the C-suite.
-
-2. **Stay sharp and challenged.** WebGL and GPU programming keep my skills cutting-edge while directing vendor portfolios and ensuring SOX compliance. I learn by building.
-
-3. **Demonstrate my philosophy: efficiency, automation, analytics.** 60 FPS with 30K particles. 303KB gzipped. Adaptive rendering. Every decision data-driven, every feature performance-tested. This is how I approach enterprise architecture.
-
-<div align="center">
-
-### What this proves:
-
-✅ **Technical depth** at leadership level (still ship production code)
-✅ **Relentlessly curious** (never-ending quest for knowledge)
-✅ **Optimize everything** (60 FPS, 30K particles, 70% compression)
-✅ **Automate by instinct** (lazy loading, code splitting, GPU acceleration)
-✅ **Data-driven decisions** (benchmarks, analytics, metrics)
-✅ **Multi-passionate** (AI/ML, art, music, photography, strategy)
-✅ **Ship at scale** ($5M+ enterprise platforms + this)
-
-</div>
+✅ **Code + Strategy:** Ship production code while governing $5M+ budgets
+✅ **Performance-obsessed:** 60 FPS, 30K particles, 70% bundle compression
+✅ **Never stop learning:** WebGL/GPU programming while directing SOX compliance
+✅ **Data-driven:** Every decision benchmarked, tested, optimized
+✅ **Multi-passionate:** AI/ML, digital art, music, 360° photography, analytics
 
 ---
 
