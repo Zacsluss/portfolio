@@ -51,7 +51,7 @@
 }
 
 .principle-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(255, 0, 110, 0.2);
@@ -59,7 +59,7 @@
   padding: 30px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   display: flex;
   flex-direction: column;
@@ -104,7 +104,7 @@
 }
 
 .metric-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 2px solid rgba(255, 0, 110, 0.3);
@@ -112,7 +112,7 @@
   padding: 35px 25px;
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   backdrop-filter: blur(10px);
 }
@@ -197,7 +197,7 @@
 }
 
 .link-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(255, 0, 110, 0.2);
@@ -206,7 +206,7 @@
   text-decoration: none;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   display: block;
 }
@@ -215,7 +215,7 @@
   border-color: rgba(255, 0, 110, 0.5);
   box-shadow: 0 10px 30px rgba(255, 0, 110, 0.2);
   transform: translateY(-5px);
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   animation-play-state: running;
@@ -235,7 +235,7 @@
   overflow: hidden;
   border: 2px solid rgba(255, 0, 110, 0.2);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
 }
 
@@ -279,7 +279,7 @@
   opacity: 0;
   transform: translate(-5px, -5px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
 }
 
