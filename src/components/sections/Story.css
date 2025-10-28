@@ -1,6 +1,6 @@
 .story-section {
   position: relative;
-  padding: 100px 50px;
+  padding: 80.0px 50px;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@
 .story-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 24.0px;
 }
 
 .story-card {
@@ -46,14 +46,14 @@
   background-position: 0% 50%;
   border: 1px solid rgba(135, 206, 250, 0.44);
   border-radius: 15px;
-  padding: 30px;
+  padding: 24.0px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12.0px;
 }
 
 .story-card:hover {
@@ -78,7 +78,7 @@
 }
 
 .story-icon {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   filter: drop-shadow(0 0 10px rgba(135, 206, 250, 0.5));
 }
 
@@ -87,7 +87,7 @@
 }
 
 .story-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.12rem;
   font-weight: 600;
   color: #0088ff;
   margin: 0;
@@ -98,8 +98,8 @@
 }
 
 .story-text {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.84rem;
+  line-height: 1.62;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
@@ -116,14 +116,14 @@
 }
 
 .story-cta-button {
-  padding: 15px 40px;
+  padding: 12.0px 40px;
   background: linear-gradient(135deg, #00ff88, #00cc6a);
   background-size: 200% 200%;
   background-position: 0% 50%;
   color: #000;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-radius: 8px;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
@@ -145,7 +145,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .story-section {
-    padding: 80px 30px;
+    padding: 64.0px 30px;
   }
 
   .story-content {
@@ -153,14 +153,14 @@
   }
 
   .story-card {
-    padding: 25px;
+    padding: 20.0px;
   }
 
   .story-subtitle {
-    font-size: 1.2rem;
+    font-size: 0.96rem;
   }
 
   .story-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }

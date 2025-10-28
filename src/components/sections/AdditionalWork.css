@@ -1,6 +1,6 @@
 .additional-work-section {
   position: relative;
-  padding: 100px 50px;
+  padding: 80.0px 50px;
 }
 
 .additional-work-container {
@@ -12,13 +12,13 @@
 .section-header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16.0px;
   margin-bottom: 30px;
 }
 
 .section-title {
   font-family: 'Orbitron', monospace;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #00ff88;
   margin: 0;
@@ -35,8 +35,8 @@
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.44;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 40px 0;
 }
@@ -44,7 +44,7 @@
 .categories-container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40.0px;
 }
 
 .category-group {
@@ -52,7 +52,7 @@
 }
 
 .category-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #00ff88;
   margin: 0 0 25px 0;
@@ -61,7 +61,7 @@
 .links-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 20px;
+  gap: 16.0px;
 }
 
 .link-card {
@@ -70,7 +70,7 @@
   background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 12px;
-  padding: 20px;
+  padding: 16.0px;
   text-decoration: none;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -92,7 +92,7 @@
 .link-card-content {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 16.0px;
 }
 
 .link-image {
@@ -128,13 +128,13 @@
 }
 
 .link-title {
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: white;
   margin: 0 0 8px 0;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6.4px;
   transition: color 0.3s ease;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .external-icon {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   opacity: 0;
   transform: translate(-5px, -5px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -157,8 +157,8 @@
 }
 
 .link-description {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.72rem;
+  line-height: 1.35;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
@@ -166,32 +166,32 @@
 /* Responsive */
 @media (max-width: 768px) {
   .additional-work-section {
-    padding: 80px 30px;
+    padding: 64.0px 30px;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.44rem;
   }
 
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .category-title {
-    font-size: 1.3rem;
+    font-size: 1.04rem;
   }
 
   .links-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12.0px;
   }
 
   .link-card {
-    padding: 15px;
+    padding: 12.0px;
   }
 
   .link-card-content {
-    gap: 15px;
+    gap: 12.0px;
   }
 
   .link-image {
@@ -200,10 +200,10 @@
   }
 
   .link-title {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .link-description {
-    font-size: 0.85rem;
+    font-size: 0.68rem;
   }
 }

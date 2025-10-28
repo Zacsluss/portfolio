@@ -1,6 +1,6 @@
 .projects-wrapper {
   position: relative;
-  padding: 100px 50px;
+  padding: 80.0px 50px;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
@@ -9,13 +9,13 @@
 .section-header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16.0px;
   margin-bottom: 60px;
 }
 
 .section-title {
   font-family: 'Orbitron', monospace;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #00ff88;
   margin: 0;
@@ -34,7 +34,7 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 16.0px;
   max-width: 1200px;
   margin: 0 auto; /* Center the grid */
   pointer-events: auto;
@@ -46,7 +46,7 @@
   background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 10px;
-  padding: 20px;
+  padding: 16.0px;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
@@ -86,7 +86,7 @@
 }
 
 .project-title {
-  font-size: 1.3rem;
+  font-size: 1.04rem;
   color: var(--accent-color);
   margin-bottom: 10px;
   position: relative;
@@ -96,8 +96,8 @@
 .project-description {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 0.72rem;
+  line-height: 1.26;
   position: relative;
   z-index: 1;
 }
@@ -105,8 +105,8 @@
 .project-long-description {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 15px;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.68rem;
+  line-height: 1.26;
   position: relative;
   z-index: 1;
 }
@@ -118,7 +118,7 @@
 }
 
 .features-label {
-  font-size: 0.85rem;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.6);
   margin: 0 0 8px 0;
   font-weight: 600;
@@ -133,16 +133,16 @@
 .feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 6.4px;
   margin-bottom: 6px;
-  font-size: 0.85rem;
-  line-height: 1.4;
+  font-size: 0.68rem;
+  line-height: 1.26;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .feature-bullet {
   color: #00ff88;
-  font-size: 1rem;
+  font-size: 0.8rem;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -150,7 +150,7 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6.4px;
   margin-bottom: 15px;
   position: relative;
   z-index: 1;
@@ -159,15 +159,15 @@
 .project-tag {
   background: rgba(0, 255, 136, 0.1);
   color: #00ff88;
-  padding: 4px 10px;
+  padding: 3.2px 10px;
   border-radius: 15px;
-  font-size: 0.8rem;
+  font-size: 0.64rem;
   border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .project-links {
   display: flex;
-  gap: 15px;
+  gap: 12.0px;
   position: relative;
   z-index: 1;
 }
@@ -175,7 +175,7 @@
 .project-link {
   color: var(--accent-color);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
@@ -191,7 +191,7 @@
 /* Case Study Format */
 .case-study-section {
   margin-bottom: 20px;
-  padding: 15px;
+  padding: 12.0px;
   background: rgba(0, 0, 0, 0.3);
   border-left: 3px solid var(--accent-color);
   border-radius: 5px;
@@ -200,7 +200,7 @@
 }
 
 .case-study-label {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--accent-color);
   margin: 0 0 10px 0;
@@ -209,8 +209,8 @@
 }
 
 .case-study-text {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.72rem;
+  line-height: 1.44;
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
 }
@@ -232,19 +232,19 @@
 /* Responsive */
 @media (max-width: 768px) {
   .projects-wrapper {
-    padding: 80px 30px;
+    padding: 64.0px 30px;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.44rem;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12.0px;
   }
 
   .project-card {
-    padding: 15px;
+    padding: 12.0px;
   }
 }
