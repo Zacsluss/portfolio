@@ -107,7 +107,8 @@ function App() {
           antialias: false,
           stencil: false,
           depth: true,
-          alpha: false
+          alpha: false,
+          pixelRatio: Math.min(window.devicePixelRatio, 2)
         }}
         onWheel={handleCanvasWheel}
       >
