@@ -268,14 +268,6 @@ export const portfolioData = {
   ],
   additionalLinks: [
     {
-      id: "link-1",
-      title: "AI Projects",
-      description: "Custom AI/ML projects and experiments",
-      url: "https://drive.google.com/drive/folders/1v-1Ce2hVIsn5dIwpV8wD7068f3Hv5qcM?usp=drive_link",
-      category: "AI & Technology",
-      image: "portfolio-images/ai.webp",
-    },
-    {
       id: "link-2",
       title: "Digital Art Portfolio",
       description: "Creative artwork and digital illustrations",
