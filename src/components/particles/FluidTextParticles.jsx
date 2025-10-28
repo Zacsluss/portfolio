@@ -506,26 +506,27 @@ export function FluidTextParticles({
         material.current.explosionEffect = 0
       }
 
-      // Update mouse position for interactivity - NOW ACCOUNTS FOR CAMERA ROTATION
-      // Use raycasting to project mouse into 3D world space at the text's plane
-      const raycaster = new THREE.Raycaster()
-      raycaster.setFromCamera(mouse, state.camera)
-
-      // Create a plane at z=0 in world space (text particles are at z≈0, group at y=5)
-      // The plane normal should face the camera for accurate intersection
-      const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0)
-      const intersectionPoint = new THREE.Vector3()
-      raycaster.ray.intersectPlane(plane, intersectionPoint)
-
-      // If we have points group, transform intersection to local space
+      // Update mouse position for interactivity
+      // Simple and accurate: use normalized mouse coords scaled to particle space
       let currentMouseX, currentMouseY
-      if (points.current && intersectionPoint) {
-        // Convert world space intersection to local space of the points group
-        const localPoint = points.current.worldToLocal(intersectionPoint.clone())
-        currentMouseX = localPoint.x
-        currentMouseY = localPoint.y
+
+      if (points.current) {
+        // Get the group's world position
+        const groupWorldPos = new THREE.Vector3()
+        points.current.getWorldPosition(groupWorldPos)
+
+        // Project camera-relative mouse position to the particle plane
+        // Account for camera position and perspective
+        const distance = state.camera.position.distanceTo(groupWorldPos)
+        const fov = state.camera.fov * (Math.PI / 180)
+        const viewportHeightAtDistance = 2 * Math.tan(fov / 2) * distance
+        const viewportWidthAtDistance = viewportHeightAtDistance * state.camera.aspect
+
+        // Scale mouse position to actual viewport size at particle distance
+        currentMouseX = mouse.x * (viewportWidthAtDistance / 2)
+        currentMouseY = mouse.y * (viewportHeightAtDistance / 2)
       } else {
-        // Fallback to old method if intersection fails
+        // Fallback
         currentMouseX = mouse.x * (viewport.width / 2)
         currentMouseY = mouse.y * (viewport.height / 2)
       }
