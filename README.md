@@ -83,8 +83,8 @@ Built with React, Three.js, and a lot of caffeine.
 
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🔬 Advanced Shader Effects](#-advanced-shader-effects)
-- [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
+- [🚀 Quick Start](#-quick-start)
 - [📄 License & Usage](#-license--usage)
 - [📬 About & Connect](#-about--connect)
 
@@ -224,55 +224,6 @@ Multi-layer 3D with independent particle motion
 
 ---
 
-## 🚀 Quick Start
-
-<div align="center">
-
-### Want to try it locally? Takes about 30 seconds
-
-</div>
-
-```bash
-# 1️⃣ Clone this repo
-git clone https://github.com/Zacsluss/portfolio.git
-cd portfolio
-
-# 2️⃣ Install dependencies
-npm install
-
-# 3️⃣ Start dev server
-npm run dev
-# Opens at http://localhost:5173/portfolio/
-
-# 4️⃣ Build for production
-npm run build
-
-# 5️⃣ Deploy to GitHub Pages
-npm run deploy
-```
-
-<details>
-<summary><b>🔧 How to customize it for yourself</b></summary>
-
-<br/>
-
-**Make it yours (takes about 5 minutes):**
-
-1. **Your content**: Edit `src/data/portfolio-data.js` — swap my info with yours
-2. **Your images**: Drop your project screenshots in `public/portfolio-images/`
-3. **Your SEO**: Update meta tags in `index.html`
-4. **Your colors**: Tweak the color scheme in `src/App.css`
-5. **Your domain**: Run `npm run deploy` to push it live
-
-**Want to change what the particles spell?**
-- Open `src/App.jsx`
-- Line 38: Change `'Zachary Sluss'` to your name
-- Save and watch the magic happen ✨
-
-</details>
-
----
-
 ## 📊 Performance Benchmarks
 
 <div align="center">
@@ -329,6 +280,55 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 - ✅ Gzip compression (70% size reduction)
 - ✅ Lazy loading (sections load on-demand)
 - ✅ No external CDN dependencies (everything self-hosted)
+
+</details>
+
+---
+
+## 🚀 Quick Start
+
+<div align="center">
+
+### Want to try it locally? Takes about 30 seconds
+
+</div>
+
+```bash
+# 1️⃣ Clone this repo
+git clone https://github.com/Zacsluss/portfolio.git
+cd portfolio
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Start dev server
+npm run dev
+# Opens at http://localhost:5173/portfolio/
+
+# 4️⃣ Build for production
+npm run build
+
+# 5️⃣ Deploy to GitHub Pages
+npm run deploy
+```
+
+<details>
+<summary><b>🔧 How to customize it for yourself</b></summary>
+
+<br/>
+
+**Make it yours (takes about 5 minutes):**
+
+1. **Your content**: Edit `src/data/portfolio-data.js` — swap my info with yours
+2. **Your images**: Drop your project screenshots in `public/portfolio-images/`
+3. **Your SEO**: Update meta tags in `index.html`
+4. **Your colors**: Tweak the color scheme in `src/App.css`
+5. **Your domain**: Run `npm run deploy` to push it live
+
+**Want to change what the particles spell?**
+- Open `src/App.jsx`
+- Line 38: Change `'Zachary Sluss'` to your name
+- Save and watch the magic happen ✨
 
 </details>
 
