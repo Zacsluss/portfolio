@@ -86,8 +86,7 @@ Built with React, Three.js, and a lot of caffeine.
 - [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
 - [🤝 Open Source](#-open-source-mit-license)
-- [🎯 About Me](#-about-me)
-- [📬 Let's Connect](#-lets-connect)
+- [📬 About & Connect](#-about--connect)
 - [📄 License](#-license)
 
 </details>
@@ -359,25 +358,15 @@ Fork it, customize it, deploy it in 5 minutes. No credit needed (but a ⭐ appre
 
 ---
 
-## 🎯 About Me
+## 📬 About & Connect
 
 By day, I work as a Lead CRM Systems Analyst at Computershare, managing enterprise platforms and Salesforce integrations across global teams. By night, I build stuff like this.
 
 I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 360° drone photography. Always learning, always building.
 
-**Find me:**
-- [LinkedIn](https://linkedin.com/in/zacharylsluss)
-- [Resume (PDF)](public/resume.pdf)
-
----
-
-## 📬 Let's Connect
+**Let's connect:**
 
 <div align="center">
-
-I love meeting new people! Whether you want to chat about tech, collaborate on a project, or just say hi — reach out!
-
-<br/>
 
 <a href="https://zacsluss.github.io/portfolio/">
   <img src="https://img.shields.io/badge/Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge&logo=vercel&logoColor=white"/>
@@ -392,7 +381,11 @@ I love meeting new people! Whether you want to chat about tech, collaborate on a
   <img src="https://img.shields.io/badge/Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 
-<br/><br/>
+<br/>
+
+[Resume (PDF)](public/resume.pdf)
+
+<br/>
 
 **Found this helpful?** Give it a ⭐ to show support!
 
