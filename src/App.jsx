@@ -163,44 +163,6 @@ function App() {
         <p className="scroll-text">Scroll to explore</p>
       </div>
 
-      {/* Top Right UI - Name Input and Secret Code */}
-      <div className={`top-right-overlay ${particlesFormed ? 'fade-in-1' : ''}`}>
-        {/* Header */}
-        <div className="portfolio-header">
-          <h1 className="portfolio-title">Zachary Sluss</h1>
-          <p className="portfolio-subtitle">Portfolio</p>
-        </div>
-
-        {/* User Instructions */}
-        <div className="user-instructions">
-          <p className="instruction-item">→ Drag to rotate view</p>
-          <p className="instruction-item">→ Scroll to explore content</p>
-          <p className="instruction-item">→ Hover over particles</p>
-        </div>
-
-        <div className="name-input-container">
-          <input
-            type="text"
-            className="name-input"
-            placeholder="Enter your name"
-            value={visitorName}
-            onChange={(e) => setVisitorName(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                e.target.blur()
-              }
-            }}
-            maxLength={20}
-          />
-          <p className="input-hint">Type your name to see it form in particles</p>
-        </div>
-
-        {/* Easter egg hint */}
-        <p className="hint easter-egg-hint">
-          Secret Code: ↑↑↓↓←→←→BA
-        </p>
-      </div>
-
       {/* Sticky Navigation */}
       <nav className={`sticky-nav ${particlesFormed ? 'fade-in-1' : ''}`}>
         <div className="nav-container">
@@ -215,6 +177,43 @@ function App() {
 
       {/* Main Content Sections - All fade in after particles */}
       <div className="main-content">
+        {/* Top Left UI - Name Input and Secret Code - Now scrolls with content */}
+        <div className={`top-right-overlay ${particlesFormed ? 'fade-in-1' : ''}`}>
+          {/* Header */}
+          <div className="portfolio-header">
+            <h1 className="portfolio-title">Zachary Sluss</h1>
+            <p className="portfolio-subtitle">Portfolio</p>
+          </div>
+
+          {/* User Instructions */}
+          <div className="user-instructions">
+            <p className="instruction-item">→ Drag to rotate view</p>
+            <p className="instruction-item">→ Scroll to explore content</p>
+            <p className="instruction-item">→ Hover over particles</p>
+          </div>
+
+          <div className="name-input-container">
+            <input
+              type="text"
+              className="name-input"
+              placeholder="Enter your name"
+              value={visitorName}
+              onChange={(e) => setVisitorName(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.target.blur()
+                }
+              }}
+              maxLength={20}
+            />
+            <p className="input-hint">Type your name to see it form in particles</p>
+          </div>
+
+          {/* Easter egg hint */}
+          <p className="hint easter-egg-hint">
+            Secret Code: ↑↑↓↓←→←→BA
+          </p>
+        </div>
         <Suspense fallback={<div className="section-loading">Loading...</div>}>
           {/* About Section - has 100vh margin to start after hero */}
           <div id="about" className={`content-section ${particlesFormed ? 'fade-in-2' : ''}`}>
