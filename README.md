@@ -85,9 +85,8 @@ Built with React, Three.js, and a lot of caffeine.
 - [🔬 Advanced Shader Effects](#-advanced-shader-effects)
 - [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
-- [🤝 Open Source](#-open-source-mit-license)
 - [📬 About & Connect](#-about--connect)
-- [📄 License](#-license)
+- [📄 License & Usage](#-license--usage)
 
 </details>
 
@@ -335,29 +334,6 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 
 ---
 
-## 🤝 Open Source (MIT License)
-
-Fork it, customize it, deploy it in 5 minutes. No credit needed (but a ⭐ appreciated).
-
-**Quick setup:** `git clone` → `npm install` → `npm run dev` → `npm run deploy`
-
-<details>
-<summary><b>📋 Full customization instructions</b></summary>
-
-<br/>
-
-**Make it yours (5 minutes):**
-1. Edit `src/data/portfolio-data.js` — replace my info with yours
-2. Drop your project screenshots in `public/portfolio-images/`
-3. Update meta tags in `index.html` (for SEO)
-4. Run `npm run deploy` — you're live!
-
-**Change particle text:** Edit `src/App.jsx` line 38
-
-</details>
-
----
-
 ## 📬 About & Connect
 
 By day, I work as a Lead CRM Systems Analyst at Computershare, managing enterprise platforms and Salesforce integrations across global teams. By night, I build stuff like this.
@@ -393,21 +369,36 @@ I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 36
 
 ---
 
-## 📄 License
+## 📄 License & Usage
 
-<div align="center">
+**MIT License** — Fork it, customize it, do whatever you want with it. No credit needed (but a ⭐ appreciated).
 
-**MIT License** — Seriously, do whatever you want with this!
-
-Use it for your portfolio • Learn from it • Remix it • Even sell it if you want (though that would be weird lol)
+**Quick setup:** `git clone` → `npm install` → `npm run dev` → `npm run deploy`
 
 **Just one thing:** If you fork this, swap out my name and info with yours. Otherwise people might think I'm applying to jobs I didn't apply to. Awkward. 😅
 
-Full license text available in the [LICENSE](LICENSE) file.
+<details>
+<summary><b>📋 Full customization instructions</b></summary>
 
 <br/>
 
+**Make it yours (5 minutes):**
+1. Edit `src/data/portfolio-data.js` — replace my info with yours
+2. Drop your project screenshots in `public/portfolio-images/`
+3. Update meta tags in `index.html` (for SEO)
+4. Run `npm run deploy` — you're live!
+
+**Change particle text:** Edit `src/App.jsx` line 38
+
+</details>
+
+<br/>
+
+<div align="center">
+
 <img src="https://img.shields.io/badge/License-MIT-555555?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
+
+Full license text in [LICENSE](LICENSE) file.
 
 </div>
 
