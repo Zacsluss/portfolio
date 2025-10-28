@@ -41,7 +41,7 @@
 }
 
 .project-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
@@ -51,7 +51,7 @@
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   cursor: pointer;
 }
@@ -177,7 +177,7 @@
   text-decoration: none;
   font-size: 0.9rem;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   border-bottom: 1px solid transparent;
 }

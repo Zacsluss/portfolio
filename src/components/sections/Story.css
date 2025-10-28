@@ -41,15 +41,15 @@
 }
 
 .story-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
-  border: 1px solid rgba(0, 136, 255, 0.44);
+  border: 1px solid rgba(135, 206, 250, 0.44);
   border-radius: 15px;
   padding: 30px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   display: flex;
   flex-direction: column;
@@ -66,7 +66,7 @@
 .story-card-highlight {
   grid-column: 1 / -1;
   border-color: rgba(0, 255, 136, 0.3);
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 20, 15, 0.7) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 20, 15, 0.7) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
 }
@@ -79,7 +79,7 @@
 
 .story-icon {
   font-size: 2.5rem;
-  filter: drop-shadow(0 0 10px rgba(0, 136, 255, 0.5));
+  filter: drop-shadow(0 0 10px rgba(135, 206, 250, 0.5));
 }
 
 .story-card-highlight .story-icon {
@@ -126,7 +126,7 @@
   font-size: 1rem;
   border-radius: 8px;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: shimmer 8s ease-in-out infinite;
+  animation: shimmer 5.6s ease-in-out infinite;
   animation-play-state: paused;
   text-transform: uppercase;
   letter-spacing: 0.05em;
