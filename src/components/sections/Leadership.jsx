@@ -1,6 +1,17 @@
+import { portfolioData } from '../../data/portfolio-data'
 import './Leadership.css'
 
 export function Leadership() {
+  const { additionalLinks } = portfolioData
+
+  // Group links by category
+  const groupedLinks = additionalLinks.reduce((acc, link) => {
+    if (!acc[link.category]) {
+      acc[link.category] = []
+    }
+    acc[link.category].push(link)
+    return acc
+  }, {})
   const principles = [
     {
       icon: "⚡",
@@ -39,7 +50,7 @@ export function Leadership() {
       <div className="leadership-container">
         {/* Section Header */}
         <div className="section-header">
-          <h2 className="section-title">Leadership Philosophy</h2>
+          <h2 className="section-title">Leadership & Passions</h2>
           <div className="title-line" />
         </div>
 
@@ -77,6 +88,56 @@ export function Leadership() {
             <div className="metric-value">100%</div>
             <div className="metric-label">SOX Compliance</div>
             <div className="metric-context">Zero breaches while enabling rapid innovation</div>
+          </div>
+        </div>
+
+        {/* Passions & Creative Work */}
+        <div className="passions-section">
+          <h3 className="passions-title">Beyond the Enterprise</h3>
+          <p className="passions-intro">
+            Multi-passionate about AI/ML, digital art, music production, and 360° drone photography —
+            because curiosity makes better strategists.
+          </p>
+
+          <div className="categories-container">
+            {Object.entries(groupedLinks).map(([category, links]) => (
+              <div key={category} className="category-group">
+                <h4 className="category-title">{category}</h4>
+
+                <div className="links-grid">
+                  {links.map((link) => (
+                    <a
+                      key={link.id}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-card"
+                    >
+                      <div className="link-card-content">
+                        {/* Image Thumbnail */}
+                        {link.image && (
+                          <div className="link-image">
+                            <img
+                              src={import.meta.env.BASE_URL + link.image}
+                              alt={link.title}
+                            />
+                          </div>
+                        )}
+
+                        {/* Content */}
+                        <div className="link-text">
+                          <h5 className="link-title">
+                            {link.title}
+                            <span className="external-icon">↗</span>
+                          </h5>
+                          <p className="link-description">{link.description}</p>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
