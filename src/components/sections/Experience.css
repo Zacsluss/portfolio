@@ -48,14 +48,12 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .experience-card:hover {
   border-color: rgba(0, 255, 136, 0.4);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.15);
   transform: translateY(-5px);
-  animation-play-state: running;
 }
 
 .card-header {
@@ -151,14 +149,12 @@
   font-family: 'Courier New', monospace;
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .tech-tag:hover {
   background: rgba(0, 255, 136, 0.44);
   border-color: rgba(0, 255, 136, 0.5);
   transform: translateY(-2px);
-  animation-play-state: running;
 }
 
 /* Responsive */

@@ -121,7 +121,6 @@
   border-radius: 25px;
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
   position: relative;
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
@@ -136,7 +135,6 @@
   border-color: rgba(0, 255, 136, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 255, 136, 0.44);
-  animation-play-state: running;
 }
 
 .nav-link::after {
@@ -234,7 +232,6 @@
   cursor: default;
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .stat-badge:hover {
@@ -243,7 +240,6 @@
   border-color: #00ff88;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
-  animation-play-state: running;
 }
 
 /* Konami Code Easter Egg */
@@ -312,7 +308,6 @@
   width: 250px;
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
   backdrop-filter: blur(10px);
   text-align: center;
   font-family: inherit;
@@ -334,7 +329,6 @@
 
 .name-input:hover {
   border-color: rgba(0, 255, 136, 0.5);
-  animation-play-state: running;
 }
 
 .input-hint {
