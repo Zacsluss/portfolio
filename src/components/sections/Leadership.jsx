@@ -80,7 +80,7 @@ export function Leadership() {
             <div className="metric-context">Through strategic automation & process redesign</div>
           </div>
           <div className="metric-card">
-            <div className="metric-value">12,000+</div>
+            <div className="metric-value">1,000+</div>
             <div className="metric-label">Hours Automated</div>
             <div className="metric-context">Annually across 3,000+ global users</div>
           </div>
