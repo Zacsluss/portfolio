@@ -24,14 +24,12 @@
   padding: 25px;
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .skill-category-card:hover {
   border-color: rgba(0, 255, 136, 0.4);
   transform: translateY(-5px);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.1);
-  animation-play-state: running;
 }
 
 .category-title {
@@ -68,7 +66,6 @@
 
 .skill-item:hover {
   padding-left: 5px;
-  animation-play-state: running;
 }
 
 .skill-info {

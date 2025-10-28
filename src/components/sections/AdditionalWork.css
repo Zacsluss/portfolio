@@ -73,7 +73,6 @@
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
   display: block;
 }
 
@@ -83,7 +82,6 @@
   transform: translateY(-5px);
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
   background-size: 200% 200%;
-  animation-play-state: running;
 }
 
 .link-card-content {
@@ -101,7 +99,6 @@
   border: 2px solid rgba(0, 255, 136, 0.44);
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .link-card:hover .link-image {
@@ -145,7 +142,6 @@
   transform: translate(-5px, -5px);
   transition: all 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
-  animation-play-state: paused;
 }
 
 .link-card:hover .external-icon {
