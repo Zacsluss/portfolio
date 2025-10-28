@@ -237,7 +237,7 @@ Multi-layer 3D with independent particle motion
 
 #### Desktop (1920×1080)
 | Metric | Value |
-|--------|-------|
+|:------:|:-----:|
 | Particle Count | 30,000 |
 | Average FPS | 60 |
 | GPU Usage | ~30% |
@@ -249,7 +249,7 @@ Multi-layer 3D with independent particle motion
 
 #### Mobile (iPhone 12)
 | Metric | Value |
-|--------|-------|
+|:------:|:-----:|
 | Particle Count | 10,000 |
 | Average FPS | 30 |
 | GPU Usage | ~50% |
