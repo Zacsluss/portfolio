@@ -37,15 +37,15 @@
 
 ## 👋 Hey, I'm Zac
 
-I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text in real-time 3D space.
+I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text elements in real-time 3D space. And that's not even counting the "space" itself!
 
 **What makes it interesting:**
-- Custom GLSL shaders for particle physics (black holes, supernovas, chromatic aberration)
+- Custom GLSL shaders for particle physics
 - 60 FPS on desktop with adaptive scaling for mobile
 - 303KB optimized bundle with code splitting and lazy loading
-- Fully interactive — type anything to watch particles morph
+- Fully interactive — type anything to watch particles morph. Steer your spacechip as you hurdle through space!
 
-Built with React, Three.js, and a lot of caffeine.
+Built with React, Three.js, and a little science!
 
 <div align="center">
 
@@ -67,10 +67,9 @@ Built with React, Three.js, and a lot of caffeine.
 
 **Key Features:**
 - ✨ Type any text → watch 30,000 particles morph in real-time 3D
-- 🎮 Interactive physics: drag to rotate, particles react to mouse
+- 🎮 Interactive physics: drag to rotate and turn through space, glowing particles react to mouse movement
 - 🔬 Custom GLSL shaders (black hole spiral, supernova explosion, chromatic aberration)
 - 📱 Automatically scales to 10K particles on mobile (30 FPS)
-- 🎯 Production-ready: lazy loading, code splitting, 72% compression
 
 **Tech:** React 19 • Three.js 0.180 • Vite • Custom WebGL shaders
 
