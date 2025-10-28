@@ -9,12 +9,10 @@ import './App.css'
 
 // Lazy load section components for better code splitting
 const About = lazy(() => import('./components/sections/About').then(m => ({ default: m.About })))
-const Story = lazy(() => import('./components/sections/Story').then(m => ({ default: m.Story })))
-const Experience = lazy(() => import('./components/sections/Experience').then(m => ({ default: m.Experience })))
-const Leadership = lazy(() => import('./components/sections/Leadership').then(m => ({ default: m.Leadership })))
-const Projects = lazy(() => import('./components/sections/Projects').then(m => ({ default: m.Projects })))
 const Skills = lazy(() => import('./components/sections/Skills').then(m => ({ default: m.Skills })))
-const AdditionalWork = lazy(() => import('./components/sections/AdditionalWork').then(m => ({ default: m.AdditionalWork })))
+const Experience = lazy(() => import('./components/sections/Experience').then(m => ({ default: m.Experience })))
+const Projects = lazy(() => import('./components/sections/Projects').then(m => ({ default: m.Projects })))
+const Leadership = lazy(() => import('./components/sections/Leadership').then(m => ({ default: m.Leadership })))
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })))
 
 // Component to track global mouse position even when hovering over HTML elements
@@ -207,12 +205,10 @@ function App() {
       <nav className={`sticky-nav ${particlesFormed ? 'fade-in-1' : ''}`}>
         <div className="nav-container">
           <a href="#about" className="nav-link">About</a>
-          <a href="#story" className="nav-link">My Story</a>
-          <a href="#experience" className="nav-link">Experience</a>
-          <a href="#leadership" className="nav-link">Leadership</a>
-          <a href="#projects" className="nav-link">Projects</a>
           <a href="#skills" className="nav-link">Skills</a>
-          <a href="#additional-work" className="nav-link">Additional Work</a>
+          <a href="#experience" className="nav-link">Experience</a>
+          <a href="#projects" className="nav-link">Projects</a>
+          <a href="#leadership" className="nav-link">Leadership</a>
           <a href="#contact" className="nav-link">Contact</a>
         </div>
       </nav>
@@ -225,9 +221,9 @@ function App() {
             <About />
           </div>
 
-          {/* Story Section */}
-          <div id="story" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
-            <Story />
+          {/* Skills Section */}
+          <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
+            <Skills />
           </div>
 
           {/* Experience Section */}
@@ -235,28 +231,18 @@ function App() {
             <Experience />
           </div>
 
-          {/* Leadership Philosophy Section */}
-          <div id="leadership" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
-            <Leadership />
-          </div>
-
           {/* Projects Section */}
-          <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+          <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
             <Projects />
           </div>
 
-          {/* Skills Section */}
-          <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
-            <Skills />
-          </div>
-
-          {/* Additional Work Section */}
-          <div id="additional-work" className={`content-section ${particlesFormed ? 'fade-in-8' : ''}`}>
-            <AdditionalWork />
+          {/* Leadership Philosophy Section */}
+          <div id="leadership" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+            <Leadership />
           </div>
 
           {/* Contact Section */}
-          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-9' : ''}`}>
+          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
             <Contact />
           </div>
         </Suspense>
