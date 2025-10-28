@@ -41,8 +41,9 @@
 }
 
 .story-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.18) 0%, rgba(0, 8, 20, 0.7) 50%, rgba(0, 255, 136, 0.18) 100%);
-  border: 1px solid rgba(0, 136, 255, 0.2);
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.22) 0%, rgba(0, 8, 20, 0.84) 50%, rgba(0, 255, 136, 0.22) 100%);
+  background-size: 200% 200%;
+  border: 1px solid rgba(0, 136, 255, 0.24);
   border-radius: 15px;
   padding: 30px;
   backdrop-filter: blur(10px);
@@ -56,17 +57,20 @@
   border-color: rgba(0, 136, 255, 0.4);
   box-shadow: 0 10px 40px rgba(0, 136, 255, 0.15);
   transform: translateY(-5px);
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 .story-card-highlight {
   grid-column: 1 / -1;
   border-color: rgba(0, 255, 136, 0.3);
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.18) 0%, rgba(0, 20, 15, 0.7) 50%, rgba(0, 255, 136, 0.18) 100%);
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.22) 0%, rgba(0, 20, 15, 0.7) 50%, rgba(0, 255, 136, 0.22) 100%);
+  background-size: 200% 200%;
 }
 
 .story-card-highlight:hover {
   border-color: rgba(0, 255, 136, 0.5);
-  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.24);
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 .story-icon {
@@ -110,6 +114,7 @@
 .story-cta-button {
   padding: 15px 40px;
   background: linear-gradient(135deg, #00ff88, #00cc6a);
+  background-size: 200% 200%;
   color: #000;
   text-decoration: none;
   font-weight: 700;
@@ -123,6 +128,7 @@
 
 .story-cta-button:hover {
   background: linear-gradient(135deg, #00ffaa, #00dd77);
+  background-size: 200% 200%;
   box-shadow: 0 8px 30px rgba(0, 255, 136, 0.5);
   transform: translateY(-2px);
 }

@@ -27,6 +27,7 @@
   flex: 1;
   height: 2px;
   background: linear-gradient(to right, #00ff88, transparent);
+  background-size: 200% 200%;
 }
 
 .projects-grid {
@@ -39,8 +40,9 @@
 }
 
 .project-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.18) 0%, rgba(0, 8, 20, 0.9) 50%, rgba(0, 255, 136, 0.18) 100%);
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.22) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.22) 100%);
+  background-size: 200% 200%;
+  border: 1px solid rgba(0, 255, 136, 0.24);
   border-radius: 10px;
   padding: 20px;
   position: relative;
@@ -53,7 +55,8 @@
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-color);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.24);
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 .project-card.hovered .project-particles {
