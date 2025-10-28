@@ -25,6 +25,32 @@
   z-index: 10;
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16.0px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.title-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #00ff88, transparent);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+}
+
+
 .leadership-intro {
   margin-bottom: 50px;
   text-align: center;
@@ -55,7 +81,7 @@
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(255, 0, 110, 0.2);
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 24.0px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -109,7 +135,7 @@
   background-position: 0% 50%;
   border: 2px solid rgba(255, 0, 110, 0.3);
   border-radius: 15px;
-  padding: 28.0px 25px;
+  padding: 24.0px;
   text-align: center;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
@@ -201,7 +227,7 @@
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(255, 0, 110, 0.2);
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 16.0px;
   text-decoration: none;
   backdrop-filter: blur(10px);
@@ -231,7 +257,7 @@
   width: 80px;
   height: 80px;
   flex-shrink: 0;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
   border: 2px solid rgba(255, 0, 110, 0.2);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
