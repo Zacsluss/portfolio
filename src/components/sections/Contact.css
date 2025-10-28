@@ -31,6 +31,7 @@
   height: 2px;
   background: linear-gradient(to right, #00ff88, transparent);
   background-size: 200% 200%;
+  background-position: 0% 50%;
 }
 
 .section-subtitle {
@@ -50,6 +51,7 @@
 .contact-card {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 15px;
   padding: 30px;
@@ -58,14 +60,16 @@
   gap: 20px;
   text-decoration: none;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 .contact-card:hover {
   border-color: rgba(0, 255, 136, 0.4);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.15);
   transform: translateY(-5px);
+  animation-play-state: running;
 }
 
 .card-icon {
@@ -78,8 +82,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 .contact-card:hover .card-icon {
@@ -117,6 +122,7 @@
 .social-section {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 15px;
   padding: 35px;
@@ -151,8 +157,9 @@
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 .social-link:hover {
@@ -161,6 +168,7 @@
   color: #00ff88;
   transform: translateY(-3px);
   box-shadow: 0 5px 20px rgba(0, 255, 136, 0.44);
+  animation-play-state: running;
 }
 
 .social-icon {
@@ -185,8 +193,9 @@
   font-size: 1.1rem;
   font-weight: 600;
   font-family: 'Orbitron', monospace;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 .resume-button:hover {
@@ -195,6 +204,7 @@
   color: #00ffaa;
   transform: translateY(-3px);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.3);
+  animation-play-state: running;
 }
 
 .resume-icon {

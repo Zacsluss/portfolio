@@ -119,11 +119,13 @@
   letter-spacing: 0.05em;
   padding: 10px 20px;
   border-radius: 25px;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
   position: relative;
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 255, 136, 0.44);
 }
@@ -132,9 +134,11 @@
   color: #00ff88;
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border-color: rgba(0, 255, 136, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 255, 136, 0.44);
+  animation-play-state: running;
 }
 
 .nav-link::after {
@@ -222,6 +226,7 @@
 .stat-badge {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.3);
   padding: 5px 12px;
   border-radius: 20px;
@@ -230,16 +235,19 @@
   backdrop-filter: blur(10px);
   pointer-events: auto;
   cursor: default;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
 }
 
 .stat-badge:hover {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.5) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.3) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border-color: #00ff88;
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+  animation-play-state: running;
 }
 
 /* Konami Code Easter Egg */
@@ -299,6 +307,7 @@
 .name-input {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border: 2px solid rgba(0, 255, 136, 0.3);
   border-radius: 30px;
   padding: 9px 18px;
@@ -306,8 +315,9 @@
   color: #00ff88;
   outline: none;
   width: 250px;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 8s ease-in-out infinite;
+  animation-play-state: paused;
   backdrop-filter: blur(10px);
   text-align: center;
   font-family: inherit;
@@ -321,6 +331,7 @@
 .name-input:focus {
   background: linear-gradient(135deg, rgba(0, 136, 255, 0.44) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.44) 100%);
   background-size: 200% 200%;
+  background-position: 0% 50%;
   border-color: #00ff88;
   box-shadow: 0 0 30px rgba(0, 255, 136, 0.3),
               inset 0 0 10px rgba(0, 255, 136, 0.1);
@@ -329,6 +340,7 @@
 
 .name-input:hover {
   border-color: rgba(0, 255, 136, 0.5);
+  animation-play-state: running;
 }
 
 .input-hint {
