@@ -9,6 +9,32 @@
   width: 100%;
 }
 
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16.0px;
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 2.0rem;
+  font-weight: 700;
+  color: #00ff88;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+  letter-spacing: 0.05em;
+}
+
+.title-line {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, #00ff88, transparent);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+}
+
+
 .timeline {
   position: relative;
   padding-left: 40px;
