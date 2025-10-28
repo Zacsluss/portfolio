@@ -37,7 +37,7 @@
 
 ## 👋 Hey, I'm Zac
 
-I work on enterprise platforms by day and build interactive WebGL projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text in real-time 3D space.
+I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text in real-time 3D space.
 
 **What makes it interesting:**
 - Custom GLSL shaders for particle physics (black holes, supernovas, chromatic aberration)
