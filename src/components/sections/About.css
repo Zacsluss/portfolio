@@ -1,6 +1,6 @@
 .about-section {
   position: relative;
-  padding: 100px 50px;
+  padding: 80.0px 50px;
   overflow: hidden;
 }
 
@@ -27,13 +27,13 @@
 .section-header {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16.0px;
   margin-bottom: 60px;
 }
 
 .section-title {
   font-family: 'Orbitron', monospace;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #00ff88;
   margin: 0;
@@ -52,7 +52,7 @@
 .about-content {
   display: grid;
   grid-template-columns: 250px 1fr 1fr;
-  gap: 40px;
+  gap: 32.0px;
   align-items: start;
 }
 
@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12.0px;
 }
 
 .headshot-frame {
@@ -69,7 +69,7 @@
   height: 220px;
   border-radius: 50%;
   border: 3px solid rgba(0, 255, 136, 0.4);
-  padding: 5px;
+  padding: 4.0px;
   background: transparent;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.44);
@@ -106,18 +106,18 @@
 }
 
 .placeholder-icon {
-  font-size: 4rem;
+  font-size: 3.2rem;
   opacity: 0.3;
 }
 
 .placeholder-text {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: rgba(255, 255, 255, 0.4);
   margin-top: 10px;
 }
 
 .headshot-caption {
-  font-size: 1.1rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: #00ff88;
   margin: 0;
@@ -125,7 +125,7 @@
 }
 
 .headshot-role {
-  font-size: 0.85rem;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
   text-align: center;
@@ -136,14 +136,14 @@
 .about-bio {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16.0px;
   /* Glass panel styling */
   background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
   background-size: 200% 200%;
   background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 15px;
-  padding: 30px;
+  padding: 24.0px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
@@ -158,8 +158,8 @@
 }
 
 .bio-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 0.88rem;
+  line-height: 1.62;
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
@@ -167,13 +167,13 @@
 .location-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8.0px;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
+  font-size: 0.76rem;
 }
 
 .location-icon {
-  font-size: 1.2rem;
+  font-size: 0.96rem;
   filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.5));
 }
 
@@ -183,7 +183,7 @@
   background-position: 0% 50%;
   border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 15px;
-  padding: 30px;
+  padding: 24.0px;
   backdrop-filter: blur(10px);
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: shimmer 5.6s ease-in-out infinite;
@@ -198,7 +198,7 @@
 }
 
 .quick-facts-title {
-  font-size: 1.3rem;
+  font-size: 1.04rem;
   font-weight: 600;
   color: #00ff88;
   margin: 0 0 25px 0;
@@ -213,7 +213,7 @@
 }
 
 .fact-label {
-  font-size: 0.85rem;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.5);
   margin: 0 0 5px 0;
   text-transform: uppercase;
@@ -221,14 +221,14 @@
 }
 
 .fact-value {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   font-weight: 500;
   margin: 0;
 }
 
 .fact-link {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #00ff88;
   text-decoration: none;
   font-weight: 500;
@@ -248,16 +248,16 @@
 /* Responsive */
 @media (max-width: 768px) {
   .about-section {
-    padding: 80px 30px;
+    padding: 64.0px 30px;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .about-content {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24.0px;
   }
 
   .headshot-container {
@@ -265,14 +265,14 @@
   }
 
   .about-bio {
-    padding: 25px;
+    padding: 20.0px;
   }
 
   .bio-text {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .quick-facts-card {
-    padding: 25px;
+    padding: 20.0px;
   }
 }
