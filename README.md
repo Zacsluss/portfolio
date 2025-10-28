@@ -229,9 +229,7 @@ Multi-layer 3D with independent particle motion
 
 ### Real numbers from my production build
 
-</div>
-
-<table>
+<table align="center">
 <tr>
 <td width="50%">
 
@@ -261,6 +259,8 @@ Multi-layer 3D with independent particle motion
 </td>
 </tr>
 </table>
+
+</div>
 
 <details>
 <summary><b>📦 Bundle size breakdown</b></summary>
