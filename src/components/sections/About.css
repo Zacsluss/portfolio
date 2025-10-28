@@ -133,7 +133,7 @@
   flex-direction: column;
   gap: 20px;
   /* Glass panel styling */
-  background: transparent;
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.08) 0%, rgba(0, 8, 20, 0.6) 50%, rgba(0, 255, 136, 0.08) 100%);
   border: 1px solid rgba(0, 255, 136, 0.2);
   border-radius: 15px;
   padding: 30px;
@@ -168,7 +168,7 @@
 }
 
 .quick-facts-card {
-  background: transparent;
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.08) 0%, rgba(0, 8, 20, 0.6) 50%, rgba(0, 255, 136, 0.08) 100%);
   border: 1px solid rgba(0, 255, 136, 0.2);
   border-radius: 15px;
   padding: 30px;
