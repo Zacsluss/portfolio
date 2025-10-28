@@ -151,94 +151,81 @@
 
 ---
 
-## 💡 Why I Built This
-
-**Three reasons:**
-
-1. **Prove technical credibility at the leadership level.** When you govern $5M+ budgets, people question if you can still code. This demonstrates I can review PRs, debug shaders, optimize performance — AND present to the C-suite.
-
-2. **Stay sharp and challenged.** WebGL and GPU programming keep my skills cutting-edge while directing vendor portfolios and ensuring SOX compliance. I learn by building.
-
-3. **Demonstrate my philosophy: efficiency, automation, analytics.** 60 FPS with 30K particles. 303KB gzipped. Adaptive rendering. Every decision data-driven, every feature performance-tested. This is how I approach enterprise architecture.
-
-<div align="center">
-
-### What this proves:
-
-✅ **Technical depth** at leadership level (still ship production code)
-✅ **Relentlessly curious** (never-ending quest for knowledge)
-✅ **Optimize everything** (60 FPS, 30K particles, 70% compression)
-✅ **Automate by instinct** (lazy loading, code splitting, GPU acceleration)
-✅ **Data-driven decisions** (benchmarks, analytics, metrics)
-✅ **Multi-passionate** (AI/ML, art, music, photography, strategy)
-✅ **Ship at scale** ($5M+ enterprise platforms + this)
-
-</div>
-
----
-
-## 🎯 Beyond This Portfolio
-
-While this site showcases WebGL and front-end skills, **my day job is enterprise-scale technology leadership:**
-
-<table>
-<tr>
-<td width="50%">
-
-### 💼 Professional Role
-
-**Lead CRM Systems Analyst** @ Computershare
-- 📊 Govern **$5M+ annual platform portfolio**
-- 🌍 Manage **3,000+ users across 22 countries**
-- 📈 Led programs delivering **40% productivity gains**
-- ⚡ Automated **12,000+ hours annually**
-- 🎯 **100% SOX compliance** with zero breaches
-- 👥 Matrix leadership across **12 global teams**
-- 💰 Oversee **$3M+ vendor portfolio** (11 contracts)
-
-</td>
-<td width="50%">
-
-### 🏆 Certifications & Credentials
-
-- ☁️ **AWS Certified**
-- 📊 **Tableau Certified**
-- 🎯 **Seeking Director/VP roles** in:
-  - Enterprise Platforms
-  - Global CRM Strategy
-  - Digital Transformation Leadership
-
-### 📄 Professional Materials
-
-- [Resume (PDF)](public/resume.pdf)
-- [LinkedIn Profile](https://linkedin.com/in/zacharylsluss)
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-**I architect Salesforce Multi-Cloud • MuleSoft integrations • Enterprise data strategy • API-led architecture**
-**I also build particle systems at 60 FPS • Because the best leaders never stop coding**
-
-</div>
-
----
-
 ## 📚 Table of Contents
 
 <details>
 <summary><b>Jump to a section</b></summary>
 
-- [🔬 Advanced Shader Effects](#-advanced-shader-effects)
 - [🛠️ Tech Stack](#️-tech-stack)
+- [🔬 Advanced Shader Effects](#-advanced-shader-effects)
 - [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
-- [📦 What's Included](#-whats-included)
 - [🤝 Want to Fork This?](#-want-to-fork-this)
+- [💡 Why I Built This](#-why-i-built-this)
+- [🎯 Beyond This Portfolio](#-beyond-this-portfolio)
 - [📬 Let's Connect](#-lets-connect)
 - [📄 License](#-license)
+
+</details>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+### What I Used to Build This
+
+<img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Tech Stack" />
+
+### Core Dependencies
+
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/React-19.1.1-61dafb?style=flat-square&logo=react&logoColor=white"/><br/>
+<sub><b>UI Framework</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Three.js-0.180.0-000000?style=flat-square&logo=three.js&logoColor=white"/><br/>
+<sub><b>3D Library</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/Vite-7.1.2-646cff?style=flat-square&logo=vite&logoColor=white"/><br/>
+<sub><b>Build Tool</b></sub>
+</td>
+<td align="center" width="25%">
+<img src="https://img.shields.io/badge/ESLint-9.33.0-4b32c3?style=flat-square&logo=eslint&logoColor=white"/><br/>
+<sub><b>Code Quality</b></sub>
+</td>
+</tr>
+</table>
+
+</div>
+
+<details>
+<summary><b>📦 See the full dependency list</b></summary>
+
+```json
+{
+  "dependencies": {
+    "@react-three/drei": "^10.7.6",
+    "@react-three/fiber": "^9.3.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "terser": "^5.44.0",
+    "vite-plugin-compression": "^0.5.1",
+    "rollup-plugin-visualizer": "^6.0.5"
+  }
+}
+```
+
+**Why so few dependencies?**
+I wrote all the shaders from scratch. No particle libraries, no animation libraries. Just pure WebGL, Three.js, and custom GLSL code.
 
 </details>
 
@@ -318,67 +305,6 @@ Multi-layer 3D with independent particle motion
 
 ---
 
-## 🛠️ Tech Stack
-
-<div align="center">
-
-### What I Used to Build This
-
-<img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Tech Stack" />
-
-### Core Dependencies
-
-<table>
-<tr>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/React-19.1.1-61dafb?style=flat-square&logo=react&logoColor=white"/><br/>
-<sub><b>UI Framework</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/Three.js-0.180.0-000000?style=flat-square&logo=three.js&logoColor=white"/><br/>
-<sub><b>3D Library</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/Vite-7.1.2-646cff?style=flat-square&logo=vite&logoColor=white"/><br/>
-<sub><b>Build Tool</b></sub>
-</td>
-<td align="center" width="25%">
-<img src="https://img.shields.io/badge/ESLint-9.33.0-4b32c3?style=flat-square&logo=eslint&logoColor=white"/><br/>
-<sub><b>Code Quality</b></sub>
-</td>
-</tr>
-</table>
-
-</div>
-
-<details>
-<summary><b>📦 See the full dependency list</b></summary>
-
-```json
-{
-  "dependencies": {
-    "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "^9.3.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "three": "^0.180.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.0",
-    "terser": "^5.44.0",
-    "vite-plugin-compression": "^0.5.1",
-    "rollup-plugin-visualizer": "^6.0.5"
-  }
-}
-```
-
-**Why so few dependencies?**
-I wrote all the shaders from scratch. No particle libraries, no animation libraries. Just pure WebGL, Three.js, and custom GLSL code.
-
-</details>
-
----
-
 ## 🚀 Quick Start
 
 <div align="center">
@@ -390,7 +316,7 @@ I wrote all the shaders from scratch. No particle libraries, no animation librar
 ```bash
 # 1️⃣ Clone this repo
 git clone https://github.com/Zacsluss/portfolio.git
-cd portfolio/particle-portfolio
+cd portfolio
 
 # 2️⃣ Install dependencies
 npm install
@@ -489,55 +415,6 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 
 ---
 
-## 📦 What's Included
-
-<div align="center">
-
-### Everything you need — I've done the hard parts
-
-</div>
-
-<table>
-<tr>
-<td width="50%">
-
-#### ✨ Features
-
-- ✅ 6 fully-built sections (see below)
-- ✅ 30,000-particle name morphing system
-- ✅ Starfield with bokeh & chromatic aberration
-- ✅ Custom WebGL cursor
-- ✅ Konami code easter egg (try it!)
-- ✅ Fully responsive (desktop → mobile)
-
-</td>
-<td width="50%">
-
-#### 🔧 Developer Tools
-
-- ✅ Hot Module Reload (instant updates)
-- ✅ ESLint configuration (code quality)
-- ✅ Production build optimization
-- ✅ GitHub Pages deployment script
-- ✅ Bundle analyzer (see what's bloating)
-- ✅ TypeScript ready (if you want to add it)
-
-</td>
-</tr>
-</table>
-
-**All the sections you'd expect:**
-```
-1. About       - Who I am, what I do
-2. Experience  - Where I've worked
-3. Projects    - Cool stuff I've built
-4. Skills      - What I'm good at
-5. Additional  - Side projects & experiments
-6. Contact     - Let's connect!
-```
-
----
-
 ## 🤝 Want to Fork This?
 
 <div align="center">
@@ -569,6 +446,81 @@ Fork it, make it yours, no credit needed (but a star would be cool ⭐)
 | **Mobile Support** | 📱 Adaptive rendering | ❌ Often broken |
 | **Bundle Size** | 📦 303KB optimized | 💾 Often 1MB+ |
 | **Setup Time** | ⏱️ 5 minutes | ⏰ Hours/days |
+
+---
+
+## 💡 Why I Built This
+
+**Three reasons:**
+
+1. **Prove technical credibility at the leadership level.** When you govern $5M+ budgets, people question if you can still code. This demonstrates I can review PRs, debug shaders, optimize performance — AND present to the C-suite.
+
+2. **Stay sharp and challenged.** WebGL and GPU programming keep my skills cutting-edge while directing vendor portfolios and ensuring SOX compliance. I learn by building.
+
+3. **Demonstrate my philosophy: efficiency, automation, analytics.** 60 FPS with 30K particles. 303KB gzipped. Adaptive rendering. Every decision data-driven, every feature performance-tested. This is how I approach enterprise architecture.
+
+<div align="center">
+
+### What this proves:
+
+✅ **Technical depth** at leadership level (still ship production code)
+✅ **Relentlessly curious** (never-ending quest for knowledge)
+✅ **Optimize everything** (60 FPS, 30K particles, 70% compression)
+✅ **Automate by instinct** (lazy loading, code splitting, GPU acceleration)
+✅ **Data-driven decisions** (benchmarks, analytics, metrics)
+✅ **Multi-passionate** (AI/ML, art, music, photography, strategy)
+✅ **Ship at scale** ($5M+ enterprise platforms + this)
+
+</div>
+
+---
+
+## 🎯 Beyond This Portfolio
+
+While this site showcases WebGL and front-end skills, **my day job is enterprise-scale technology leadership:**
+
+<table>
+<tr>
+<td width="50%">
+
+### 💼 Professional Role
+
+**Lead CRM Systems Analyst** @ Computershare
+- 📊 Govern **$5M+ annual platform portfolio**
+- 🌍 Manage **3,000+ users across 22 countries**
+- 📈 Led programs delivering **40% productivity gains**
+- ⚡ Automated **12,000+ hours annually**
+- 🎯 **100% SOX compliance** with zero breaches
+- 👥 Matrix leadership across **12 global teams**
+- 💰 Oversee **$3M+ vendor portfolio** (11 contracts)
+
+</td>
+<td width="50%">
+
+### 🏆 Certifications & Credentials
+
+- ☁️ **AWS Certified**
+- 📊 **Tableau Certified**
+- 🎯 **Seeking Director/VP roles** in:
+  - Enterprise Platforms
+  - Global CRM Strategy
+  - Digital Transformation Leadership
+
+### 📄 Professional Materials
+
+- [Resume (PDF)](public/resume.pdf)
+- [LinkedIn Profile](https://linkedin.com/in/zacharylsluss)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+**I architect Salesforce Multi-Cloud • MuleSoft integrations • Enterprise data strategy • API-led architecture**
+**I also build particle systems at 60 FPS • Because the best leaders never stop coding**
+
+</div>
 
 ---
 
