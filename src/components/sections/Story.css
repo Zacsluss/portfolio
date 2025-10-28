@@ -41,7 +41,7 @@
 }
 
 .story-card {
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.08) 0%, rgba(0, 8, 20, 0.6) 50%, rgba(0, 255, 136, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.18) 0%, rgba(0, 8, 20, 0.7) 50%, rgba(0, 255, 136, 0.18) 100%);
   border: 1px solid rgba(0, 136, 255, 0.2);
   border-radius: 15px;
   padding: 30px;
@@ -61,7 +61,7 @@
 .story-card-highlight {
   grid-column: 1 / -1;
   border-color: rgba(0, 255, 136, 0.3);
-  background: linear-gradient(135deg, rgba(0, 136, 255, 0.08) 0%, rgba(0, 20, 15, 0.6) 50%, rgba(0, 255, 136, 0.08) 100%);
+  background: linear-gradient(135deg, rgba(0, 136, 255, 0.18) 0%, rgba(0, 20, 15, 0.7) 50%, rgba(0, 255, 136, 0.18) 100%);
 }
 
 .story-card-highlight:hover {
