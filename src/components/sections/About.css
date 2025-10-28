@@ -68,7 +68,7 @@
   border-radius: 50%;
   border: 3px solid rgba(0, 255, 136, 0.4);
   padding: 5px;
-  background: rgba(0, 8, 20, 0.8);
+  background: transparent;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
   transition: all 0.3s ease;
@@ -133,7 +133,7 @@
   flex-direction: column;
   gap: 20px;
   /* Glass panel styling */
-  background: rgba(0, 8, 20, 0.8);
+  background: transparent;
   border: 1px solid rgba(0, 255, 136, 0.2);
   border-radius: 15px;
   padding: 30px;
@@ -168,7 +168,7 @@
 }
 
 .quick-facts-card {
-  background: rgba(0, 8, 20, 0.8);
+  background: transparent;
   border: 1px solid rgba(0, 255, 136, 0.2);
   border-radius: 15px;
   padding: 30px;
