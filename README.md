@@ -393,7 +393,7 @@ I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 36
 
 <br/>
 
-[Resume (PDF)](public/resume.pdf)
+[Download Resume](public/resume.pdf)
 
 <br/>
 
