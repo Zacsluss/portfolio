@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/🚀_VIEW-MY_PORTFOLIO-2e8b57?style=for-the-badge&labelColor=000000&logo=vercel&logoColor=white" alt="Live Site"/>
   </a>
   <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip">
-    <img src="https://img.shields.io/badge/⬇️_FORK-THIS_TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
+    <img src="https://img.shields.io/badge/⬇️_DOWNLOAD-TEMPLATE-d97706?style=for-the-badge&labelColor=000000&logo=github&logoColor=white" alt="Download"/>
   </a>
 </p>
 
@@ -43,7 +43,7 @@ I work on enterprise platforms by day and build unusually fun projects by night.
 - Custom GLSL shaders for particle physics
 - 60 FPS on desktop with adaptive scaling for mobile
 - 303KB optimized bundle with code splitting and lazy loading
-- Fully interactive — type anything to watch particles morph. Steer your spacechip as you hurdle through space!
+- Fully interactive — type anything to watch particles morph. Steer your spaceship as you hurdle through space!
 
 Built with React, Three.js, and a little science!
 
