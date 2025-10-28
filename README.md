@@ -37,18 +37,15 @@
 
 ## 👋 Hey, I'm Zac
 
-**Lead CRM Systems Analyst @ Computershare** | AWS & Tableau Certified | Seeking Director/VP Roles
+I work on enterprise platforms by day and build interactive WebGL projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text in real-time 3D space.
 
-**Leadership Scale:**
-- 💰 Govern **$5M+ platform portfolio** across 22 countries
-- 👥 **3,000+ users** • 12 global teams • $3M vendor portfolio
-- 📈 **40% productivity gains** • 12,000+ hours automated annually
-- 🎯 **100% SOX compliance** • Zero security breaches
+**What makes it interesting:**
+- Custom GLSL shaders for particle physics (black holes, supernovas, chromatic aberration)
+- 60 FPS on desktop with adaptive scaling for mobile
+- 303KB optimized bundle with code splitting and lazy loading
+- Fully interactive — type anything to watch particles morph
 
-**This portfolio proves:** I still ship production code at 60 FPS while leading enterprise architecture.
-30,000 GPU-accelerated particles • Custom GLSL shaders • 303KB optimized bundle.
-
-**Seeking:** Director/VP roles in Enterprise Platforms, Global CRM Strategy, Digital Transformation
+Built with React, Three.js, and a lot of caffeine.
 
 <div align="center">
 
@@ -89,8 +86,7 @@
 - [🚀 Quick Start](#-quick-start)
 - [📊 Performance Benchmarks](#-performance-benchmarks)
 - [🤝 Open Source](#-open-source-mit-license)
-- [💡 What This Proves](#-what-this-proves)
-- [🎯 Beyond This Portfolio](#-beyond-this-portfolio)
+- [🎯 About Me](#-about-me)
 - [📬 Let's Connect](#-lets-connect)
 - [📄 License](#-license)
 
@@ -363,64 +359,15 @@ Fork it, customize it, deploy it in 5 minutes. No credit needed (but a ⭐ appre
 
 ---
 
-## 💡 What This Proves
+## 🎯 About Me
 
-**Technical leadership at scale:**
+By day, I work as a Lead CRM Systems Analyst at Computershare, managing enterprise platforms and Salesforce integrations across global teams. By night, I build stuff like this.
 
-✅ **Code + Strategy:** Ship production code while governing $5M+ budgets
-✅ **Performance-obsessed:** 60 FPS, 30K particles, 70% bundle compression
-✅ **Never stop learning:** WebGL/GPU programming while directing SOX compliance
-✅ **Data-driven:** Every decision benchmarked, tested, optimized
-✅ **Multi-passionate:** AI/ML, digital art, music, 360° photography, analytics
+I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 360° drone photography. Always learning, always building.
 
----
-
-## 🎯 Beyond This Portfolio
-
-While this site showcases WebGL and front-end skills, **my day job is enterprise-scale technology leadership:**
-
-<table>
-<tr>
-<td width="50%">
-
-### 💼 Professional Role
-
-**Lead CRM Systems Analyst** @ Computershare
-- 📊 Govern **$5M+ annual platform portfolio**
-- 🌍 Manage **3,000+ users across 22 countries**
-- 📈 Led programs delivering **40% productivity gains**
-- ⚡ Automated **12,000+ hours annually**
-- 🎯 **100% SOX compliance** with zero breaches
-- 👥 Matrix leadership across **12 global teams**
-- 💰 Oversee **$3M+ vendor portfolio** (11 contracts)
-
-</td>
-<td width="50%">
-
-### 🏆 Certifications & Credentials
-
-- ☁️ **AWS Certified**
-- 📊 **Tableau Certified**
-- 🎯 **Seeking Director/VP roles** in:
-  - Enterprise Platforms
-  - Global CRM Strategy
-  - Digital Transformation Leadership
-
-### 📄 Professional Materials
-
+**Find me:**
+- [LinkedIn](https://linkedin.com/in/zacharylsluss)
 - [Resume (PDF)](public/resume.pdf)
-- [LinkedIn Profile](https://linkedin.com/in/zacharylsluss)
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-**I architect Salesforce Multi-Cloud • MuleSoft integrations • Enterprise data strategy • API-led architecture**
-**I also build particle systems at 60 FPS • Because the best leaders never stop coding**
-
-</div>
 
 ---
 
