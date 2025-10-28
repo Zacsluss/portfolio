@@ -236,25 +236,27 @@ Multi-layer 3D with independent particle motion
 <td width="50%">
 
 #### Desktop (1920×1080)
-| Metric | Value |
-|:------:|:-----:|
-| Particle Count | 30,000 |
-| Average FPS | 60 |
-| GPU Usage | ~30% |
-| Memory | ~120MB |
-| Initial Load | 1.2s |
+<table>
+<tr><th align="center">Metric</th><th align="center">Value</th></tr>
+<tr><td align="center">Particle Count</td><td align="center">30,000</td></tr>
+<tr><td align="center">Average FPS</td><td align="center">60</td></tr>
+<tr><td align="center">GPU Usage</td><td align="center">~30%</td></tr>
+<tr><td align="center">Memory</td><td align="center">~120MB</td></tr>
+<tr><td align="center">Initial Load</td><td align="center">1.2s</td></tr>
+</table>
 
 </td>
 <td width="50%">
 
 #### Mobile (iPhone 12)
-| Metric | Value |
-|:------:|:-----:|
-| Particle Count | 10,000 |
-| Average FPS | 30 |
-| GPU Usage | ~50% |
-| Memory | ~80MB |
-| Initial Load | 2.1s |
+<table>
+<tr><th align="center">Metric</th><th align="center">Value</th></tr>
+<tr><td align="center">Particle Count</td><td align="center">10,000</td></tr>
+<tr><td align="center">Average FPS</td><td align="center">30</td></tr>
+<tr><td align="center">GPU Usage</td><td align="center">~50%</td></tr>
+<tr><td align="center">Memory</td><td align="center">~80MB</td></tr>
+<tr><td align="center">Initial Load</td><td align="center">2.1s</td></tr>
+</table>
 
 </td>
 </tr>
