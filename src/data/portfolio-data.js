@@ -3,9 +3,7 @@ export const portfolioData = {
     name: "Zachary Sluss",
     title: "Lead CRM Systems Analyst",
     tagline: "Enterprise Technology Leader driving multi-million-dollar CRM, ERP, and data ecosystems for Fortune 500 enterprises",
-    bio: "I design and lead CRM ecosystems that scale across 22+ countries, empower 3,000+ global users, and deliver measurable results—40%+ productivity gains and multimillion-dollar ROI year over year. My focus is translating complexity into clarity: aligning Salesforce multi-cloud architecture, data strategy, and API-led integrations with the growth goals that matter to executives and end users alike.
-
-By day, I govern $5M+ Salesforce programs and drive enterprise-wide digital transformation; by night, I build particle systems at 60 FPS, experiment with AI-assisted art, and capture 360° drone worlds. I believe the best technology leaders are creators at heart—curious, hands-on, and driven to make systems not just efficient, but inspiring.",
+    bio: "I design and lead CRM ecosystems that scale across 22+ countries, empower 3,000+ global users, and deliver measurable results—40%+ productivity gains and multimillion-dollar ROI year over year. My focus is translating complexity into clarity: aligning Salesforce multi-cloud architecture, data strategy, and API-led integrations with the growth goals that matter to executives and end users alike.\n\nBy day, I govern $5M+ Salesforce programs and drive enterprise-wide digital transformation; by night, I build particle systems at 60 FPS, experiment with AI-assisted art, and capture 360° drone worlds. I believe the best technology leaders are creators at heart—curious, hands-on, and driven to make systems not just efficient, but inspiring.",
     location: "New Hampshire, USA (Remote)",
     email: "zacharyjsluss@gmail.com",
     phone: "(603) 515-6051",
