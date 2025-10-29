@@ -211,10 +211,15 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Automation & Security",
+      category: "Automation",
       skills: [
         { name: "UiPath", level: "Advanced", years: 3 },
         { name: "Automation Anywhere", level: "Advanced", years: 2 },
+      ],
+    },
+    {
+      category: "Security",
+      skills: [
         { name: "Okta SSO", level: "Advanced", years: 3 },
         { name: "OneTrust", level: "Advanced", years: 2 },
         { name: "TrustArc", level: "Advanced", years: 2 },
