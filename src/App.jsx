@@ -55,44 +55,16 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Smooth scroll handler with RAF for better performance
+  // Handle wheel events at window level to enable scrolling everywhere
+  // Canvas is position:fixed but content has z-index:10, so we need window-level handler
   useEffect(() => {
-    let scrollPending = 0
-    let rafId = null
-
-    const smoothScroll = () => {
-      if (Math.abs(scrollPending) > 0.5) {
-        const scrollAmount = scrollPending * 0.2 // Smooth damping
-        window.scrollBy(0, scrollAmount)
-        scrollPending -= scrollAmount
-        rafId = requestAnimationFrame(smoothScroll)
-      } else {
-        scrollPending = 0
-        rafId = null
-      }
-    }
-
     const handleWheel = (event) => {
-      // Only handle if wheel event is on the canvas or not on a scrollable element
-      const target = event.target
-      const isCanvas = target.tagName === 'CANVAS' || target.closest('.canvas')
-
-      if (isCanvas) {
-        event.preventDefault()
-        scrollPending += event.deltaY
-
-        if (!rafId) {
-          rafId = requestAnimationFrame(smoothScroll)
-        }
-      }
+      // Scroll the page - browser handles momentum naturally
+      window.scrollBy(0, event.deltaY)
     }
 
-    window.addEventListener('wheel', handleWheel, { passive: false })
-
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-      if (rafId) cancelAnimationFrame(rafId)
-    }
+    window.addEventListener('wheel', handleWheel, { passive: true })
+    return () => window.removeEventListener('wheel', handleWheel)
   }, [])
 
   // Konami code easter egg
