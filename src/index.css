@@ -19,7 +19,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* Removed smooth scroll - conflicts with Canvas wheel handler */
+  /* scroll-behavior: smooth; */
 }
 
 html, body {
