@@ -55,32 +55,45 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Force browser to calculate scroll height AFTER content renders
-  // This ensures scrolling works immediately without needing to click nav first
+  // Smooth scroll handler with RAF for better performance
   useEffect(() => {
-    // Wait for React to finish rendering all content, then force height recalculation
-    const timer = setTimeout(() => {
-      // Force browser to recalculate document height
-      document.body.style.height = 'auto'
+    let scrollPending = 0
+    let rafId = null
 
-      // Trigger a reflow to ensure the browser recognizes the page dimensions
-      // This is a non-visual way to force the browser to recalculate without scrolling
-      void document.body.offsetHeight
-    }, 100) // Small delay to let all components render
+    const smoothScroll = () => {
+      if (Math.abs(scrollPending) > 0.5) {
+        const scrollAmount = scrollPending * 0.2 // Smooth damping
+        window.scrollBy(0, scrollAmount)
+        scrollPending -= scrollAmount
+        rafId = requestAnimationFrame(smoothScroll)
+      } else {
+        scrollPending = 0
+        rafId = null
+      }
+    }
 
-    return () => clearTimeout(timer)
+    const handleWheel = (event) => {
+      // Only handle if wheel event is on the canvas or not on a scrollable element
+      const target = event.target
+      const isCanvas = target.tagName === 'CANVAS' || target.closest('.canvas')
+
+      if (isCanvas) {
+        event.preventDefault()
+        scrollPending += event.deltaY
+
+        if (!rafId) {
+          rafId = requestAnimationFrame(smoothScroll)
+        }
+      }
+    }
+
+    window.addEventListener('wheel', handleWheel, { passive: false })
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+      if (rafId) cancelAnimationFrame(rafId)
+    }
   }, [])
-
-  // Handle wheel events on Canvas to enable page scrolling
-  // The Canvas is position:fixed and covers the viewport, so it intercepts wheel events
-  // We manually translate wheel events to page scrolls so both drag AND scroll work
-  const handleCanvasWheel = (event) => {
-    // Scroll the page by the wheel delta
-    window.scrollBy({
-      top: event.deltaY,
-      behavior: 'auto' // Instant scroll, not smooth (for responsiveness)
-    })
-  }
 
   // Konami code easter egg
   useKonamiCode(() => {
@@ -108,7 +121,6 @@ function App() {
           alpha: false,
           pixelRatio: Math.min(window.devicePixelRatio, 2)
         }}
-        onWheel={handleCanvasWheel}
       >
         {/* Debug tools - removed for production */}
         
