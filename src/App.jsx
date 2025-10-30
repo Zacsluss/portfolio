@@ -63,9 +63,9 @@ function App() {
       // Force browser to recalculate document height
       document.body.style.height = 'auto'
 
-      // Scroll down 1px then back to top - forces browser to recognize page is scrollable
-      window.scrollTo(0, 1)
-      window.scrollTo(0, 0)
+      // Trigger a reflow to ensure the browser recognizes the page dimensions
+      // This is a non-visual way to force the browser to recalculate without scrolling
+      void document.body.offsetHeight
     }, 100) // Small delay to let all components render
 
     return () => clearTimeout(timer)
