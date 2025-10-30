@@ -57,6 +57,7 @@
   height: 280px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .skill-category-card:hover {
