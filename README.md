@@ -225,6 +225,11 @@ Multi-layer 3D with independent particle motion
 
 ## 📊 Performance Benchmarks
 
+<details>
+<summary><b>📈 See real production benchmarks (Desktop vs Mobile)</b></summary>
+
+<br/>
+
 <div align="center">
 
 ### Real numbers from my production build
@@ -262,6 +267,8 @@ Multi-layer 3D with independent particle motion
 
 </div>
 
+</details>
+
 <details>
 <summary><b>📦 Bundle size breakdown</b></summary>
 
@@ -295,6 +302,17 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 </div>
 
 ```bash
+git clone https://github.com/Zacsluss/portfolio.git && cd portfolio && npm install && npm run dev
+```
+
+<details>
+<summary><b>💻 Local Development Setup</b></summary>
+
+<br/>
+
+**Step-by-step installation:**
+
+```bash
 # 1️⃣ Clone this repo
 git clone https://github.com/Zacsluss/portfolio.git
 cd portfolio
@@ -305,16 +323,64 @@ npm install
 # 3️⃣ Start dev server
 npm run dev
 # Opens at http://localhost:5173/portfolio/
+```
 
-# 4️⃣ Build for production
+**Available npm scripts:**
+- `npm run dev` — Start dev server with hot reload
+- `npm run build` — Build for production
+- `npm run preview` — Preview production build locally
+- `npm run deploy` — Deploy to GitHub Pages
+
+</details>
+
+<details>
+<summary><b>🏗️ Production Build & Preview</b></summary>
+
+<br/>
+
+**Build and test locally:**
+
+```bash
+# Build optimized production bundle
 npm run build
 
-# 5️⃣ Deploy to GitHub Pages
+# Preview the production build
+npm run preview
+# Opens at http://localhost:4173/portfolio/
+```
+
+**Build output:**
+- Output folder: `dist/`
+- Bundle size: ~303KB gzipped
+- Includes: Code splitting, minification, compression
+
+</details>
+
+<details>
+<summary><b>🚀 Deploy to GitHub Pages</b></summary>
+
+<br/>
+
+**One-command deployment:**
+
+```bash
 npm run deploy
 ```
 
+This will:
+1. Build the production bundle
+2. Push to `gh-pages` branch
+3. Deploy to: `https://[username].github.io/portfolio/`
+
+**Setup requirements:**
+- GitHub repo must be public (or have GitHub Pages enabled)
+- Update `base` in `vite.config.js` if using custom domain
+- Update homepage in `package.json`
+
+</details>
+
 <details>
-<summary><b>🔧 How to customize it for yourself</b></summary>
+<summary><b>🔧 Customize for Yourself</b></summary>
 
 <br/>
 
@@ -324,7 +390,7 @@ npm run deploy
 2. **Your images**: Drop your project screenshots in `public/portfolio-images/`
 3. **Your SEO**: Update meta tags in `index.html`
 4. **Your colors**: Tweak the color scheme in `src/App.css`
-5. **Your domain**: Run `npm run deploy` to push it live
+5. **Your resume**: Replace `public/resume.pdf` with your own
 
 **Want to change what the particles spell?**
 - Open `src/App.jsx`
