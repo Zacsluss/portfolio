@@ -78,7 +78,7 @@ export default defineConfig({
 
   // Dev server optimization
   server: {
-    port: 3000,
+    port: 2945,
     open: true,
   },
 

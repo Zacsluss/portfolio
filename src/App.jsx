@@ -11,7 +11,6 @@ import './App.css'
 const About = lazy(() => import('./components/sections/About').then(m => ({ default: m.About })))
 const Skills = lazy(() => import('./components/sections/Skills').then(m => ({ default: m.Skills })))
 const Experience = lazy(() => import('./components/sections/Experience').then(m => ({ default: m.Experience })))
-const Projects = lazy(() => import('./components/sections/Projects').then(m => ({ default: m.Projects })))
 const Leadership = lazy(() => import('./components/sections/Leadership').then(m => ({ default: m.Leadership })))
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })))
 
@@ -191,7 +190,6 @@ function App() {
           <a href="#about" className="nav-link">About</a>
           <a href="#skills" className="nav-link">Skills</a>
           <a href="#experience" className="nav-link">Experience</a>
-          <a href="#projects" className="nav-link">Projects</a>
           <a href="#leadership" className="nav-link">Leadership & Passions</a>
           <a href="#contact" className="nav-link">Contact</a>
         </div>
@@ -215,18 +213,13 @@ function App() {
             <Experience />
           </div>
 
-          {/* Projects Section */}
-          <div id="projects" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
-            <Projects />
-          </div>
-
           {/* Leadership Philosophy Section */}
-          <div id="leadership" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+          <div id="leadership" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
             <Leadership />
           </div>
 
           {/* Contact Section */}
-          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-7' : ''}`}>
+          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
             <Contact />
           </div>
         </Suspense>

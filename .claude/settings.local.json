@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(copy \"E:\\AAA\\Resume & Employment\\Resume & Employment\\Zachary Sluss Resume.pdf\" \"c:\\Dev\\portfolio\\public\\resume.pdf\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(curl:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)",
+      "Read(//c/Dev/**)",
+      "Read(//c/Users/zacsl/Downloads/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
