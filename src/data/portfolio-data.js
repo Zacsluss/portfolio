@@ -427,3 +427,12 @@ export const calculateDuration = (startDate, endDate) => {
     return `${remainingMonths}m`;
   }
 };
+
+// Calculate skill level based on years of experience
+// 5+ years = Expert, 3-4 years = Advanced, 1-2 years = Intermediate, <1 year = Beginner
+export const calculateSkillLevel = (years) => {
+  if (years >= 5) return 'Expert';
+  if (years >= 3) return 'Advanced';
+  if (years >= 1) return 'Intermediate';
+  return 'Beginner';
+};
