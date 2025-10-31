@@ -1,4 +1,4 @@
-import { portfolioData } from '../../data/portfolio-data'
+import { portfolioData, calculateSkillLevel } from '../../data/portfolio-data'
 import './Skills.css'
 
 const getLevelColor = (level) => {
@@ -38,21 +38,27 @@ export function Skills() {
               </h3>
 
               <div className="skills-list">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      {skill.level && (
-                        <span className={`skill-level ${getLevelColor(skill.level)}`}>
-                          {skill.level}
-                        </span>
+                {category.skills.map((skill, skillIndex) => {
+                  // Use calculated level based on years for consistency
+                  // Manual level is kept in data for reference but calculated level ensures accuracy
+                  const effectiveLevel = skill.years ? calculateSkillLevel(skill.years) : skill.level
+
+                  return (
+                    <div key={skillIndex} className="skill-item">
+                      <div className="skill-info">
+                        <span className="skill-name">{skill.name}</span>
+                        {effectiveLevel && (
+                          <span className={`skill-level ${getLevelColor(effectiveLevel)}`}>
+                            {effectiveLevel}
+                          </span>
+                        )}
+                      </div>
+                      {skill.years && (
+                        <span className="skill-years">{skill.years}y</span>
                       )}
                     </div>
-                    {skill.years && (
-                      <span className="skill-years">{skill.years}y</span>
-                    )}
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           ))}
@@ -63,19 +69,19 @@ export function Skills() {
           <span className="legend-label">Skill Level:</span>
           <div className="legend-item">
             <span className="legend-dot legend-expert" />
-            <span>Expert</span>
+            <span>Expert (5+ years)</span>
           </div>
           <div className="legend-item">
             <span className="legend-dot legend-advanced" />
-            <span>Advanced</span>
+            <span>Advanced (3-4 years)</span>
           </div>
           <div className="legend-item">
             <span className="legend-dot legend-intermediate" />
-            <span>Intermediate</span>
+            <span>Intermediate (1-2 years)</span>
           </div>
           <div className="legend-item">
             <span className="legend-dot legend-beginner" />
-            <span>Beginner</span>
+            <span>Beginner (&lt;1 year)</span>
           </div>
         </div>
       </div>
