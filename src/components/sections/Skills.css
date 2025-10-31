@@ -150,27 +150,27 @@
 }
 
 .level-expert {
-  background: rgba(0, 255, 136, 0.15);
-  color: #00ff88;
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: rgba(100, 180, 255, 0.15);
+  color: #64b4ff;
+  border: 1px solid rgba(100, 180, 255, 0.3);
 }
 
 .level-advanced {
-  background: rgba(0, 136, 255, 0.15);
-  color: #0088ff;
-  border: 1px solid rgba(135, 206, 250, 0.5);
+  background: rgba(100, 220, 150, 0.15);
+  color: #64dc96;
+  border: 1px solid rgba(100, 220, 150, 0.3);
 }
 
 .level-intermediate {
-  background: rgba(255, 190, 11, 0.15);
-  color: #ffbe0b;
-  border: 1px solid rgba(255, 190, 11, 0.3);
+  background: rgba(160, 160, 160, 0.15);
+  color: #a0a0a0;
+  border: 1px solid rgba(160, 160, 160, 0.3);
 }
 
 .level-beginner {
-  background: rgba(136, 136, 136, 0.15);
-  color: #888;
-  border: 1px solid rgba(136, 136, 136, 0.3);
+  background: rgba(100, 100, 100, 0.15);
+  color: #646464;
+  border: 1px solid rgba(100, 100, 100, 0.3);
 }
 
 .skill-years {
@@ -213,22 +213,23 @@
 }
 
 .legend-expert {
-  background: #00ff88;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  background: #64b4ff;
+  box-shadow: 0 0 10px rgba(100, 180, 255, 0.5);
 }
 
 .legend-advanced {
-  background: #0088ff;
-  box-shadow: 0 0 10px rgba(135, 206, 250, 0.5);
+  background: #64dc96;
+  box-shadow: 0 0 10px rgba(100, 220, 150, 0.5);
 }
 
 .legend-intermediate {
-  background: #ffbe0b;
-  box-shadow: 0 0 10px rgba(255, 190, 11, 0.5);
+  background: #a0a0a0;
+  box-shadow: 0 0 10px rgba(160, 160, 160, 0.5);
 }
 
 .legend-beginner {
-  background: #888;
+  background: #646464;
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.5);
 }
 
 /* Responsive */

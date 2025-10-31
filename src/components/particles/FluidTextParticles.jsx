@@ -108,11 +108,10 @@ const FluidParticleMaterial = shaderMaterial(
 
       if (mouseDistance < attractionRadius && mouseDistance > 0.1) {
         // Gentle pull toward mouse, stronger when closer
-        float attractionStrength = (1.0 - mouseDistance / attractionRadius) * 0.8; // More noticeable pull
+        float attractionStrength = (1.0 - mouseDistance / attractionRadius) * 0.3;
 
         // TRAIL EFFECT - When mouse moves fast, add extra drag/momentum
-        // Increased multiplier from 0.5 to 2.0 for more visible trail
-        float trailEffect = mouseVelocity * 2.0; // Velocity from mouse speed
+        float trailEffect = mouseVelocity * 0.8;
         attractionStrength += trailEffect * (1.0 - mouseDistance / attractionRadius);
 
         morphedPos.xy += normalize(toMouse) * attractionStrength * t; // Only when formed
@@ -121,7 +120,8 @@ const FluidParticleMaterial = shaderMaterial(
       // DEPTH/PARALLAX - Particles at different z-depths move differently with mouse
       // Closer particles (negative z) move more, creating depth illusion
       float depthFactor = (morphedPos.z + 1.0) * 0.5; // Normalize z to 0-1
-      vec2 parallaxOffset = mousePosition * 0.05 * (1.0 - depthFactor) * t;
+
+      vec2 parallaxOffset = mousePosition * 0.012 * (1.0 - depthFactor) * t; // Uniform parallax across all particles
       morphedPos.xy += parallaxOffset;
       
       // DISABLE pulsing entirely for maximum stability
@@ -299,6 +299,7 @@ export function FluidTextParticles({
 
     const textCenterX = (minX + maxX) / 2
     const textCenterY = (minY + maxY) / 2
+    const textWidth = maxX - minX
     const positions = []
 
     const step = 1
@@ -309,7 +310,20 @@ export function FluidTextParticles({
           const scale = 0.12
           const px = (x - textCenterX) * scale
           const py = -(y - textCenterY) * scale
-          const pz = (Math.random() - 0.5) * 2
+
+          // Calculate Z-depth falloff based on distance from text center
+          // Use smooth exponential curve for gradual transition
+          // Center (px = 0): full depth ±1.0
+          // Edges (px = textWidth/2): minimal depth ±0.1
+          const distanceFromCenterX = Math.abs(px)
+          const maxDistanceX = (textWidth / 2) * scale
+          const normalizedDistance = Math.min(distanceFromCenterX / maxDistanceX, 1.0)
+
+          // Use cubic curve for smooth, gradual falloff (1.0 -> 0.1)
+          const depthFalloff = 1.0 - (normalizedDistance * normalizedDistance * normalizedDistance * 0.9)
+          const maxDepth = 1.5 * depthFalloff // Range from ±0.75 at center to ±0.075 at edges (25% reduction)
+          const pz = (Math.random() - 0.5) * maxDepth
+
           positions.push(px, py, pz)
         }
       }
@@ -506,25 +520,35 @@ export function FluidTextParticles({
         material.current.explosionEffect = 0
       }
 
-      // Update mouse position for interactivity
-      // Simple and accurate: use normalized mouse coords scaled to particle space
+      // Update mouse position for interactivity using proper raycasting
       let currentMouseX, currentMouseY
 
       if (points.current) {
-        // Get the group's world position
+        // Create raycaster to properly project screen coordinates to 3D space
+        const raycaster = new THREE.Raycaster()
+        raycaster.setFromCamera(mouse, state.camera)
+
+        // Create a plane at the particle's Z position in world space
         const groupWorldPos = new THREE.Vector3()
         points.current.getWorldPosition(groupWorldPos)
 
-        // Project camera-relative mouse position to the particle plane
-        // Account for camera position and perspective
-        const distance = state.camera.position.distanceTo(groupWorldPos)
-        const fov = state.camera.fov * (Math.PI / 180)
-        const viewportHeightAtDistance = 2 * Math.tan(fov / 2) * distance
-        const viewportWidthAtDistance = viewportHeightAtDistance * state.camera.aspect
+        // Plane perpendicular to camera view, passing through particles
+        const planeNormal = new THREE.Vector3()
+        state.camera.getWorldDirection(planeNormal)
+        const plane = new THREE.Plane().setFromNormalAndCoplanarPoint(
+          planeNormal,
+          groupWorldPos
+        )
 
-        // Scale mouse position to actual viewport size at particle distance
-        currentMouseX = mouse.x * (viewportWidthAtDistance / 2)
-        currentMouseY = mouse.y * (viewportHeightAtDistance / 2)
+        // Raycast to find intersection with particle plane
+        const intersectionPoint = new THREE.Vector3()
+        raycaster.ray.intersectPlane(plane, intersectionPoint)
+
+        // Convert world space intersection to particle local space
+        const localPoint = points.current.worldToLocal(intersectionPoint.clone())
+
+        currentMouseX = localPoint.x
+        currentMouseY = localPoint.y
       } else {
         // Fallback
         currentMouseX = mouse.x * (viewport.width / 2)
