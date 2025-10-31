@@ -83,7 +83,7 @@ function App() {
       
       <Canvas
         className="canvas"
-        camera={{ position: [0, 0, 20], fov: 85 }}
+        camera={{ position: [0, 0, 28], fov: 85 }}
         gl={{
           powerPreference: "high-performance",
           antialias: false,
@@ -151,7 +151,7 @@ function App() {
         {/* Header */}
         <div className="portfolio-header">
           <h1 className="portfolio-title">Zachary Sluss</h1>
-          <p className="portfolio-subtitle">Portfolio</p>
+          <p className="portfolio-subtitle">Welcome to my Portfolio!</p>
         </div>
 
         {/* User Instructions */}
