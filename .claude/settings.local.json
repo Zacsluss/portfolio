@@ -11,7 +11,16 @@
       "Bash(findstr:*)",
       "Bash(dir:*)",
       "Read(//c/Dev/**)",
-      "Read(//c/Users/zacsl/Downloads/**)"
+      "Read(//c/Users/zacsl/Downloads/**)",
+      "Bash(git log:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "Bash(git fetch:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx gh-pages -d dist --dotfiles)",
+      "Bash(rm:*)"
     ],
     "deny": [],
     "ask": []
