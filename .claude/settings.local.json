@@ -20,7 +20,8 @@
       "Bash(git ls-tree:*)",
       "Bash(npm run build:*)",
       "Bash(npx gh-pages -d dist --dotfiles)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
