@@ -24,7 +24,7 @@ export const portfolioData = {
       startDate: "2023-07",
       description: "Lead enterprise CRM strategy and digital transformation initiatives for thousands of global users across over 20 countries. Govern a $1M+ annual CRM, analytics, and integration portfolio aligned to board-level growth objectives.",
       achievements: [
-        "Defined and govern enterprise CRM architecture and roadmap spanning Salesforce Multi-Cloud, ERP, and analytics ecosystems - ensuring interoperability, data integrity, and scalable growth across all business units",
+        "Defined and governed enterprise CRM architecture and roadmap spanning Salesforce Multi-Cloud, ERP, and analytics ecosystems - ensuring interoperability, data integrity, and scalable growth across all business units",
         "Directed global digital transformation program that improved sales and operational throughput 40%, automated 1,000+ hours annually, and established global process standardization through API-led integration frameworks",
         "Instituted enterprise governance and compliance model achieving 100% SOX audit readiness and maintaining zero regulatory breaches across all systems and markets",
         "Architected managed services pricing platform integrating automation and standardized product data models, increasing deal velocity 30% and enabling consistent global pricing strategy",
@@ -32,7 +32,7 @@ export const portfolioData = {
         "Enabled executive and board-level decision intelligence by designing Salesforce dashboards and analytics frameworks for real-time forecasting, pipeline, and revenue insights",
         "Led global change management and adoption strategy, serving as single authority for Salesforce change governance - aligning process, communication, and user adoption across 22+ countries",
         "Directed multi-vendor ecosystem ($3M+ annual portfolio; 11 contracts) across CRM, integration, analytics, and automation categories - overseeing selection, negotiation, and multi-year ROI realization",
-        "Govern enterprise project delivery portfolio of 12+ concurrent strategic programs annually, ensuring cross-functional alignment, on-time delivery, and measurable business impact",
+        "Governed enterprise project delivery portfolio of 12+ concurrent strategic programs annually, ensuring cross-functional alignment, on-time delivery, and measurable business impact",
       ],
       technologies: ["Salesforce Multi-Cloud", "Salesforce Marketing Cloud", "MuleSoft", "API Management", "Tableau", "Power BI", "SQL", "AWS", "Azure", "ServiceNow", "Jira", "Confluence", "SOX Compliance"],
     },

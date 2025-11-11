@@ -57,7 +57,7 @@ export function Leadership() {
         <div className="leadership-intro">
           <p className="leadership-intro-text">
             I believe the best technology leaders are <strong>force multipliers</strong> — not gatekeepers.
-            Over the past 6+ years leading enterprise transformations, I've developed a philosophy that combines
+            Throughout my career driving enterprise transformations, I've developed a philosophy that combines
             strategic vision with tactical execution, data-driven decision-making with human-centered design.
           </p>
         </div>
