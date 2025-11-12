@@ -39,3 +39,10 @@ stats.html
 *.njsproj
 *.sln
 *.sw?
+
+# Claude Code settings
+.claude/
+
+# Development files
+*.backup
+src/data/*.txt
