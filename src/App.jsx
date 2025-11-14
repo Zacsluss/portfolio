@@ -175,7 +175,7 @@ function App() {
             }}
             maxLength={20}
           />
-          <p className="input-hint">Type your name to see it form in particles</p>
+          <p className="input-hint">Type your name then press ENTER to see it form in particles</p>
         </div>
 
         {/* Easter egg hint */}
