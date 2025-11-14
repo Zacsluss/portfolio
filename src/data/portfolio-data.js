@@ -183,30 +183,6 @@ export const portfolioData = {
   ],
   skills: [
     {
-      category: "Salesforce & CRM Platforms",
-      skills: [
-        { name: "Microsoft Power Platform", level: "Expert" },
-        { name: "Salesforce CPQ", level: "Expert" },
-        { name: "Salesforce Data Cloud", level: "Expert" },
-        { name: "Salesforce Experience Cloud", level: "Expert" },
-        { name: "Salesforce Flow", level: "Expert" },
-        { name: "Salesforce Marketing Cloud", level: "Expert" },
-        { name: "Salesforce Multi-Cloud (Certified)", level: "Expert", certified: true },
-        { name: "Salesforce Sales Cloud", level: "Expert" },
-        { name: "Salesforce Service Cloud", level: "Expert" },
-        { name: "ServiceNow & Flow Designer", level: "Expert" },
-      ],
-    },
-    {
-      category: "Integration & Data",
-      skills: [
-        { name: "API-Led Integration", level: "Expert" },
-        { name: "Data Governance & Compliance (SOX, GDPR, CCPA)", level: "Expert" },
-        { name: "MuleSoft", level: "Expert" },
-        { name: "SQL", level: "Expert" },
-      ],
-    },
-    {
       category: "Analytics & Business Intelligence",
       skills: [
         { name: "Enterprise Data Strategy", level: "Expert" },
@@ -228,13 +204,10 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Enterprise Systems",
+      category: "Communication Tools",
       skills: [
-        { name: "HubSpot", level: "Advanced" },
-        { name: "Oracle Cloud Applications", level: "Advanced" },
-        { name: "Pardot", level: "Advanced" },
-        { name: "SAP ERP", level: "Advanced" },
-        { name: "Workday HCM", level: "Advanced" },
+        { name: "Microsoft Teams", level: "Advanced" },
+        { name: "Slack", level: "Advanced" },
       ],
     },
     {
@@ -247,17 +220,53 @@ export const portfolioData = {
       ],
     },
     {
+      category: "Enterprise Systems",
+      skills: [
+        { name: "HubSpot", level: "Advanced" },
+        { name: "Oracle Cloud Applications", level: "Advanced" },
+        { name: "Pardot", level: "Advanced" },
+        { name: "SAP ERP", level: "Advanced" },
+        { name: "Workday HCM", level: "Advanced" },
+      ],
+    },
+    {
+      category: "Integration & Data",
+      skills: [
+        { name: "API-Led Integration", level: "Expert" },
+        { name: "Data Governance & Compliance (SOX, GDPR, CCPA)", level: "Expert" },
+        { name: "MuleSoft", level: "Expert" },
+        { name: "SQL", level: "Expert" },
+      ],
+    },
+    {
+      category: "Modern Development",
+      skills: [
+        { name: "Next.js", level: "Intermediate" },
+        { name: "Node.js", level: "Intermediate" },
+        { name: "React", level: "Intermediate" },
+        { name: "TypeScript", level: "Intermediate" },
+      ],
+    },
+    {
+      category: "Salesforce & CRM Platforms",
+      skills: [
+        { name: "Microsoft Power Platform", level: "Expert" },
+        { name: "Salesforce CPQ", level: "Expert" },
+        { name: "Salesforce Data Cloud", level: "Expert" },
+        { name: "Salesforce Experience Cloud", level: "Expert" },
+        { name: "Salesforce Flow", level: "Expert" },
+        { name: "Salesforce Marketing Cloud", level: "Expert" },
+        { name: "Salesforce Multi-Cloud (Certified)", level: "Expert", certified: true },
+        { name: "Salesforce Sales Cloud", level: "Expert" },
+        { name: "Salesforce Service Cloud", level: "Expert" },
+        { name: "ServiceNow & Flow Designer", level: "Expert" },
+      ],
+    },
+    {
       category: "Security & Identity",
       skills: [
         { name: "Okta SSO", level: "Advanced" },
         { name: "OneTrust", level: "Advanced" },
-      ],
-    },
-    {
-      category: "Communication Tools",
-      skills: [
-        { name: "Microsoft Teams", level: "Advanced" },
-        { name: "Slack", level: "Advanced" },
       ],
     },
     {
@@ -268,15 +277,6 @@ export const portfolioData = {
         { name: "Enterprise Platform Governance", level: "Advanced" },
         { name: "Platform Integration & Roadmap Ownership", level: "Advanced" },
         { name: "Vendor Portfolio Strategy & Contract Negotiation", level: "Advanced" },
-      ],
-    },
-    {
-      category: "Modern Development",
-      skills: [
-        { name: "Next.js", level: "Intermediate" },
-        { name: "Node.js", level: "Intermediate" },
-        { name: "React", level: "Intermediate" },
-        { name: "TypeScript", level: "Intermediate" },
       ],
     },
   ],
