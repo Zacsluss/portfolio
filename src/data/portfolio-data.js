@@ -2,7 +2,7 @@ export const portfolioData = {
   personal: {
     name: "Zachary Sluss",
     title: "Lead CRM Systems Analyst",
-    tagline: "Enterprise Technology Leader specializing in multi-million-dollar CRM, ERP, and Data ecosystems for Fortune 500-scale enterprises - delivering 40%+ productivity gains and governing global multi-cloud portfolios across over 20 countries",
+    tagline: "Enterprise Technology Leader specializing in multi-million-dollar CRM, ERP, and Data ecosystems for Fortune 500-scale enterprises - delivering 40%+ productivity gains and governing global multi-cloud portfolios across 20+ countries",
     bio: "I design and govern the digital ecosystems that keep global enterprises running - spanning Salesforce, ERP, and data clouds across 20+ countries and millions in technology investments. I turn complexity into clarity, automation into scale, and platforms into measurable growth - often improving productivity by 40% or more!\n\nBy day, I architect multi-cloud systems and negotiate million-dollar vendor contracts; by night, I build unique digital experiences and pilot drones through physics-defying spaces. Whether it's enterprise architecture or visual experiments, my work always comes down to the same thing: precision, performance, and a curiosity that never switches off.",
     location: "New Hampshire, USA (Remote)",
     email: "zacharyjsluss@gmail.com",
@@ -22,7 +22,7 @@ export const portfolioData = {
       company: "Computershare",
       position: "Lead CRM Systems Analyst",
       startDate: "2023-07",
-      description: "Lead enterprise CRM and platform strategy as CRM platform owner for thousands of global users across over 20 countries. Oversee a $1M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives.",
+      description: "Lead enterprise CRM and platform strategy as CRM platform owner for thousands of global users across 20+ countries. Oversee a $1M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives.",
       achievements: [
         "Defined and governed enterprise CRM architecture and roadmap spanning Salesforce Multi-Cloud, ERP, and analytics ecosystems - ensuring interoperability, data integrity, and scalable growth across all business units",
         "Directed global digital transformation program that improved sales and operational throughput 40%, automated 1,000+ hours annually, and established global process standardization through API-led integration frameworks",
@@ -30,7 +30,7 @@ export const portfolioData = {
         "Architected managed services pricing platform integrating automation and standardized product data models, increasing deal velocity 30% and enabling consistent global pricing strategy",
         "Defined multi-year CRM and data roadmap ensuring alignment with corporate strategy, M&A integrations, and geographic expansion goals",
         "Enabled executive and board-level decision intelligence by designing Salesforce dashboards and analytics frameworks for real-time forecasting, pipeline, and revenue insights",
-        "Led global change management and adoption strategy, serving as single authority for Salesforce change governance - aligning process, communication, and user adoption across 22+ countries",
+        "Led global change management and adoption strategy, serving as the single authority for Salesforce change governance - aligning process, communication, and user adoption across 22+ countries",
         "Managed a multi-vendor ecosystem ($3M+ annual portfolio; 11 contracts) across CRM, integration, analytics, and automation categories - contributing to vendor selection, renewals, and multi-year ROI assessment",
         "Oversee a project delivery portfolio of 12+ concurrent strategic programs annually from the CRM/platform side, helping ensure cross-functional alignment, on-time delivery, and measurable business impact",
       ],
@@ -368,6 +368,15 @@ export const portfolioData = {
       url: "https://www.salesforce.com/trailblazer/zacharyjsluss",
       category: "Certifications",
       image: "portfolio-images/certificationpicture.png",
+    },
+    // Code & Development (alphabetically sorted)
+    {
+      id: "link-15",
+      title: "GitHub Profile",
+      description: "Open source projects, code repositories, and software development work",
+      url: "https://github.com/Zacsluss",
+      category: "Code & Development",
+      image: "portfolio-images/github.png",
     },
     // Drone 360 Aerial Photography (alphabetically sorted)
     {
