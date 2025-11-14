@@ -185,33 +185,33 @@ export const portfolioData = {
     {
       category: "Salesforce & CRM Platforms",
       skills: [
+        { name: "Microsoft Power Platform", level: "Expert" },
+        { name: "Salesforce CPQ", level: "Expert" },
+        { name: "Salesforce Data Cloud", level: "Expert" },
+        { name: "Salesforce Experience Cloud", level: "Expert" },
+        { name: "Salesforce Flow", level: "Expert" },
+        { name: "Salesforce Marketing Cloud", level: "Expert" },
         { name: "Salesforce Multi-Cloud (Certified)", level: "Expert", certified: true },
         { name: "Salesforce Sales Cloud", level: "Expert" },
         { name: "Salesforce Service Cloud", level: "Expert" },
-        { name: "Salesforce Experience Cloud", level: "Expert" },
-        { name: "Salesforce CPQ", level: "Expert" },
-        { name: "Salesforce Data Cloud", level: "Expert" },
-        { name: "Salesforce Marketing Cloud", level: "Expert" },
-        { name: "Salesforce Flow", level: "Expert" },
-        { name: "Microsoft Power Platform", level: "Expert" },
         { name: "ServiceNow & Flow Designer", level: "Expert" },
       ],
     },
     {
       category: "Integration & Data",
       skills: [
-        { name: "MuleSoft", level: "Expert" },
         { name: "API-Led Integration", level: "Expert" },
-        { name: "SQL", level: "Expert" },
         { name: "Data Governance & Compliance (SOX, GDPR, CCPA)", level: "Expert" },
+        { name: "MuleSoft", level: "Expert" },
+        { name: "SQL", level: "Expert" },
       ],
     },
     {
       category: "Analytics & Business Intelligence",
       skills: [
-        { name: "Tableau (Certified)", level: "Expert", certified: true },
-        { name: "Power BI", level: "Expert" },
         { name: "Enterprise Data Strategy", level: "Expert" },
+        { name: "Power BI", level: "Expert" },
+        { name: "Tableau (Certified)", level: "Expert", certified: true },
       ],
     },
     {
@@ -223,27 +223,27 @@ export const portfolioData = {
     {
       category: "Collaboration & Project Management",
       skills: [
-        { name: "Jira", level: "Expert" },
         { name: "Confluence", level: "Expert" },
+        { name: "Jira", level: "Expert" },
       ],
     },
     {
       category: "Enterprise Systems",
       skills: [
-        { name: "Workday HCM", level: "Advanced" },
-        { name: "SAP ERP", level: "Advanced" },
-        { name: "Oracle Cloud Applications", level: "Advanced" },
         { name: "HubSpot", level: "Advanced" },
+        { name: "Oracle Cloud Applications", level: "Advanced" },
         { name: "Pardot", level: "Advanced" },
+        { name: "SAP ERP", level: "Advanced" },
+        { name: "Workday HCM", level: "Advanced" },
       ],
     },
     {
       category: "Data & Analytics Platforms",
       skills: [
-        { name: "Snowflake", level: "Advanced" },
-        { name: "Google BigQuery", level: "Advanced" },
-        { name: "Splunk", level: "Advanced" },
         { name: "Google Analytics", level: "Advanced" },
+        { name: "Google BigQuery", level: "Advanced" },
+        { name: "Snowflake", level: "Advanced" },
+        { name: "Splunk", level: "Advanced" },
       ],
     },
     {
@@ -256,16 +256,16 @@ export const portfolioData = {
     {
       category: "Communication Tools",
       skills: [
-        { name: "Slack", level: "Advanced" },
         { name: "Microsoft Teams", level: "Advanced" },
+        { name: "Slack", level: "Advanced" },
       ],
     },
     {
       category: "Strategic Leadership & Governance",
       skills: [
+        { name: "Capital Planning & Budget Oversight", level: "Advanced" },
         { name: "Digital Transformation Leadership", level: "Expert" },
         { name: "Enterprise Platform Governance", level: "Advanced" },
-        { name: "Capital Planning & Budget Oversight", level: "Advanced" },
         { name: "Platform Integration & Roadmap Ownership", level: "Advanced" },
         { name: "Vendor Portfolio Strategy & Contract Negotiation", level: "Advanced" },
       ],
@@ -273,10 +273,10 @@ export const portfolioData = {
     {
       category: "Modern Development",
       skills: [
-        { name: "React", level: "Intermediate" },
-        { name: "Node.js", level: "Intermediate" },
-        { name: "TypeScript", level: "Intermediate" },
         { name: "Next.js", level: "Intermediate" },
+        { name: "Node.js", level: "Intermediate" },
+        { name: "React", level: "Intermediate" },
+        { name: "TypeScript", level: "Intermediate" },
       ],
     },
   ],
