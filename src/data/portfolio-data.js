@@ -183,7 +183,7 @@ export const portfolioData = {
   ],
   skills: [
     {
-      category: "Salesforce & CRM Platforms (Primary)",
+      category: "Salesforce & CRM Platforms",
       skills: [
         { name: "Salesforce Multi-Cloud (Certified)", level: "Expert", certified: true },
         { name: "Salesforce Sales Cloud", level: "Expert" },
@@ -198,7 +198,7 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Integration & Data (Primary)",
+      category: "Integration & Data",
       skills: [
         { name: "MuleSoft", level: "Expert" },
         { name: "API-Led Integration", level: "Expert" },
@@ -207,7 +207,7 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Analytics & Business Intelligence (Primary)",
+      category: "Analytics & Business Intelligence",
       skills: [
         { name: "Tableau (Certified)", level: "Expert", certified: true },
         { name: "Power BI", level: "Expert" },
@@ -215,20 +215,20 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Cloud & Infrastructure (Primary)",
+      category: "Cloud & Infrastructure",
       skills: [
         { name: "AWS (Certified)", level: "Expert", certified: true },
       ],
     },
     {
-      category: "Collaboration & Project Management (Primary)",
+      category: "Collaboration & Project Management",
       skills: [
         { name: "Jira", level: "Expert" },
         { name: "Confluence", level: "Expert" },
       ],
     },
     {
-      category: "Enterprise Systems (Secondary)",
+      category: "Enterprise Systems",
       skills: [
         { name: "Workday HCM", level: "Advanced" },
         { name: "SAP ERP", level: "Advanced" },
@@ -238,7 +238,7 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Data & Analytics Platforms (Secondary)",
+      category: "Data & Analytics Platforms",
       skills: [
         { name: "Snowflake", level: "Advanced" },
         { name: "Google BigQuery", level: "Advanced" },
@@ -247,13 +247,14 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Security & Identity (Secondary)",
+      category: "Security & Identity",
       skills: [
         { name: "Okta SSO", level: "Advanced" },
+        { name: "OneTrust", level: "Advanced" },
       ],
     },
     {
-      category: "Communication Tools (Secondary)",
+      category: "Communication Tools",
       skills: [
         { name: "Slack", level: "Advanced" },
         { name: "Microsoft Teams", level: "Advanced" },
@@ -270,7 +271,7 @@ export const portfolioData = {
       ],
     },
     {
-      category: "Modern Development (Personal Projects)",
+      category: "Modern Development",
       skills: [
         { name: "React", level: "Intermediate" },
         { name: "Node.js", level: "Intermediate" },
