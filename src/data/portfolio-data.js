@@ -97,6 +97,20 @@ export const portfolioData = {
     },
     {
       id: "exp-6",
+      company: "EVO Payments International",
+      position: "Underwriting Support",
+      startDate: "2017-06",
+      endDate: "2018-06",
+      description: "Provided technical and analytical support for risk evaluation processes across enterprise credit systems.",
+      achievements: [
+        "Supported credit risk evaluation workflows and data analysis initiatives",
+        "Assisted in data quality improvements and compliance documentation",
+        "Contributed to process optimization efforts within underwriting operations",
+      ],
+      technologies: ["SQL", "Oracle", "Data Analysis", "Risk Assessment", "Compliance Support"],
+    },
+    {
+      id: "exp-7",
       company: "Black Flag LLC",
       position: "Founder & Managing Partner",
       startDate: "2017-03",
