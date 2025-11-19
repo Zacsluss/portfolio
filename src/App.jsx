@@ -1,13 +1,13 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Suspense, useState, useEffect, useRef, lazy } from 'react'
+import { Suspense, useState, useEffect, lazy } from 'react'
 import { ModernStarfield } from './components/particles/ModernStarfield'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
 import { SimpleCursor } from './components/ui/SimpleCursor'
 import { ErrorBoundary } from './components/ui/ErrorBoundary'
 import { Section } from './components/ui/Section'
 import { useKonamiCode } from './hooks/useKonamiCode'
-import { isMobileDevice, getOptimalParticleCount, getOptimalPixelRatio } from './utils/device'
+import { getOptimalParticleCount, getOptimalPixelRatio } from './utils/device'
 import { sanitizeName } from './utils/sanitize'
 import { PARTICLE_CONFIG, ANIMATION, CAMERA, LIGHTING, CONTROLS } from './config/constants'
 import './App.css'
@@ -46,7 +46,6 @@ function App() {
   const [particlesFormed, setParticlesFormed] = useState(false)
   const [konamiActivated, setKonamiActivated] = useState(false)
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
-  const isMobile = isMobileDevice()
 
   // Hide scroll indicator when user scrolls down
   useEffect(() => {

@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import globals from 'globals'
+import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
@@ -22,21 +23,31 @@ export default [
       },
     },
     plugins: {
+      'react': react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     rules: {
       ...js.configs.recommended.rules,
+      ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/react-in-jsx-scope': 'off', // Not needed in React 17+
+      'react/prop-types': 'off', // Using TypeScript or not using PropTypes
+      'react/no-unknown-property': ['error', { ignore: ['attach', 'args', 'position', 'intensity', 'color', 'count', 'array', 'itemSize', 'transparent', 'depthWrite', 'blending', 'side'] }], // Allow Three.js properties
+      'react/no-unescaped-entities': 'off', // Allow apostrophes in text
       'no-unused-vars': ['error', {
         varsIgnorePattern: '^_',
         argsIgnorePattern: '^_',
         ignoreRestSiblings: true,
-        // Ignore React component imports (used in JSX)
         vars: 'all',
         args: 'after-used',
       }],
