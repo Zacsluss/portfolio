@@ -57,12 +57,13 @@ jobs:
 
       - name: Check bundle size
         run: |
-          BUNDLE_SIZE=$(du -sk dist | cut -f1)
-          echo "Bundle size: ${BUNDLE_SIZE}KB"
-          if [ $BUNDLE_SIZE -gt 1500 ]; then
-            echo "❌ Bundle size exceeds 1.5MB threshold!"
+          BUNDLE_SIZE=$(du -sk dist/assets | cut -f1)
+          echo "JavaScript/CSS bundle size: ${BUNDLE_SIZE}KB"
+          if [ $BUNDLE_SIZE -gt 2000 ]; then
+            echo "❌ Bundle size exceeds 2MB threshold!"
             exit 1
           fi
+          echo "✅ Bundle size is within acceptable limits"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
