@@ -437,3 +437,16 @@ export const calculateSkillLevel = (years) => {
   if (years >= 1) return 'Intermediate';
   return 'Beginner';
 };
+
+// Validate portfolio data structure in development mode
+if (import.meta.env.DEV) {
+  import('./schema').then(({ validatePortfolioData }) => {
+    try {
+      validatePortfolioData(portfolioData)
+      console.log('✅ Portfolio data validation passed')
+    } catch (error) {
+      console.error('❌ Portfolio data validation failed:', error.message)
+      throw error
+    }
+  })
+}

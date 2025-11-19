@@ -1,10 +1,15 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { Suspense, useState, useEffect, lazy } from 'react'
+import { Suspense, useState, useEffect, useRef, lazy } from 'react'
 import { ModernStarfield } from './components/particles/ModernStarfield'
 import { FluidTextParticles } from './components/particles/FluidTextParticles'
 import { SimpleCursor } from './components/ui/SimpleCursor'
+import { ErrorBoundary } from './components/ui/ErrorBoundary'
+import { Section } from './components/ui/Section'
 import { useKonamiCode } from './hooks/useKonamiCode'
+import { isMobileDevice, getOptimalParticleCount, getOptimalPixelRatio } from './utils/device'
+import { sanitizeName } from './utils/sanitize'
+import { PARTICLE_CONFIG, ANIMATION, CAMERA, LIGHTING, CONTROLS } from './config/constants'
 import './App.css'
 
 // Lazy load section components for better code splitting
@@ -14,7 +19,10 @@ const Experience = lazy(() => import('./components/sections/Experience').then(m 
 const Leadership = lazy(() => import('./components/sections/Leadership').then(m => ({ default: m.Leadership })))
 const Contact = lazy(() => import('./components/sections/Contact').then(m => ({ default: m.Contact })))
 
-// Component to track global mouse position even when hovering over HTML elements
+/**
+ * Component to track global mouse position even when hovering over HTML elements
+ * Updates Three.js mouse state for particle interaction physics
+ */
 function GlobalMouseTracker() {
   const { size, mouse } = useThree()
 
@@ -34,16 +42,16 @@ function GlobalMouseTracker() {
 }
 
 function App() {
-  const [visitorName, setVisitorName] = useState('Zachary Sluss')
-  const [particlesFormed, setParticlesFormed] = useState(false) // Track when particles finish morphing
+  const [visitorName, setVisitorName] = useState(PARTICLE_CONFIG.DEFAULT_TEXT)
+  const [particlesFormed, setParticlesFormed] = useState(false)
   const [konamiActivated, setKonamiActivated] = useState(false)
   const [showScrollIndicator, setShowScrollIndicator] = useState(true)
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+  const isMobile = isMobileDevice()
 
   // Hide scroll indicator when user scrolls down
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > ANIMATION.SCROLL_HIDE_THRESHOLD_PX) {
         setShowScrollIndicator(false)
       } else {
         setShowScrollIndicator(true)
@@ -54,22 +62,29 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Handle wheel events at window level to enable scrolling everywhere
+  // Handle wheel events at window level with requestAnimationFrame throttling
   // Canvas is position:fixed but content has z-index:10, so we need window-level handler
   useEffect(() => {
+    let scrollPending = false
+
     const handleWheel = (event) => {
-      // Scroll the page - browser handles momentum naturally
-      window.scrollBy(0, event.deltaY)
+      if (!scrollPending) {
+        scrollPending = true
+        requestAnimationFrame(() => {
+          window.scrollBy(0, event.deltaY)
+          scrollPending = false
+        })
+      }
     }
 
     window.addEventListener('wheel', handleWheel, { passive: true })
     return () => window.removeEventListener('wheel', handleWheel)
   }, [])
 
-  // Konami code easter egg
+  // Konami code easter egg with configurable duration
   useKonamiCode(() => {
     setKonamiActivated(true)
-    setTimeout(() => setKonamiActivated(false), 5000)
+    setTimeout(() => setKonamiActivated(false), ANIMATION.KONAMI_DURATION_MS)
   })
 
   // Callback when particles finish forming
@@ -77,43 +92,55 @@ function App() {
     setParticlesFormed(true)
   }
 
+  // Handle name input with sanitization
+  const handleNameChange = (e) => {
+    const sanitized = sanitizeName(e.target.value)
+    setVisitorName(sanitized || PARTICLE_CONFIG.DEFAULT_TEXT)
+  }
+
   return (
-    <>
+    <ErrorBoundary>
       <SimpleCursor />
-      
+
       <Canvas
         className="canvas"
-        camera={{ position: [0, 0, 28], fov: 85 }}
+        camera={{ position: CAMERA.POSITION, fov: CAMERA.FOV }}
         gl={{
           powerPreference: "high-performance",
           antialias: false,
           stencil: false,
           depth: true,
           alpha: false,
-          pixelRatio: Math.min(window.devicePixelRatio, 2)
+          pixelRatio: getOptimalPixelRatio()
         }}
       >
-        {/* Debug tools - removed for production */}
-        
         {/* Deep Space Background - Pure void */}
         <color attach="background" args={['#000000']} />
         <fog attach="fog" args={['#000000', 30, 150]} />
 
         {/* Minimal Deep Space Lighting - distant starlight only */}
-        <ambientLight intensity={0.02} color="#1a1a2e" />
-        <pointLight position={[50, 50, 50]} intensity={0.1} color="#4a5f8f" />
-        <pointLight position={[-50, -50, -50]} intensity={0.08} color="#2d3561" />
-        
+        <ambientLight intensity={LIGHTING.AMBIENT_INTENSITY} color={LIGHTING.AMBIENT_COLOR} />
+        <pointLight
+          position={LIGHTING.POINT_LIGHT_1.position}
+          intensity={LIGHTING.POINT_LIGHT_1.intensity}
+          color={LIGHTING.POINT_LIGHT_1.color}
+        />
+        <pointLight
+          position={LIGHTING.POINT_LIGHT_2.position}
+          intensity={LIGHTING.POINT_LIGHT_2.intensity}
+          color={LIGHTING.POINT_LIGHT_2.color}
+        />
+
         {/* Camera controls - orbital camera with mouse drag */}
         <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          enableRotate={true}
-          autoRotate={false}
-          enableDamping={true}
-          dampingFactor={0.05}
-          rotateSpeed={0.5}
-          target={[0, 5, 0]}
+          enableZoom={CONTROLS.ENABLE_ZOOM}
+          enablePan={CONTROLS.ENABLE_PAN}
+          enableRotate={CONTROLS.ENABLE_ROTATE}
+          autoRotate={CONTROLS.AUTO_ROTATE}
+          enableDamping={CONTROLS.ENABLE_DAMPING}
+          dampingFactor={CONTROLS.DAMPING_FACTOR}
+          rotateSpeed={CONTROLS.ROTATE_SPEED}
+          target={CONTROLS.TARGET}
         />
 
         {/* Global mouse tracker - updates mouse position even when hovering over HTML elements */}
@@ -121,7 +148,7 @@ function App() {
 
         <Suspense fallback={null}>
           {/* Ultra-Modern Starfield - UE5-style with bokeh, motion blur, depth of field */}
-          <ModernStarfield count={isMobile ? 10000 : 30000} speed={2.0} />
+          <ModernStarfield count={getOptimalParticleCount()} speed={2.0} />
 
           {/* Text Particles - Positioned higher on screen */}
           {visitorName && (
@@ -137,7 +164,7 @@ function App() {
           )}
         </Suspense>
       </Canvas>
-      
+
       {/* Scroll Indicator - Bottom Center */}
       <div className={`scroll-indicator ${particlesFormed && showScrollIndicator ? 'fade-in-1' : ''} ${!showScrollIndicator ? 'hide-scroll' : ''}`}>
         <div className="mouse-icon">
@@ -167,13 +194,13 @@ function App() {
             className="name-input"
             placeholder="Enter your name"
             value={visitorName}
-            onChange={(e) => setVisitorName(e.target.value)}
+            onChange={handleNameChange}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
                 e.target.blur()
               }
             }}
-            maxLength={20}
+            maxLength={PARTICLE_CONFIG.MAX_TEXT_LENGTH}
           />
           <p className="input-hint">Type your name then press ENTER to see it form in particles</p>
         </div>
@@ -198,35 +225,28 @@ function App() {
       {/* Main Content Sections - All fade in after particles */}
       <div className="main-content">
         <Suspense fallback={<div className="section-loading">Loading...</div>}>
-          {/* About Section - has 100vh margin to start after hero */}
-          <div id="about" className={`content-section ${particlesFormed ? 'fade-in-2' : ''}`}>
+          <Section id="about" fadeDelay={2} visible={particlesFormed}>
             <About />
-          </div>
+          </Section>
 
-          {/* Skills Section */}
-          <div id="skills" className={`content-section ${particlesFormed ? 'fade-in-3' : ''}`}>
+          <Section id="skills" fadeDelay={3} visible={particlesFormed}>
             <Skills />
-          </div>
+          </Section>
 
-          {/* Experience Section */}
-          <div id="experience" className={`content-section ${particlesFormed ? 'fade-in-4' : ''}`}>
+          <Section id="experience" fadeDelay={4} visible={particlesFormed}>
             <Experience />
-          </div>
+          </Section>
 
-          {/* Leadership Philosophy Section */}
-          <div id="leadership" className={`content-section ${particlesFormed ? 'fade-in-5' : ''}`}>
+          <Section id="leadership" fadeDelay={5} visible={particlesFormed}>
             <Leadership />
-          </div>
+          </Section>
 
-          {/* Contact Section */}
-          <div id="contact" className={`content-section ${particlesFormed ? 'fade-in-6' : ''}`}>
+          <Section id="contact" fadeDelay={6} visible={particlesFormed}>
             <Contact />
-          </div>
+          </Section>
         </Suspense>
       </div>
-
-      {/* Konami effect is now in the particle system */}
-    </>
+    </ErrorBoundary>
   )
 }
 

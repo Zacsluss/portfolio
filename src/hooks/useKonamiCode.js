@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 const KONAMI_CODE = [
   'ArrowUp', 'ArrowUp',
@@ -8,25 +8,45 @@ const KONAMI_CODE = [
   'b', 'a'
 ]
 
+/**
+ * Custom hook to detect Konami Code input sequence
+ *
+ * @param {Function} callback - Function to call when code is entered
+ * @returns {Array} Current key sequence (for debugging)
+ *
+ * FIX: Uses useRef to prevent memory leak from recreating event listeners
+ * on every keypress (previous version had dependency array with [sequence])
+ */
 export function useKonamiCode(callback) {
   const [sequence, setSequence] = useState([])
+  const callbackRef = useRef(callback)
+
+  // Keep callback ref fresh without triggering effect re-run
+  useEffect(() => {
+    callbackRef.current = callback
+  }, [callback])
 
   useEffect(() => {
     const handleKeyPress = (e) => {
       // Convert to lowercase for letters, keep arrows as-is
       const key = e.key.length === 1 ? e.key.toLowerCase() : e.key
-      const newSequence = [...sequence, key].slice(-10)
-      setSequence(newSequence)
 
-      if (JSON.stringify(newSequence) === JSON.stringify(KONAMI_CODE)) {
-        callback()
-        setSequence([]) // Reset after success
-      }
+      setSequence(prevSequence => {
+        const newSequence = [...prevSequence, key].slice(-10)
+
+        // Check if completed
+        if (JSON.stringify(newSequence) === JSON.stringify(KONAMI_CODE)) {
+          callbackRef.current()
+          return [] // Reset after success
+        }
+
+        return newSequence
+      })
     }
 
     window.addEventListener('keydown', handleKeyPress)
     return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [sequence, callback])
-  
+  }, []) // Empty deps - stable listener, no memory leak
+
   return sequence
 }
