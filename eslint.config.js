@@ -14,7 +14,17 @@ export default [
       ecmaVersion: 2020,
       globals: {
         ...globals.browser,
+        ...globals.node, // Add Node.js globals for __dirname in config files
         React: 'readable', // Recognize React as global
+        // Vitest test globals
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        vi: 'readonly',
       },
       parserOptions: {
         ecmaVersion: 'latest',

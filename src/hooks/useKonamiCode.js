@@ -11,11 +11,12 @@ const KONAMI_CODE = [
 /**
  * Custom hook to detect Konami Code input sequence
  *
+ * Listens for the classic Konami Code (↑↑↓↓←→←→BA) and triggers a callback
+ * when the full sequence is entered. Uses useRef to maintain a stable event
+ * listener without causing memory leaks from re-binding on state changes.
+ *
  * @param {Function} callback - Function to call when code is entered
  * @returns {Array} Current key sequence (for debugging)
- *
- * FIX: Uses useRef to prevent memory leak from recreating event listeners
- * on every keypress (previous version had dependency array with [sequence])
  */
 export function useKonamiCode(callback) {
   const [sequence, setSequence] = useState([])

@@ -293,6 +293,101 @@ Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
 
 ---
 
+## 🏗️ How It Works
+
+<details open>
+<summary><b>Architecture & Data Flow</b></summary>
+
+<br/>
+
+### System Architecture
+
+```mermaid
+graph TD
+    A[User Input] --> B[App.jsx Main Controller]
+    B --> C[Input Sanitization]
+    C --> D[State Management]
+    D --> E[React Three Fiber Canvas]
+
+    E --> F[FluidTextParticles Component]
+    E --> G[ModernStarfield Component]
+    E --> H[Camera & Controls]
+
+    F --> I[GPU Instancing]
+    I --> J[Custom GLSL Shaders]
+    J --> K[30K Particles Rendered]
+
+    L[Portfolio Data] --> M[Schema Validation]
+    M --> N[Section Components]
+    N --> B
+
+    O[Device Detection] --> P[Performance Optimization]
+    P --> D
+
+    style B fill:#4a5f8f
+    style E fill:#2d3561
+    style J fill:#ff006e
+    style K fill:#00ff88
+```
+
+### Component Hierarchy
+
+```mermaid
+graph LR
+    App[App.jsx] --> EB[ErrorBoundary]
+    EB --> Canvas[Three.js Canvas]
+    EB --> Content[Content Sections]
+
+    Canvas --> Starfield[ModernStarfield]
+    Canvas --> TextParticles[FluidTextParticles]
+    Canvas --> Controls[OrbitControls]
+
+    Content --> About
+    Content --> Skills
+    Content --> Experience
+    Content --> Leadership
+    Content --> Contact
+
+    style App fill:#4a5f8f
+    style Canvas fill:#2d3561
+    style Content fill:#1a1a2e
+```
+
+### Data Flow Pipeline
+
+**1. User Input → Sanitization**
+```
+User types name → sanitizeName() → Remove special chars/emoji → Update state
+```
+
+**2. State → GPU Rendering**
+```
+visitorName state → FluidTextParticles → Text geometry → 30K particle positions → GPU
+```
+
+**3. Device Detection → Performance Tuning**
+```
+navigator.userAgent → isMobileDevice() → 10K or 30K particles → Optimal FPS target
+```
+
+**4. Portfolio Data → Components**
+```
+portfolio-data.js → validatePortfolioData() → Section components → Lazy loaded
+```
+
+### Key Technical Decisions
+
+- **GPU Instancing**: Renders 30,000 particles in a single draw call instead of 30,000 separate draw calls
+- **Code Splitting**: Manual chunks separate React, Three.js, and R3F into optimized bundles
+- **Lazy Loading**: Section components load on-demand to reduce initial bundle size
+- **requestAnimationFrame Throttling**: Reduces scroll handler calls from ~1000/sec to ~60/sec
+- **Schema Validation**: Catches data errors in development before they reach production
+- **Error Boundaries**: Prevents cascading failures if a component crashes
+
+</details>
+
+---
+
 ## 🚀 Quick Start
 
 <div align="center">
