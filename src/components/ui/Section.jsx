@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 /**
  * Reusable section wrapper component with conditional fade-in animation
  * Reduces code duplication across App.jsx section definitions
@@ -16,4 +18,11 @@ export function Section({ id, children, fadeDelay = 0, visible = true }) {
       {children}
     </div>
   )
+}
+
+Section.propTypes = {
+  id: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  fadeDelay: PropTypes.number,
+  visible: PropTypes.bool,
 }

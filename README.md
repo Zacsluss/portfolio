@@ -388,6 +388,156 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 
 ---
 
+## 📈 Observability & Monitoring
+
+This project includes built-in observability tools for debugging and performance optimization:
+
+### Structured Logging
+
+All application events are logged with consistent formatting and metadata:
+
+```javascript
+import { logger } from './utils/logger'
+
+// Log levels: debug, info, warn, error
+logger.info('User interaction', { component: 'Button', action: 'click' })
+logger.error('Failed to load texture', { error: err, context: 'TextureLoader' })
+logger.debug('Particle system initialized', { count: 30000, fps: 60 })
+```
+
+**Log Levels**:
+- `DEBUG`: Detailed diagnostic info (disabled in production)
+- `INFO`: General informational messages (disabled in production)
+- `WARN`: Warning messages for potential issues
+- `ERROR`: Error messages for failures (always logged)
+
+**Features**:
+- Timestamps on all log entries
+- Color-coded console output (blue info, orange warn, red error)
+- Automatic production filtering (only errors logged in prod)
+- Structured context data for easy filtering
+
+### Performance Monitoring
+
+Real-time performance metrics tracked via `usePerformanceMonitor` hook:
+
+```javascript
+import { usePerformanceMonitor } from './hooks/usePerformanceMonitor'
+
+function App() {
+  const { fps, memory, frameTime, longTasks } = usePerformanceMonitor({
+    enabled: true,
+    logInterval: 5000, // Log every 5 seconds
+    warnThreshold: 30, // Warn if FPS < 30
+  })
+
+  return <div>FPS: {fps}</div>
+}
+```
+
+**Tracked Metrics**:
+- **FPS**: Frames per second (target: 60 FPS)
+- **Frame Time**: Average milliseconds per frame (target: <16.67ms)
+- **Long Tasks**: Count of frames exceeding 16.67ms (janky frames)
+- **Memory**: JavaScript heap usage in MB (if `performance.memory` available)
+
+**Automatic Warnings**:
+- Logs warning if FPS drops below threshold (default 30 FPS)
+- Tracks long tasks that cause frame drops
+- Includes memory usage in logs (Chrome/Edge only)
+
+### Performance Utilities
+
+**Measure Function Execution**:
+```javascript
+import { measurePerformance } from './hooks/usePerformanceMonitor'
+
+await measurePerformance('dataFetch', async () => {
+  const data = await fetchData()
+  return data
+})
+// Logs: "Performance: dataFetch - 245.32ms"
+```
+
+**Mark Component Lifecycle**:
+```javascript
+import { markComponent } from './hooks/usePerformanceMonitor'
+
+useEffect(() => {
+  markComponent('FluidTextParticles', 'mount', { particleCount: 30000 })
+  return () => markComponent('FluidTextParticles', 'unmount')
+}, [])
+```
+
+### Error Tracking
+
+ErrorBoundary component automatically logs all React errors with full context:
+
+```javascript
+// Errors logged include:
+// - Error message and stack trace
+// - Component stack (which component tree failed)
+// - Timestamp
+// - Environment (dev/prod)
+```
+
+**Integration Points**:
+- Ready for Sentry/LogRocket integration (commented placeholder in ErrorBoundary.jsx:38)
+- Structured logs compatible with JSON log aggregators (Datadog, Splunk, etc.)
+- Performance marks visible in Chrome DevTools Performance tab
+
+> **Tip**: Open browser console in development to see real-time logs. Use `logger.debug()` for verbose diagnostics without polluting production logs.
+
+---
+
+## ⚙️ Prerequisites
+
+Before running this project locally, ensure you have:
+
+- **Node.js**: Version 20.x or higher (uses ES modules and modern JavaScript)
+- **npm**: Version 9.x or higher (comes with Node.js)
+- **Modern Browser**: One of the following with WebGL 2.0 support:
+  - Chrome 90+ (recommended)
+  - Firefox 88+
+  - Safari 15+
+  - Edge 90+
+- **Hardware Requirements**:
+  - GPU with WebGL 2.0 support (discrete GPU recommended for 30K particles)
+  - Minimum 4GB RAM
+  - Display with 1920×1080 resolution or higher for best experience
+
+**How to check WebGL support**: Visit [get.webgl.org](https://get.webgl.org/) and ensure WebGL 2 is enabled.
+
+---
+
+## ⚠️ Known Limitations
+
+This portfolio pushes the boundaries of web graphics, but has some constraints:
+
+### Browser & Device Support
+- **WebGL 2.0 Required**: Will not run on older browsers or devices without GPU acceleration
+- **Mobile Safari Quirks**: iOS Safari has stricter memory limits; particle count auto-reduces to 10K on mobile
+- **Firefox Performance**: May see 10-15% lower FPS than Chrome due to different WebGL optimization strategies
+
+### Performance Constraints
+- **Fixed Particle Budget**: 30K particles on desktop, 10K on mobile (hardcoded for optimal balance)
+- **Memory Usage**: Allocates ~50MB for particle buffers; may struggle on devices with <2GB RAM
+- **No Fallback**: If WebGL fails to initialize, shows error boundary (no 2D canvas fallback)
+
+### Accessibility
+- **Screen Reader Support**: Limited; 3D canvas is not accessible to screen readers (static text alternatives provided)
+- **Motion Sensitivity**: Particle effects and camera controls may trigger motion sickness (no reduced-motion mode yet)
+- **Keyboard Navigation**: Orbital controls require mouse/touch; keyboard shortcuts not implemented
+
+### Technical Debt
+- **Font Loading Race Condition**: 1-second delay ensures Orbitron font loads before particle generation; may show flash on slow connections
+- **No Progressive Enhancement**: Requires JavaScript; does not work with JS disabled
+- **Bundle Size**: 303KB gzipped (~1MB uncompressed) may take 3-5 seconds on 3G connections
+
+> **Note**: These limitations are documented for transparency. For enterprise applications requiring broader compatibility, consider using a 2D fallback or progressive enhancement strategy.
+
+---
+
 ## 🚀 Quick Start
 
 <div align="center">

@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import PropTypes from 'prop-types'
+import { logger } from '../../utils/logger'
 
 /**
  * Error Boundary component to catch and display React component errors
@@ -21,8 +23,14 @@ export class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Log error details for debugging
-    console.error('ErrorBoundary caught error:', error, errorInfo)
+    // Log error with structured logging
+    logger.error('React Error Boundary caught error', {
+      error: error.toString(),
+      errorMessage: error.message,
+      errorStack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+    })
 
     // Store error info in state
     this.setState({ errorInfo })
@@ -111,4 +119,8 @@ export class ErrorBoundary extends Component {
 
     return this.props.children
   }
+}
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
 }
