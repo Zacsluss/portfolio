@@ -61,6 +61,20 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Smooth scroll handler for navigation links
+  const handleSmoothScroll = (event) => {
+    event.preventDefault()
+    const targetId = event.currentTarget.getAttribute('href').substring(1)
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }
+
   // Handle wheel events at window level with requestAnimationFrame throttling
   // Canvas is position:fixed but content has z-index:10, so we need window-level handler
   useEffect(() => {
@@ -213,11 +227,11 @@ function App() {
       {/* Sticky Navigation */}
       <nav className={`sticky-nav ${particlesFormed ? 'fade-in-1' : ''}`}>
         <div className="nav-container">
-          <a href="#about" className="nav-link">About</a>
-          <a href="#skills" className="nav-link">Skills</a>
-          <a href="#experience" className="nav-link">Experience</a>
-          <a href="#leadership" className="nav-link">Leadership & Passions</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#about" className="nav-link" onClick={handleSmoothScroll}>About</a>
+          <a href="#skills" className="nav-link" onClick={handleSmoothScroll}>Skills</a>
+          <a href="#experience" className="nav-link" onClick={handleSmoothScroll}>Experience</a>
+          <a href="#leadership" className="nav-link" onClick={handleSmoothScroll}>Leadership & Passions</a>
+          <a href="#contact" className="nav-link" onClick={handleSmoothScroll}>Contact</a>
         </div>
       </nav>
 
