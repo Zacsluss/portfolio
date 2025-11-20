@@ -12,7 +12,7 @@
 
 <!-- Main Action Buttons -->
 <p align="center">
-  <a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Live Site"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download"/></a>
+<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge&logo=" alt="Live Site"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge&logo=" alt="Download"/></a>
 </p>
 
 <!-- GitHub Stats Badges -->
