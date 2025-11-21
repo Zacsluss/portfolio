@@ -54,7 +54,7 @@
   animation-play-state: paused;
   position: relative;
   backdrop-filter: blur(10px);
-  height: 280px;
+  height: 840px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -252,7 +252,7 @@
 
   .skill-category-card {
     padding: 20.0px;
-    height: 250px;
+    height: 750px;
   }
 
   .category-title {
