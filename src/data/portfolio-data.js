@@ -1,8 +1,8 @@
 export const portfolioData = {
   personal: {
     name: "Zachary Sluss",
-    title: "Lead CRM Systems Analyst",
-    tagline: "Enterprise Technology Leader specializing in multi-million-dollar CRM, ERP, and Data ecosystems for Fortune 500-scale enterprises - delivering 40%+ productivity gains and governing global multi-cloud portfolios across 20+ countries",
+    title: "Principal CRM & Enterprise Platforms Solutions Architect",
+    tagline: "Enterprise Technology Leader with 8+ years specializing in $3M+ CRM, ERP, and Data ecosystems for Fortune 500-scale enterprises - delivering 40%+ productivity gains and governing global multi-cloud portfolios across 20+ countries",
     bio: "I design and govern the digital ecosystems that keep global enterprises running - spanning Salesforce, ERP, and data clouds across 20+ countries and millions in technology investments. I turn complexity into clarity, automation into scale, and platforms into measurable growth - often improving productivity by 40% or more!\n\nBy day, I architect multi-cloud systems and negotiate million-dollar vendor contracts; by night, I build unique digital experiences and pilot drones through physics-defying spaces. Whether it's enterprise architecture or visual experiments, my work always comes down to the same thing: precision, performance, and a curiosity that never switches off.",
     location: "New Hampshire, USA (Remote)",
     email: "zacharyjsluss@gmail.com",
@@ -20,9 +20,9 @@ export const portfolioData = {
     {
       id: "exp-1",
       company: "Computershare",
-      position: "Lead CRM Systems Analyst",
+      position: "Principal CRM & Enterprise Platforms Solutions Architect",
       startDate: "2023-07",
-      description: "Lead enterprise CRM and platform strategy as CRM platform owner for thousands of global users across 20+ countries. Oversee a $1M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives.",
+      description: "Lead enterprise CRM and platform strategy as CRM platform owner for thousands of global users across 20+ countries. Oversee a $3M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives.",
       achievements: [
         "Defined and governed enterprise CRM architecture and roadmap spanning Salesforce Multi-Cloud, ERP, and analytics ecosystems - ensuring interoperability, data integrity, and scalable growth across all business units",
         "Directed global digital transformation program that improved sales and operational throughput 40%, automated 1,000+ hours annually, and established global process standardization through API-led integration frameworks",
@@ -31,10 +31,11 @@ export const portfolioData = {
         "Defined multi-year CRM and data roadmap ensuring alignment with corporate strategy, M&A integrations, and geographic expansion goals",
         "Enabled executive and board-level decision intelligence by designing Salesforce dashboards and analytics frameworks for real-time forecasting, pipeline, and revenue insights",
         "Led global change management and adoption strategy, serving as the single authority for Salesforce change governance - aligning process, communication, and user adoption across 22+ countries",
-        "Managed a multi-vendor ecosystem ($3M+ annual portfolio; 11 contracts) across CRM, integration, analytics, and automation categories - contributing to vendor selection, renewals, and multi-year ROI assessment",
+        "Managed a multi-vendor ecosystem ($3M+ annual portfolio; 10+ contracts) across CRM, integration, analytics, and automation categories - contributing to vendor selection, renewals, and multi-year ROI assessment",
         "Oversee a project delivery portfolio of 12+ concurrent strategic programs annually from the CRM/platform side, helping ensure cross-functional alignment, on-time delivery, and measurable business impact",
+        "Mentor junior analysts and lead cross-functional working groups, establishing best practices and knowledge-sharing frameworks across global teams",
       ],
-      technologies: ["Salesforce Multi-Cloud", "Salesforce Marketing Cloud", "MuleSoft", "API Management", "Tableau", "Power BI", "SQL", "AWS", "Azure", "ServiceNow", "Jira", "Confluence", "SOX Compliance"],
+      technologies: ["Salesforce Multi-Cloud", "Salesforce Marketing Cloud", "MuleSoft", "API Management", "Tableau", "Power BI", "Looker", "SQL", "AWS", "Azure", "Azure DevOps", "ServiceNow", "Jira", "Confluence", "Marketo", "SOX Compliance"],
     },
     {
       id: "exp-2",
@@ -194,6 +195,9 @@ export const portfolioData = {
       category: "Cloud & Infrastructure",
       skills: [
         { name: "AWS (Certified)", level: "Expert", certified: true },
+        { name: "Azure", level: "Advanced" },
+        { name: "Docker", level: "Intermediate" },
+        { name: "Kubernetes", level: "Intermediate" },
       ],
     },
     {
@@ -215,6 +219,7 @@ export const portfolioData = {
       skills: [
         { name: "Google Analytics", level: "Advanced" },
         { name: "Google BigQuery", level: "Advanced" },
+        { name: "Looker", level: "Advanced" },
         { name: "Snowflake", level: "Advanced" },
         { name: "Splunk", level: "Advanced" },
       ],
@@ -223,6 +228,7 @@ export const portfolioData = {
       category: "Enterprise Systems",
       skills: [
         { name: "HubSpot", level: "Advanced" },
+        { name: "Marketo", level: "Advanced" },
         { name: "Oracle Cloud Applications", level: "Advanced" },
         { name: "Pardot", level: "Advanced" },
         { name: "SAP ERP", level: "Advanced" },
@@ -236,6 +242,7 @@ export const portfolioData = {
         { name: "Data Governance & Compliance (SOX, GDPR, CCPA)", level: "Expert" },
         { name: "MuleSoft", level: "Expert" },
         { name: "SQL", level: "Expert" },
+        { name: "Workato", level: "Advanced" },
       ],
     },
     {
@@ -265,6 +272,7 @@ export const portfolioData = {
     {
       category: "Security & Identity",
       skills: [
+        { name: "Microsoft Entra", level: "Advanced" },
         { name: "Okta SSO", level: "Advanced" },
         { name: "OneTrust", level: "Advanced" },
       ],
