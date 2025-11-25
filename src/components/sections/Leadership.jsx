@@ -92,7 +92,7 @@ export function Leadership() {
         </div>
 
         {/* Passions & Creative Work */}
-        <div className="passions-section">
+        <div id="passions" className="passions-section">
           <div className="section-header">
             <h2 className="section-title">Beyond the Enterprise</h2>
             <div className="title-line" />

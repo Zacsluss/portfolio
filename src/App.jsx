@@ -230,7 +230,8 @@ function App() {
           <a href="#about" className="nav-link" onClick={handleSmoothScroll}>About</a>
           <a href="#skills" className="nav-link" onClick={handleSmoothScroll}>Skills</a>
           <a href="#experience" className="nav-link" onClick={handleSmoothScroll}>Experience</a>
-          <a href="#leadership" className="nav-link" onClick={handleSmoothScroll}>Leadership & Passions</a>
+          <a href="#leadership" className="nav-link" onClick={handleSmoothScroll}>Leadership</a>
+          <a href="#passions" className="nav-link" onClick={handleSmoothScroll}>Beyond the Enterprise</a>
           <a href="#contact" className="nav-link" onClick={handleSmoothScroll}>Contact</a>
         </div>
       </nav>
