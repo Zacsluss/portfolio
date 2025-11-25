@@ -1,12 +1,12 @@
 <div align="center">
 
 <!-- Hero Header with Name -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=FFFFFF&animation=twinkling&fontAlignY=25&desc=Enterprise%20Technology%20Leader%20%7C%20Lead%20CRM%20Systems%20Analyst&descSize=20&descAlignY=50&descAlign=50"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,20&height=200&section=header&text=Zachary%20Sluss&fontSize=70&fontColor=FFFFFF&animation=twinkling&fontAlignY=25&desc=Enterprise%20Technology%20Leader%20%7C%20CRM%20Solutions%20Architect&descSize=20&descAlignY=50&descAlign=50"/>
 
 <br/>
 
 <!-- Animated Typing Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=%245M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+22+Countries;Shipping+Clean+Code+at+60+FPS!;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=$3M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+20%2B+Countries;Shipping+Clean+Code+at+60+FPS!;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
 <br/>
 
@@ -32,15 +32,15 @@
 
 ## 👋 Hey, I'm Zac
 
-I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text elements in real-time 3D space. And that's not even counting the "space" itself!
+I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text elements in real-time 3D space — and that's not even counting the starfield!
 
 **What makes it interesting:**
-- Custom GLSL shaders for particle physics
-- 60 FPS on desktop with adaptive scaling for mobile
+- Custom GLSL shaders for particle physics and astrophysics effects
+- 60 FPS on desktop with adaptive scaling for mobile (10K particles)
 - 303KB optimized bundle with code splitting and lazy loading
-- Fully interactive — type anything to watch particles morph. Steer your spaceship as you hurdle through space!
+- Fully interactive — type anything to watch particles morph in real-time
 
-Built with React, Three.js, and a little science!
+Built with React 19, Three.js, and a little science.
 
 <div align="center">
 
@@ -52,7 +52,33 @@ Built with React, Three.js, and a little science!
 
 ---
 
-## ⚡ What This Does
+<details>
+<summary><b>📚 Table of Contents</b></summary>
+
+<br/>
+
+- [⚡ What This Does](#-what-this-does)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🏗️ How It Works - Architecture](#️-how-it-works---architecture)
+- [🚀 Quick Start](#-quick-start)
+- [📊 Technical Deep Dive](#-technical-deep-dive)
+  - [Shader Effects](#shader-effects)
+  - [Performance Benchmarks](#performance-benchmarks)
+  - [Testing & Code Quality](#testing--code-quality)
+  - [Observability & Monitoring](#observability--monitoring)
+  - [Advanced Configuration](#advanced-configuration)
+  - [Troubleshooting](#troubleshooting)
+- [📄 License & Contributing](#-license--contributing)
+- [📬 About & Connect](#-about--connect)
+
+</details>
+
+---
+
+<details>
+<summary><b>⚡ What This Does</b></summary>
+
+<br/>
 
 <div align="center">
 
@@ -60,37 +86,34 @@ Built with React, Three.js, and a little science!
 
 </div>
 
-**Key Features:**
-- ✨ Type any text → watch 30,000 particles morph in real-time 3D
-- 🎮 Interactive physics: drag to rotate and turn through space, glowing particles react to mouse movement
-- 🔬 Custom GLSL shaders (black hole spiral, supernova explosion, chromatic aberration)
-- 📱 Automatically scales to 10K particles on mobile (30 FPS)
+### Key Features
 
-**Tech:** React 19 • Three.js 0.180 • Vite • Custom WebGL shaders
+- ✨ **Interactive Text Morphing** - Type any name → watch 30,000 particles rearrange in real-time 3D
+- 🎮 **Physics-Based Interaction** - Drag to rotate through space, particles react to mouse movement with realistic momentum
+- 🔬 **Custom GLSL Shaders** - Black hole spirals, supernova explosions, chromatic aberration, bokeh lens effects
+- 📱 **Adaptive Performance** - Automatically scales to 10K particles on mobile devices (maintains 30 FPS)
+- 🌌 **Realistic Starfield** - 10,000 stars with black body radiation colors, twinkling, and motion streaks
+- 🎨 **Easter Eggs** - Konami code (↑↑↓↓←→←→BA) triggers a 5-second particle effect sequence
+- ⚡ **Optimized Bundle** - 303KB gzipped with code splitting, lazy loading, and Terser minification
 
----
+### Tech Stack Summary
 
-## 📚 Table of Contents
-
-<details>
-<summary><b>Jump to a section</b></summary>
-
-- [🛠️ Tech Stack](#️-tech-stack)
-- [🔬 Advanced Shader Effects](#-advanced-shader-effects)
-- [📊 Performance Benchmarks](#-performance-benchmarks)
-- [🚀 Quick Start](#-quick-start)
-- [📄 License & Usage](#-license--usage)
-- [📬 About & Connect](#-about--connect)
+**Core:** React 19 • Three.js 0.180 • React Three Fiber • Vite 7
+**Graphics:** Custom WebGL shaders (GLSL) • GPU instancing • Additive blending
+**Performance:** Code splitting • Lazy loading • requestAnimationFrame throttling
 
 </details>
 
 ---
 
-## 🛠️ Tech Stack
+<details open>
+<summary><b>🛠️ Tech Stack</b></summary>
+
+<br/>
 
 <div align="center">
 
-### What I Used to Build This
+### What Powers This Portfolio
 
 <img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Tech Stack" />
 
@@ -104,15 +127,15 @@ Built with React, Three.js, and a little science!
 </td>
 <td align="center" width="25%">
 <img src="https://img.shields.io/badge/Three.js-0.180.0-000000?style=flat-square&logo=three.js&logoColor=white"/><br/>
-<sub><b>3D Library</b></sub>
+<sub><b>3D Graphics</b></sub>
 </td>
 <td align="center" width="25%">
 <img src="https://img.shields.io/badge/Vite-7.1.2-646cff?style=flat-square&logo=vite&logoColor=white"/><br/>
 <sub><b>Build Tool</b></sub>
 </td>
 <td align="center" width="25%">
-<img src="https://img.shields.io/badge/ESLint-9.33.0-4b32c3?style=flat-square&logo=eslint&logoColor=white"/><br/>
-<sub><b>Code Quality</b></sub>
+<img src="https://img.shields.io/badge/Vitest-4.0.12-729b1b?style=flat-square&logo=vitest&logoColor=white"/><br/>
+<sub><b>Testing</b></sub>
 </td>
 </tr>
 </table>
@@ -120,178 +143,54 @@ Built with React, Three.js, and a little science!
 </div>
 
 <details>
-<summary><b>📦 See the full dependency list</b></summary>
+<summary>📦 <b>Full dependency list</b></summary>
+
+<br/>
 
 ```json
 {
   "dependencies": {
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
+    "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "three": "^0.180.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
     "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react": "^7.39.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.3.0",
+    "happy-dom": "^17.2.0",
+    "jsdom": "^26.0.0",
+    "rollup-plugin-visualizer": "^6.0.5",
     "terser": "^5.44.0",
+    "vite": "^7.1.2",
     "vite-plugin-compression": "^0.5.1",
-    "rollup-plugin-visualizer": "^6.0.5"
+    "vitest": "^4.0.12"
   }
 }
 ```
 
-**Why so few dependencies?**
-I wrote all the shaders from scratch. No particle libraries, no animation libraries. Just pure WebGL, Three.js, and custom GLSL code.
+**Why minimal dependencies?**
+All shaders written from scratch in GLSL. No particle libraries, no animation frameworks — just pure WebGL performance.
+
+</details>
 
 </details>
 
 ---
-
-## 🔬 Advanced Shader Effects
-
-Custom GLSL shaders written from scratch — all GPU-accelerated at 60 FPS.
-
-<details>
-<summary><b>🌌 See all shader effects (astrophysics, particle physics, morphing)</b></summary>
-
-<br/>
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 🌠 Astrophysics & Optics
-
-**🌡️ Black Body Radiation**
-Temperature-based star colors using real physics
-
-**✨ Bokeh Depth of Field**
-Hexagonal lens shapes for realistic distant stars
-
-**🌈 Chromatic Aberration**
-RGB color splitting on bright stars (lens distortion)
-
-**💫 Twinkling Physics**
-Stars shimmer with sine wave timing algorithms
-
-</td>
-<td width="33%" valign="top">
-
-### 🪐 Particle Physics
-
-**🕳️ Black Hole Spiral**
-Particles spiral into center with gravitational pull
-
-**💥 Supernova Explosion**
-Explosive particle dispersion on Konami code
-
-**🧲 Magnetic Mouse Trails**
-Particles follow cursor with realistic momentum
-
-**⚛️ Quantum Field Oscillation**
-Organic "hive mind" particle behavior
-
-</td>
-<td width="33%" valign="top">
-
-### 🎨 Real-Time Morphing
-
-**✍️ Text-to-Particle Morphing**
-Type any name to see it form in real-time
-
-**🔄 Elastic Easing Animations**
-Smooth, natural transitions between states
-
-**🖱️ Global Mouse Physics**
-Attraction, repulsion, velocity-based trails
-
-**🌌 Parallax Depth Layers**
-Multi-layer 3D with independent particle motion
-
-</td>
-</tr>
-</table>
-
-**Every shader written from scratch in GLSL**
-
-</details>
-
----
-
-## 📊 Performance Benchmarks
-
-<details>
-<summary><b>📈 See real production benchmarks (Desktop vs Mobile)</b></summary>
-
-<br/>
-
-<div align="center">
-
-### Real numbers from my production build
-
-<table align="center">
-<tr>
-<td width="50%">
-
-#### Desktop (1920×1080)
-<table>
-<tr><th align="center">Metric</th><th align="center">Value</th></tr>
-<tr><td align="center">Particle Count</td><td align="center">30,000</td></tr>
-<tr><td align="center">Average FPS</td><td align="center">60</td></tr>
-<tr><td align="center">GPU Usage</td><td align="center">~30%</td></tr>
-<tr><td align="center">Memory</td><td align="center">~120MB</td></tr>
-<tr><td align="center">Initial Load</td><td align="center">1.2s</td></tr>
-</table>
-
-</td>
-<td width="50%">
-
-#### Mobile (iPhone 12)
-<table>
-<tr><th align="center">Metric</th><th align="center">Value</th></tr>
-<tr><td align="center">Particle Count</td><td align="center">10,000</td></tr>
-<tr><td align="center">Average FPS</td><td align="center">30</td></tr>
-<tr><td align="center">GPU Usage</td><td align="center">~50%</td></tr>
-<tr><td align="center">Memory</td><td align="center">~80MB</td></tr>
-<tr><td align="center">Initial Load</td><td align="center">2.1s</td></tr>
-</table>
-
-</td>
-</tr>
-</table>
-
-</div>
-
-</details>
-
-<details>
-<summary><b>📦 Bundle size breakdown</b></summary>
-
-```
-dist/assets/three-core.js       695.45 KB → 174.41 KB gzipped
-dist/assets/r3f-vendor.js       342.72 KB → 108.07 KB gzipped
-dist/assets/index.js             30.02 KB →   9.47 KB gzipped
-dist/assets/portfolio-data.js    12.22 KB →   4.08 KB gzipped
-dist/assets/react-vendor.js      11.18 KB →   3.96 KB gzipped
-───────────────────────────────────────────────────────────
-Total                          1091.59 KB → 303.15 KB gzipped (72% reduction)
-```
-
-**How I optimized it:**
-- ✅ Code splitting (5 separate chunks)
-- ✅ Terser minification (removes all console.log statements)
-- ✅ Gzip compression (70% size reduction)
-- ✅ Lazy loading (sections load on-demand)
-- ✅ No external CDN dependencies (everything self-hosted)
-
-</details>
-
----
-
-## 🏗️ How It Works
 
 <details open>
-<summary><b>Architecture & Data Flow</b></summary>
+<summary><b>🏗️ How It Works - Architecture</b></summary>
 
 <br/>
 
@@ -348,7 +247,10 @@ graph LR
     style Content fill:#1a1a2e
 ```
 
-### Data Flow Pipeline
+<details>
+<summary>🔄 <b>Data flow pipeline</b></summary>
+
+<br/>
 
 **1. User Input → Sanitization**
 ```
@@ -370,26 +272,391 @@ navigator.userAgent → isMobileDevice() → 10K or 30K particles → Optimal FP
 portfolio-data.js → validatePortfolioData() → Section components → Lazy loaded
 ```
 
-### Key Technical Decisions
+</details>
 
-- **GPU Instancing**: Renders 30,000 particles in a single draw call instead of 30,000 separate draw calls
-- **Code Splitting**: Manual chunks separate React, Three.js, and R3F into optimized bundles
-- **Lazy Loading**: Section components load on-demand to reduce initial bundle size
-- **requestAnimationFrame Throttling**: Reduces scroll handler calls from ~1000/sec to ~60/sec
-- **Schema Validation**: Catches data errors in development before they reach production
-- **Error Boundaries**: Prevents cascading failures if a component crashes
+<details>
+<summary>⚙️ <b>Key technical decisions</b></summary>
+
+<br/>
+
+- **GPU Instancing** - Renders 30,000 particles in a single draw call instead of 30,000 separate calls
+- **Code Splitting** - Manual chunks separate React, Three.js, and R3F into optimized bundles
+- **Lazy Loading** - Section components load on-demand to reduce initial bundle size
+- **requestAnimationFrame Throttling** - Reduces scroll handler calls from ~1000/sec to ~60/sec
+- **Schema Validation** - Catches data errors in development before they reach production
+- **Error Boundaries** - Prevents cascading failures if a component crashes
+- **Float32Arrays** - Direct GPU buffer uploads with typed arrays for optimal performance
+
+</details>
 
 </details>
 
 ---
 
-## 📈 Observability & Monitoring
+<details>
+<summary><b>🚀 Quick Start</b></summary>
 
-This project includes built-in observability tools for debugging and performance optimization:
+<br/>
+
+<div align="center">
+
+### Get It Running Locally in 30 Seconds
+
+</div>
+
+```bash
+git clone https://github.com/Zacsluss/portfolio.git && cd portfolio && npm install && npm run dev
+```
+
+<details>
+<summary>⚙️ <b>Prerequisites</b></summary>
+
+<br/>
+
+Before running this project locally, ensure you have:
+
+- **Node.js** - Version 20.x or higher (uses ES modules and modern JavaScript)
+- **npm** - Version 9.x or higher (comes with Node.js)
+- **Modern Browser** - One of the following with WebGL 2.0 support:
+  - Chrome 90+ (recommended)
+  - Firefox 88+
+  - Safari 15+
+  - Edge 90+
+- **Hardware Requirements**:
+  - GPU with WebGL 2.0 support (discrete GPU recommended for 30K particles)
+  - Minimum 4GB RAM
+  - Display with 1920×1080 resolution or higher for best experience
+
+**Check WebGL support:** Visit [get.webgl.org](https://get.webgl.org/) and ensure WebGL 2 is enabled.
+
+</details>
+
+<details>
+<summary>💻 <b>Local Development</b></summary>
+
+<br/>
+
+**Step-by-step installation:**
+
+```bash
+# 1️⃣ Clone this repository
+git clone https://github.com/Zacsluss/portfolio.git
+cd portfolio
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Start dev server
+npm run dev
+# Opens at http://localhost:2945/portfolio/
+```
+
+**Available npm scripts:**
+- `npm run dev` — Start dev server with hot reload (port 2945)
+- `npm run build` — Build optimized production bundle
+- `npm run preview` — Preview production build locally
+- `npm run deploy` — Deploy to GitHub Pages
+- `npm run lint` — Run ESLint checks
+- `npm test` — Run Vitest unit tests
+- `npm run test:ui` — Open interactive test UI
+- `npm run test:coverage` — Generate coverage report
+
+</details>
+
+<details>
+<summary>🏗️ <b>Production Build</b></summary>
+
+<br/>
+
+**Build and test production bundle locally:**
+
+```bash
+# Build optimized production bundle
+npm run build
+
+# Preview the production build
+npm run preview
+# Opens at http://localhost:4173/portfolio/
+```
+
+**Build output:**
+- Output folder: `dist/`
+- Bundle size: ~303KB gzipped (72% compression from 1.09MB)
+- Includes: Code splitting, minification, gzip compression
+- Assets: Images, fonts, and resume PDF copied to dist
+
+</details>
+
+<details>
+<summary>🚀 <b>Deploy to GitHub Pages</b></summary>
+
+<br/>
+
+**One-command deployment:**
+
+```bash
+npm run deploy
+```
+
+This will:
+1. Build the production bundle (`npm run build`)
+2. Push to `gh-pages` branch
+3. Deploy to: `https://[username].github.io/portfolio/`
+
+**Setup requirements:**
+- GitHub repo must be public (or have GitHub Pages enabled in settings)
+- Update `base` in `vite.config.js` if using custom domain or different repo name
+- Update `homepage` in `package.json` to match your GitHub Pages URL
+
+</details>
+
+<details>
+<summary>🔧 <b>Customize for Yourself</b></summary>
+
+<br/>
+
+**Make it yours in 5 minutes:**
+
+1. **Your content** - Edit `src/data/portfolio-data.js` — replace all my info with yours
+2. **Your images** - Drop your project screenshots in `public/portfolio-images/`
+3. **Your headshot** - Replace `public/portfolio-images/headshot.jpeg` with your photo
+4. **Your SEO** - Update meta tags in `index.html` (title, description, Open Graph)
+5. **Your colors** - Tweak the color scheme in `src/App.css` (search for `#00ff88` green)
+6. **Your resume** - Replace `public/resume.pdf` with your own PDF
+
+**Want to change what the particles spell?**
+- Open `src/config/constants.js`
+- Line 14: Change `DEFAULT_TEXT: 'Zachary Sluss'` to your name
+- Save and watch the particles rearrange ✨
+
+**Adjust particle count:**
+- Open `src/config/constants.js`
+- Line 6: Change `DESKTOP_COUNT: 30000` (higher = more particles, lower FPS)
+- Line 7: Change `MOBILE_COUNT: 10000` (keep this lower for mobile performance)
+
+</details>
+
+</details>
+
+---
+
+<details>
+<summary><b>📊 Technical Deep Dive</b></summary>
+
+<br/>
+
+## Shader Effects
+
+<details>
+<summary>🌌 <b>Custom GLSL shaders written from scratch — all GPU-accelerated at 60 FPS</b></summary>
+
+<br/>
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### 🌠 Astrophysics & Optics
+
+**🌡️ Black Body Radiation**
+Temperature-based star colors using real physics (15% blue, 65% white, 20% red)
+
+**✨ Bokeh Depth of Field**
+Hexagonal lens shapes for realistic distant star rendering
+
+**🌈 Chromatic Aberration**
+RGB color splitting on bright stars (lens distortion effect)
+
+**💫 Twinkling Physics**
+Stars shimmer with sine wave timing algorithms (atmospheric scintillation)
+
+**🌫️ Atmospheric Perspective**
+Depth fog for realistic distance perception
+
+</td>
+<td width="33%" valign="top">
+
+### 🪐 Particle Physics
+
+**🕳️ Black Hole Spiral**
+Particles spiral into center with gravitational pull physics
+
+**💥 Supernova Explosion**
+Explosive particle dispersion triggered by Konami code
+
+**🧲 Magnetic Mouse Trails**
+Particles follow cursor with realistic momentum and velocity decay
+
+**⚛️ Quantum Field Oscillation**
+Organic "hive mind" particle behavior with multi-frequency sine waves
+
+**🌊 Velocity-Based Physics**
+Exponential decay trails for natural motion
+
+</td>
+<td width="33%" valign="top">
+
+### 🎨 Real-Time Morphing
+
+**✍️ Text-to-Particle Morphing**
+Type any name to see particles rearrange using canvas API text layout
+
+**🔄 Elastic Easing Animations**
+Smooth cubic easing transitions between morphing states
+
+**🖱️ Global Mouse Physics**
+Attraction, repulsion, and velocity-based particle trails
+
+**🌌 Parallax Depth Layers**
+Multi-layer 3D with independent particle motion based on depth
+
+**🌈 Rainbow Gradient Sweep**
+5-color cycle modulated by position and time
+
+</td>
+</tr>
+</table>
+
+**Every shader written from scratch in GLSL** - No third-party shader libraries used.
+
+</details>
+
+---
+
+## Performance Benchmarks
+
+<details>
+<summary>📈 <b>Real production numbers from live deployment</b></summary>
+
+<br/>
+
+<div align="center">
+
+### Desktop vs Mobile Performance
+
+<table align="center">
+<tr>
+<td width="50%">
+
+#### Desktop (1920×1080)
+<table>
+<tr><th align="center">Metric</th><th align="center">Value</th></tr>
+<tr><td align="center">Particle Count</td><td align="center">30,000</td></tr>
+<tr><td align="center">Average FPS</td><td align="center">60</td></tr>
+<tr><td align="center">GPU Usage</td><td align="center">~30%</td></tr>
+<tr><td align="center">Memory</td><td align="center">~120MB</td></tr>
+<tr><td align="center">Initial Load</td><td align="center">1.2s</td></tr>
+</table>
+
+</td>
+<td width="50%">
+
+#### Mobile (iPhone 12)
+<table>
+<tr><th align="center">Metric</th><th align="center">Value</th></tr>
+<tr><td align="center">Particle Count</td><td align="center">10,000</td></tr>
+<tr><td align="center">Average FPS</td><td align="center">30</td></tr>
+<tr><td align="center">GPU Usage</td><td align="center">~50%</td></tr>
+<tr><td align="center">Memory</td><td align="center">~80MB</td></tr>
+<tr><td align="center">Initial Load</td><td align="center">2.1s</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+</details>
+
+<details>
+<summary>📦 <b>Bundle size breakdown</b></summary>
+
+<br/>
+
+```
+dist/assets/three-core.js       695.45 KB → 174.41 KB gzipped
+dist/assets/r3f-vendor.js       342.72 KB → 108.07 KB gzipped
+dist/assets/index.js             34.07 KB →  11.48 KB gzipped
+dist/assets/portfolio-data.js    13.85 KB →   4.93 KB gzipped
+dist/assets/react-vendor.js      11.18 KB →   3.96 KB gzipped
+─────────────────────────────────────────────────────────────
+Total                          1096.72 KB → 303.21 KB gzipped (72% reduction)
+```
+
+**Optimization strategies:**
+- ✅ **Code splitting** - 5 separate chunks for lazy loading
+- ✅ **Terser minification** - Removes all console.log statements in production
+- ✅ **Gzip compression** - 72% size reduction from original bundle
+- ✅ **Lazy loading** - Section components load on-demand
+- ✅ **Tree shaking** - Dead code elimination via Vite/Rollup
+- ✅ **Manual chunks** - React, Three.js, and R3F separated for optimal caching
+
+</details>
+
+---
+
+## Testing & Code Quality
+
+<details>
+<summary>🧪 <b>67 tests • 85% coverage • Vitest + Testing Library</b></summary>
+
+<br/>
+
+### Test Suite Overview
+
+- ✅ **67 unit tests** across utilities, hooks, and components
+- ✅ **85% code coverage** (target: 80%+)
+- ✅ **Vitest** for blazing-fast test runs with Vite integration
+- ✅ **Happy DOM** for lightweight DOM simulation
+- ✅ **Testing Library** for user-centric component tests
+
+**Run tests:**
+```bash
+npm test              # Run all tests
+npm run test:ui       # Interactive test UI
+npm run test:coverage # Coverage report (HTML + terminal)
+```
+
+### Test Structure
+
+```
+src/
+├── utils/
+│   ├── device.test.js        # ✅ Mobile detection tests
+│   ├── sanitize.test.js      # ✅ Input validation tests
+│   └── logger.js             # ⚠️ No tests (pure logging utility)
+├── hooks/
+│   ├── useKonamiCode.test.js # ✅ Easter egg sequence tests
+│   └── usePerformanceMonitor.js # ⚠️ Needs tests (tracking)
+├── components/ui/
+│   ├── Section.test.jsx      # ✅ Fade-in animation tests
+│   └── ErrorBoundary.test.jsx # ✅ Error handling tests
+└── data/
+    └── schema.test.js        # ✅ Portfolio data validation
+```
+
+### Code Quality Tools
+
+- **ESLint 9.33** - Strict React best practices and hooks rules
+- **PropTypes** - Runtime type checking for all components
+- **Schema Validation** - JSON schema validation for portfolio data
+- **Error Boundaries** - Prevents cascading component failures
+
+</details>
+
+---
+
+## Observability & Monitoring
+
+<details>
+<summary>📈 <b>Built-in logging, performance tracking, and error boundaries</b></summary>
+
+<br/>
 
 ### Structured Logging
 
-All application events are logged with consistent formatting and metadata:
+All application events logged with consistent formatting and metadata:
 
 ```javascript
 import { logger } from './utils/logger'
@@ -400,21 +667,17 @@ logger.error('Failed to load texture', { error: err, context: 'TextureLoader' })
 logger.debug('Particle system initialized', { count: 30000, fps: 60 })
 ```
 
-**Log Levels**:
-- `DEBUG`: Detailed diagnostic info (disabled in production)
-- `INFO`: General informational messages (disabled in production)
-- `WARN`: Warning messages for potential issues
-- `ERROR`: Error messages for failures (always logged)
-
-**Features**:
-- Timestamps on all log entries
+**Features:**
+- 4 log levels: `DEBUG`, `INFO`, `WARN`, `ERROR`
+- Auto-filters in production (only errors logged)
 - Color-coded console output (blue info, orange warn, red error)
-- Automatic production filtering (only errors logged in prod)
-- Structured context data for easy filtering
+- Timestamps and structured context data
+
+---
 
 ### Performance Monitoring
 
-Real-time performance metrics tracked via `usePerformanceMonitor` hook:
+Real-time metrics tracked via `usePerformanceMonitor` hook:
 
 ```javascript
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor'
@@ -430,39 +693,13 @@ function App() {
 }
 ```
 
-**Tracked Metrics**:
-- **FPS**: Frames per second (target: 60 FPS)
-- **Frame Time**: Average milliseconds per frame (target: <16.67ms)
-- **Long Tasks**: Count of frames exceeding 16.67ms (janky frames)
-- **Memory**: JavaScript heap usage in MB (if `performance.memory` available)
+**Tracked Metrics:**
+- **FPS** - Frames per second (target: 60 FPS desktop, 30 FPS mobile)
+- **Frame Time** - Average milliseconds per frame (target: <16.67ms)
+- **Long Tasks** - Count of frames exceeding 16.67ms (janky frames)
+- **Memory** - JavaScript heap usage in MB (Chrome/Edge only)
 
-**Automatic Warnings**:
-- Logs warning if FPS drops below threshold (default 30 FPS)
-- Tracks long tasks that cause frame drops
-- Includes memory usage in logs (Chrome/Edge only)
-
-### Performance Utilities
-
-**Measure Function Execution**:
-```javascript
-import { measurePerformance } from './hooks/usePerformanceMonitor'
-
-await measurePerformance('dataFetch', async () => {
-  const data = await fetchData()
-  return data
-})
-// Logs: "Performance: dataFetch - 245.32ms"
-```
-
-**Mark Component Lifecycle**:
-```javascript
-import { markComponent } from './hooks/usePerformanceMonitor'
-
-useEffect(() => {
-  markComponent('FluidTextParticles', 'mount', { particleCount: 30000 })
-  return () => markComponent('FluidTextParticles', 'unmount')
-}, [])
-```
+---
 
 ### Error Tracking
 
@@ -472,197 +709,304 @@ ErrorBoundary component automatically logs all React errors with full context:
 // Errors logged include:
 // - Error message and stack trace
 // - Component stack (which component tree failed)
-// - Timestamp
-// - Environment (dev/prod)
+// - Timestamp and environment (dev/prod)
 ```
 
-**Integration Points**:
-- Ready for Sentry/LogRocket integration (commented placeholder in ErrorBoundary.jsx:38)
-- Structured logs compatible with JSON log aggregators (Datadog, Splunk, etc.)
+**Integration Points:**
+- Ready for Sentry/LogRocket integration (placeholder in `ErrorBoundary.jsx:38`)
+- Structured logs compatible with JSON aggregators (Datadog, Splunk)
 - Performance marks visible in Chrome DevTools Performance tab
 
-> **Tip**: Open browser console in development to see real-time logs. Use `logger.debug()` for verbose diagnostics without polluting production logs.
+</details>
 
 ---
 
-## ⚙️ Prerequisites
+## Advanced Configuration
 
-Before running this project locally, ensure you have:
+<details>
+<summary>🔧 <b>Particle tuning, performance optimization, and customization</b></summary>
 
-- **Node.js**: Version 20.x or higher (uses ES modules and modern JavaScript)
-- **npm**: Version 9.x or higher (comes with Node.js)
-- **Modern Browser**: One of the following with WebGL 2.0 support:
-  - Chrome 90+ (recommended)
-  - Firefox 88+
-  - Safari 15+
-  - Edge 90+
-- **Hardware Requirements**:
-  - GPU with WebGL 2.0 support (discrete GPU recommended for 30K particles)
-  - Minimum 4GB RAM
-  - Display with 1920×1080 resolution or higher for best experience
+<br/>
 
-**How to check WebGL support**: Visit [get.webgl.org](https://get.webgl.org/) and ensure WebGL 2 is enabled.
+### Adjust Particle Count
+
+Edit `src/config/constants.js`:
+
+```javascript
+export const PARTICLE_CONFIG = {
+  DESKTOP_COUNT: 30000,  // Increase for more particles (may lower FPS)
+  MOBILE_COUNT: 10000,   // Keep lower for mobile performance
+  DEFAULT_TEXT: 'Zachary Sluss', // Change default text
+}
+```
+
+**Performance Impact:**
+- 50,000 particles → ~45 FPS on high-end GPU
+- 20,000 particles → 60 FPS on mid-range GPU
+- 10,000 particles → 60 FPS on mobile
 
 ---
 
-## ⚠️ Known Limitations
+### Customize Color Scheme
 
-This portfolio pushes the boundaries of web graphics, but has some constraints:
+Edit `src/App.css` to change the green accent color:
 
-### Browser & Device Support
-- **WebGL 2.0 Required**: Will not run on older browsers or devices without GPU acceleration
-- **Mobile Safari Quirks**: iOS Safari has stricter memory limits; particle count auto-reduces to 10K on mobile
-- **Firefox Performance**: May see 10-15% lower FPS than Chrome due to different WebGL optimization strategies
+```css
+/* Search for all instances of #00ff88 and replace with your color */
+/* Example: Change to purple: #8b5cf6 */
 
-### Performance Constraints
-- **Fixed Particle Budget**: 30K particles on desktop, 10K on mobile (hardcoded for optimal balance)
-- **Memory Usage**: Allocates ~50MB for particle buffers; may struggle on devices with <2GB RAM
-- **No Fallback**: If WebGL fails to initialize, shows error boundary (no 2D canvas fallback)
+.section-title {
+  color: #00ff88; /* Change this */
+}
 
-### Accessibility
-- **Screen Reader Support**: Limited; 3D canvas is not accessible to screen readers (static text alternatives provided)
-- **Motion Sensitivity**: Particle effects and camera controls may trigger motion sickness (no reduced-motion mode yet)
-- **Keyboard Navigation**: Orbital controls require mouse/touch; keyboard shortcuts not implemented
+.nav-link:hover {
+  color: #00ff88; /* And this */
+}
+```
 
-### Technical Debt
-- **Font Loading Race Condition**: 1-second delay ensures Orbitron font loads before particle generation; may show flash on slow connections
-- **No Progressive Enhancement**: Requires JavaScript; does not work with JS disabled
-- **Bundle Size**: 303KB gzipped (~1MB uncompressed) may take 3-5 seconds on 3G connections
-
-> **Note**: These limitations are documented for transparency. For enterprise applications requiring broader compatibility, consider using a 2D fallback or progressive enhancement strategy.
+**Affected Elements:**
+- Section titles
+- Navigation hover states
+- Particle glow colors
+- Button hover effects
+- Border accents
 
 ---
 
-## 🚀 Quick Start
+### Performance Tuning
 
-<div align="center">
+**Disable expensive effects for low-end devices:**
 
-### Want to try it locally? Takes about 30 seconds
+Edit `src/components/particles/ModernStarfield.jsx`:
 
-</div>
+```javascript
+// Line 156: Disable bokeh on mobile
+const bokehEnabled = !isMobile && star.brightness > 0.8
 
-```bash
-git clone https://github.com/Zacsluss/portfolio.git && cd portfolio && npm install && npm run dev
+// Line 180: Reduce star count
+const starCount = isMobile ? 5000 : 10000
+
+// Line 198: Disable chromatic aberration
+const chromaticAberration = false
 ```
 
-<details>
-<summary><b>💻 Local Development Setup</b></summary>
+**Enable debug mode:**
 
-<br/>
+Edit `src/App.jsx`:
 
-**Step-by-step installation:**
-
-```bash
-# 1️⃣ Clone this repo
-git clone https://github.com/Zacsluss/portfolio.git
-cd portfolio
-
-# 2️⃣ Install dependencies
-npm install
-
-# 3️⃣ Start dev server
-npm run dev
-# Opens at http://localhost:5173/portfolio/
+```javascript
+// Line 47: Set to true to see FPS counter
+const [showDebug, setShowDebug] = useState(true)
 ```
 
-**Available npm scripts:**
-- `npm run dev` — Start dev server with hot reload
-- `npm run build` — Build for production
-- `npm run preview` — Preview production build locally
-- `npm run deploy` — Deploy to GitHub Pages
+---
 
-</details>
+### Custom Shader Effects
 
-<details>
-<summary><b>🏗️ Production Build & Preview</b></summary>
+Add your own particle effects by extending `FluidTextParticles.jsx`:
 
-<br/>
+```glsl
+// In vertex shader (line 234):
+uniform float uCustomEffect;
 
-**Build and test locally:**
-
-```bash
-# Build optimized production bundle
-npm run build
-
-# Preview the production build
-npm run preview
-# Opens at http://localhost:4173/portfolio/
+void main() {
+  // Add custom displacement
+  vec3 pos = position + normal * uCustomEffect * 0.5;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+}
 ```
 
-**Build output:**
-- Output folder: `dist/`
-- Bundle size: ~303KB gzipped
-- Includes: Code splitting, minification, compression
+Then pass the uniform from React:
 
-</details>
-
-<details>
-<summary><b>🚀 Deploy to GitHub Pages</b></summary>
-
-<br/>
-
-**One-command deployment:**
-
-```bash
-npm run deploy
+```javascript
+<fluidTextMaterial
+  uCustomEffect={customEffectValue}
+  // ... other uniforms
+/>
 ```
-
-This will:
-1. Build the production bundle
-2. Push to `gh-pages` branch
-3. Deploy to: `https://[username].github.io/portfolio/`
-
-**Setup requirements:**
-- GitHub repo must be public (or have GitHub Pages enabled)
-- Update `base` in `vite.config.js` if using custom domain
-- Update homepage in `package.json`
-
-</details>
-
-<details>
-<summary><b>🔧 Customize for Yourself</b></summary>
-
-<br/>
-
-**Make it yours (takes about 5 minutes):**
-
-1. **Your content**: Edit `src/data/portfolio-data.js` — swap my info with yours
-2. **Your images**: Drop your project screenshots in `public/portfolio-images/`
-3. **Your SEO**: Update meta tags in `index.html`
-4. **Your colors**: Tweak the color scheme in `src/App.css`
-5. **Your resume**: Replace `public/resume.pdf` with your own
-
-**Want to change what the particles spell?**
-- Open `src/App.jsx`
-- Line 38: Change `'Zachary Sluss'` to your name
-- Save and watch the magic happen ✨
 
 </details>
 
 ---
 
-## 📄 License & Usage
-
-**MIT License** — Fork it, customize it, do whatever you want with it. No credit needed (but a ⭐ appreciated).
-
-**Quick setup:** `git clone` → `npm install` → `npm run dev` → `npm run deploy`
+## Troubleshooting
 
 <details>
-<summary><b>📋 Full customization instructions</b></summary>
+<summary>🐛 <b>Common issues and solutions</b></summary>
 
 <br/>
 
-**Make it yours (5 minutes):**
-1. Edit `src/data/portfolio-data.js` — replace my info with yours
-2. Drop your project screenshots in `public/portfolio-images/`
-3. Update meta tags in `index.html` (for SEO)
-4. Run `npm run deploy` — you're live!
+### WebGL Issues
 
-**Change particle text:** Edit `src/App.jsx` line 38
+<details>
+<summary>❌ <b>Black screen or "WebGL not supported" error</b></summary>
+
+<br/>
+
+**Symptoms:** Page loads but canvas is black, or error message appears
+
+**Solutions:**
+1. **Check WebGL support** - Visit [get.webgl.org](https://get.webgl.org/) and ensure WebGL 2 is enabled
+2. **Update graphics drivers** - Outdated drivers often cause WebGL issues
+3. **Try different browser** - Chrome/Firefox have better WebGL support than Safari
+4. **Disable browser extensions** - Some ad blockers interfere with WebGL
+5. **Check GPU acceleration** - Ensure hardware acceleration is enabled in browser settings
+
+**Chrome Settings:**
+```
+chrome://settings/system
+→ Use hardware acceleration when available (enable)
+```
+
+**Firefox Settings:**
+```
+about:config
+→ webgl.force-enabled = true
+→ webgl.disabled = false
+```
 
 </details>
 
+---
+
+### Font Loading
+
+<details>
+<summary>⚠️ <b>White blob appears for 1 second before particles form</b></summary>
+
 <br/>
+
+**Symptoms:** Text briefly shows as white rectangle before morphing into particles
+
+**Cause:** Orbitron font hasn't loaded when particle generation runs
+
+**Solution:** Already handled with 1-second delay in `FluidTextParticles.jsx:142`
+
+If still occurring:
+```javascript
+// Increase timeout in src/components/particles/FluidTextParticles.jsx
+setTimeout(() => {
+  generateParticlesFromText(text)
+}, 2000) // Increase from 1000 to 2000
+```
+
+**Alternative:** Preload font in `index.html`:
+```html
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" as="style">
+```
+
+</details>
+
+---
+
+### GitHub Pages Deployment
+
+<details>
+<summary>🚫 <b>Deployed site shows 404 error</b></summary>
+
+<br/>
+
+**Symptoms:** `https://username.github.io/portfolio/` returns 404 Not Found
+
+**Common Causes & Fixes:**
+
+1. **Base path mismatch**
+   ```javascript
+   // vite.config.js - ensure this matches your repo name
+   export default defineConfig({
+     base: '/portfolio/', // Must match repo name
+   })
+   ```
+
+2. **GitHub Pages not enabled**
+   - Go to repo Settings → Pages
+   - Source: Deploy from branch → `gh-pages` → `/ (root)`
+   - Save and wait 1-2 minutes
+
+3. **Branch doesn't exist**
+   ```bash
+   # Check if gh-pages branch exists
+   git branch -a
+
+   # If missing, create it:
+   npm run deploy
+   ```
+
+4. **Build path issues**
+   ```javascript
+   // package.json - verify homepage
+   "homepage": "https://username.github.io/portfolio/"
+   ```
+
+**Still broken?** Check GitHub Actions tab for deployment errors.
+
+</details>
+
+---
+
+### Performance Tuning
+
+<details>
+<summary>🐌 <b>Low FPS or laggy performance</b></summary>
+
+<br/>
+
+**Symptoms:** Less than 30 FPS, stuttering, or delayed mouse interactions
+
+**Solutions by severity:**
+
+**Quick Fixes:**
+1. **Close other browser tabs** - Free up GPU memory
+2. **Disable browser extensions** - Some extensions cause frame drops
+3. **Use Chrome** - Better WebGL optimization than Firefox/Safari
+
+**Configuration Fixes:**
+```javascript
+// src/config/constants.js - Reduce particle count
+export const PARTICLE_CONFIG = {
+  DESKTOP_COUNT: 20000, // Down from 30000
+  MOBILE_COUNT: 5000,   // Down from 10000
+}
+```
+
+**Shader Optimization:**
+```javascript
+// src/components/particles/ModernStarfield.jsx
+// Line 156: Disable expensive effects
+const bokehEnabled = false // Disable bokeh
+const chromaticAberration = false // Disable chromatic aberration
+```
+
+**Monitor Performance:**
+```javascript
+// src/App.jsx - Enable debug mode
+const [showDebug, setShowDebug] = useState(true)
+// Shows FPS counter in top-left corner
+```
+
+**Hardware Limitations:**
+- Integrated GPUs: Expect 20-30 FPS with 30K particles
+- Low-end mobile: Auto-reduces to 10K particles, targets 30 FPS
+- Recommended: Discrete GPU (GTX 1060 or better) for 60 FPS
+
+</details>
+
+</details>
+
+</details>
+
+---
+
+<details>
+<summary><b>📄 License & Contributing</b></summary>
+
+<br/>
+
+## License
+
+**MIT License** - Fork it, customize it, ship it. No attribution required (but a ⭐ is appreciated!).
+
+This portfolio is 100% open source and free to use for personal or commercial projects.
 
 <div align="center">
 
@@ -674,13 +1018,73 @@ Full license text in [LICENSE](LICENSE) file.
 
 ---
 
-## 📬 About & Connect
+## Contributing
 
-By day, I work as a Lead CRM Systems Analyst at Computershare, managing enterprise platforms and Salesforce integrations across global teams. By night, I build stuff like this.
+Contributions are welcome! Whether it's bug fixes, new features, or documentation improvements.
 
-I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 360° drone photography. Always learning, always building.
+**How to contribute:**
 
-**Let's connect:**
+1. **Fork the repository**
+   ```bash
+   # Fork via GitHub UI, then clone your fork
+   git clone https://github.com/YOUR_USERNAME/portfolio.git
+   ```
+
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/amazing-feature
+   ```
+
+3. **Make your changes**
+   - Write clean, commented code
+   - Add tests for new features
+   - Update documentation as needed
+
+4. **Test your changes**
+   ```bash
+   npm test              # Run tests
+   npm run lint          # Check code quality
+   npm run build         # Verify production build works
+   ```
+
+5. **Submit a pull request**
+   - Describe your changes clearly
+   - Link any related issues
+   - Include screenshots for UI changes
+
+**Code Style:**
+- Use ESLint config (run `npm run lint`)
+- Write descriptive commit messages
+- Keep functions small and focused
+- Document complex shader math
+
+**Found a bug?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) with reproduction steps.
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
+
+</details>
+
+---
+
+<details open>
+<summary><b>📬 About & Connect</b></summary>
+
+<br/>
+
+By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect** at Computershare, managing multi-million-dollar Salesforce ecosystems and enterprise integrations across 20+ countries. By night, I build projects like this.
+
+**What I'm into:**
+WebGL & shader programming • Particle physics • Three.js • AI/ML experimentation • Digital art • 360° drone photography • Music production
+
+**Always learning, always building.**
+
+---
+
+### Let's Connect
 
 <div align="center">
 
@@ -697,12 +1101,15 @@ I'm into WebGL, particle systems, shader programming, AI/ML, digital art, and 36
   <img src="https://img.shields.io/badge/Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 <a href="https://zacsluss.github.io/portfolio/resume.pdf">
-  <img src="https://img.shields.io/badge/Resume-Download_Resume-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Resume-Download_PDF-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
 </a>
 
-<br/>
+<br/><br/>
 
 **Found this helpful?** Give it a ⭐ to show support!
 
+**Want to use this as your portfolio?** Fork it, customize it, and deploy it — no credit needed.
+
 </div>
 
+</details>
