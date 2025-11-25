@@ -67,7 +67,6 @@ export function About() {
               </div>
             </div>
             <p className="headshot-caption">Zachary Sluss</p>
-            <p className="headshot-role">Lead CRM Systems Analyst</p>
           </div>
 
           {/* Bio */}
