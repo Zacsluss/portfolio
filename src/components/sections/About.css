@@ -1,6 +1,6 @@
 .about-section {
   position: relative;
-  padding: 80.0px 50px;
+  padding: 64.0px 40px;
   overflow: hidden;
 }
 
@@ -419,7 +419,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .about-section {
-    padding: 64.0px 30px;
+    padding: 51.0px 24px;
   }
 
   .section-title {

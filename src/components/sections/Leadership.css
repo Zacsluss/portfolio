@@ -1,6 +1,6 @@
 .leadership-section {
   position: relative;
-  padding: 80.0px 50px;
+  padding: 64.0px 40px;
   overflow: hidden;
 }
 
@@ -344,7 +344,7 @@
 
 @media (max-width: 768px) {
   .leadership-section {
-    padding: 64.0px 30px;
+    padding: 51.0px 24px;
   }
 
   .principles-grid {

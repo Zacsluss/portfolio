@@ -1,6 +1,6 @@
 .experience-section {
   position: relative;
-  padding: 80.0px 50px;
+  padding: 64.0px 40px;
 }
 
 .experience-container {
@@ -193,7 +193,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .experience-section {
-    padding: 64.0px 30px;
+    padding: 51.0px 24px;
   }
 
   .timeline {

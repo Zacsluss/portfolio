@@ -1,6 +1,6 @@
 .skills-section {
   position: relative;
-  padding: 80.0px 50px;
+  padding: 64.0px 40px;
 }
 
 .skills-container {
@@ -242,7 +242,7 @@
 
 @media (max-width: 768px) {
   .skills-section {
-    padding: 64.0px 30px;
+    padding: 51.0px 24px;
   }
 
   .skills-grid {
