@@ -1077,9 +1077,6 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect** at Computershare, managing multi-million-dollar Salesforce ecosystems and enterprise integrations across 20+ countries. By night, I build projects like this.
 
-**What I'm into:**
-WebGL & shader programming • Particle physics • Three.js • AI/ML experimentation • Digital art • 360° drone photography • Music production
-
 **Always learning, always building.**
 
 ---
