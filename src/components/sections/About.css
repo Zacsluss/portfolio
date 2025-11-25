@@ -300,28 +300,58 @@
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background: rgba(0, 8, 20, 0.8);
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 10px;
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  animation: shimmer 5.6s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.action-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.action-button:hover::before {
+  left: 100%;
 }
 
 .action-button:hover {
-  background: rgba(0, 255, 136, 0.1);
-  border-color: rgba(0, 255, 136, 0.6);
+  border-color: rgba(0, 255, 136, 0.4);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
-  color: #00ff88;
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.1);
+  backdrop-filter: blur(15px);
+  animation-play-state: running;
 }
 
 .button-icon {
   width: 20px;
   height: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.action-button > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* Social Links */
@@ -339,25 +369,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 8, 20, 0.8);
-  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.42) 0%, rgba(0, 8, 20, 1.0) 50%, rgba(0, 255, 136, 0.42) 100%);
+  background-size: 200% 200%;
+  background-position: 50% 50%;
+  border: 1px solid rgba(0, 255, 136, 0.44);
   border-radius: 50%;
   color: rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  animation: shimmer 5.6s ease-in-out infinite;
+  animation-play-state: paused;
+}
+
+.social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.social-icon:hover::before {
+  left: 100%;
 }
 
 .social-icon:hover {
-  background: rgba(0, 255, 136, 0.1);
-  border-color: rgba(0, 255, 136, 0.6);
+  border-color: rgba(0, 255, 136, 0.4);
   transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 255, 136, 0.1);
   color: #00ff88;
+  backdrop-filter: blur(15px);
+  animation-play-state: running;
 }
 
 .social-icon svg {
   width: 22px;
   height: 22px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Responsive */
