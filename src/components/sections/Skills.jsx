@@ -28,6 +28,12 @@ export function Skills() {
           <div className="title-line" />
         </div>
 
+        <div className="section-intro">
+          <p className="section-intro-text">
+            My technical foundation spans enterprise architecture, platform integration, and data-driven decision frameworks — built through years of leading complex transformations across global, regulated environments.
+          </p>
+        </div>
+
         {/* Skills Grid */}
         <div className="skills-grid">
           {skills.map((category, catIndex) => (

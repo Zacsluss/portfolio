@@ -34,11 +34,22 @@
   background-position: 50% 50%;
 }
 
-.section-subtitle {
-  font-size: 0.88rem;
-  line-height: 1.44;
-  color: rgba(255, 255, 255, 0.6);
-  margin: 0 0 40px 0;
+.section-intro {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-intro-text {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-intro-text strong {
+  color: #00ff88;
+  font-weight: 600;
 }
 
 .contact-cards {
@@ -232,6 +243,10 @@
 
   .section-title {
     font-size: 1.44rem;
+  }
+
+  .section-intro-text {
+    font-size: 0.8rem;
   }
 
   .contact-cards {

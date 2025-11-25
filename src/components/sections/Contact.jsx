@@ -13,10 +13,11 @@ export function Contact() {
           <div className="title-line" />
         </div>
 
-        <p className="section-subtitle">
-          I'm always open to new opportunities and interesting projects.
-          Feel free to reach out if you'd like to connect!
-        </p>
+        <div className="section-intro">
+          <p className="section-intro-text">
+            I'm always open to new opportunities and interesting projects. Feel free to reach out if you'd like to connect!
+          </p>
+        </div>
 
         {/* Contact Cards */}
         <div className="contact-cards">

@@ -34,6 +34,23 @@
   background-position: 50% 50%;
 }
 
+.section-intro {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-intro-text {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-intro-text strong {
+  color: #00ff88;
+  font-weight: 600;
+}
 
 .skills-grid {
   display: grid;
@@ -243,6 +260,10 @@
 @media (max-width: 768px) {
   .skills-section {
     padding: 51.0px 24px;
+  }
+
+  .section-intro-text {
+    font-size: 0.8rem;
   }
 
   .skills-grid {
