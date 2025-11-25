@@ -1105,9 +1105,13 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 
 **Found this helpful?** Give it a ⭐ to show support!
 
-**Want to use this as your portfolio?** Fork it, customize it, and deploy it — no credit needed.
+**Want to contribute?** See [contributing guidelines](#contributing) above.
+
+**Need help?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) or email me.
 
 </div>
+
+---
 
 </details>
 
