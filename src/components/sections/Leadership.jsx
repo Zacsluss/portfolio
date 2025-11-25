@@ -93,11 +93,16 @@ export function Leadership() {
 
         {/* Passions & Creative Work */}
         <div className="passions-section">
-          <h3 className="passions-title">Beyond the Enterprise</h3>
-          <p className="passions-intro">
-            Multi-passionate about AI/ML, digital art, music production, and 360° drone photography —
-            because curiosity makes better strategists.
-          </p>
+          <div className="section-header">
+            <h2 className="section-title">Beyond the Enterprise</h2>
+            <div className="title-line" />
+          </div>
+
+          <div className="section-intro">
+            <p className="section-intro-text">
+              Multi-passionate about AI/ML, digital art, music production, and 360° drone photography — because curiosity makes better strategists.
+            </p>
+          </div>
 
           <div className="categories-container">
             {Object.entries(groupedLinks).map(([category, links]) => (

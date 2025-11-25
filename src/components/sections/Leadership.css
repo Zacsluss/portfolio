@@ -185,24 +185,6 @@
   border-top: 2px solid rgba(0, 255, 136, 0.2);
 }
 
-.passions-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #00ff88;
-  text-align: center;
-  margin: 0 0 20px 0;
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
-}
-
-.passions-intro {
-  font-size: 0.92rem;
-  line-height: 1.62;
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 800px;
-  margin: 0 auto 50px auto;
-  text-align: center;
-}
-
 .categories-container {
   display: flex;
   flex-direction: column;
@@ -365,14 +347,6 @@
 
   .metric-value {
     font-size: 2.0rem;
-  }
-
-  .passions-title {
-    font-size: 1.2rem;
-  }
-
-  .passions-intro {
-    font-size: 0.8rem;
   }
 
   .category-title {
