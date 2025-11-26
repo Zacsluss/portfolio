@@ -6,13 +6,13 @@
 <br/>
 
 <!-- Animated Typing Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=$3M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+20%2B+Countries;Shipping+Clean+Code+at+60+FPS!;AWS+%26+Tableau+Certified+%E2%80%A2+Seeking+Director%2FVP+Roles;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=$3M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+20%2B+Countries;60+FPS+Real-Time+3D+%E2%80%A2+Production-Grade+Architecture;AWS+%26+Tableau+Certified+%E2%80%A2+Enterprise+Technology+Leader;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
 <br/>
 
 <!-- Main Action Buttons -->
 <p align="center">
-<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Live Site"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download"/></a>
+<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Launch interactive portfolio with 30K GPU-accelerated particles"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download portfolio template source code"/></a>
 </p>
 
 <!-- GitHub Stats Badges -->
@@ -32,7 +32,7 @@
 
 ## 👋 Hey, I'm Zac
 
-I work on enterprise platforms by day and build unusually fun projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text elements in real-time 3D space — and that's not even counting the starfield!
+I work on enterprise platforms by day and build compelling projects by night. This portfolio uses **30,000 GPU-accelerated particles** to render text elements in real-time 3D space, plus a **10K-star procedural background**.
 
 **What makes it interesting:**
 - Custom GLSL shaders for particle physics and astrophysics effects
@@ -40,11 +40,11 @@ I work on enterprise platforms by day and build unusually fun projects by night.
 - 303KB optimized bundle with code splitting and lazy loading
 - Fully interactive — type anything to watch particles morph in real-time
 
-Built with React 19, Three.js, and a little science.
+Built with React 19, Three.js, and physics-based rendering.
 
 <div align="center">
 
-<img src="public/preview.gif" alt="Portfolio Preview" width="800"/>
+<img src="https://raw.githubusercontent.com/Zacsluss/portfolio/main/public/preview.gif" alt="Portfolio Preview" width="800"/>
 
 *Real-time particle morphing — type any text to see it transform*
 
@@ -67,7 +67,7 @@ Built with React 19, Three.js, and a little science.
   - [Testing & Code Quality](#testing--code-quality)
   - [Observability & Monitoring](#observability--monitoring)
   - [Advanced Configuration](#advanced-configuration)
-  - [Troubleshooting](#troubleshooting)
+  - [Configuration Guide](#configuration-guide)
 - [📄 License & Contributing](#-license--contributing)
 - [📬 About & Connect](#-about--connect)
 
@@ -115,7 +115,7 @@ Built with React 19, Three.js, and a little science.
 
 ### What Powers This Portfolio
 
-<img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Tech Stack" />
+<img src="https://skillicons.dev/icons?i=react,vite,threejs,html,css,js,github" alt="Technology stack icons: React, Vite, Three.js, HTML, CSS, JavaScript, GitHub" />
 
 ### Core Dependencies
 
@@ -158,19 +158,19 @@ Built with React 19, Three.js, and a little science.
     "three": "^0.180.0"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.0",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.1.0",
-    "@testing-library/user-event": "^14.5.2",
+    "@eslint/js": "^9.33.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^5.0.0",
     "eslint": "^9.33.0",
-    "eslint-plugin-react": "^7.39.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.16",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
-    "happy-dom": "^17.2.0",
-    "jsdom": "^26.0.0",
+    "happy-dom": "^20.0.10",
+    "jsdom": "^27.2.0",
     "rollup-plugin-visualizer": "^6.0.5",
     "terser": "^5.44.0",
     "vite": "^7.1.2",
@@ -180,7 +180,6 @@ Built with React 19, Three.js, and a little science.
 }
 ```
 
-**Why minimal dependencies?**
 All shaders written from scratch in GLSL. No particle libraries, no animation frameworks — just pure WebGL performance.
 
 </details>
@@ -300,7 +299,7 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 
 <div align="center">
 
-### Get It Running Locally in 30 Seconds
+### Quick Start Guide
 
 </div>
 
@@ -415,7 +414,7 @@ This will:
 
 <br/>
 
-**Make it yours in 5 minutes:**
+**Customize This Template:**
 
 1. **Your content** - Edit `src/data/portfolio-data.js` — replace all my info with yours
 2. **Your images** - Drop your project screenshots in `public/portfolio-images/`
@@ -424,7 +423,7 @@ This will:
 5. **Your colors** - Tweak the color scheme in `src/App.css` (search for `#00ff88` green)
 6. **Your resume** - Replace `public/resume.pdf` with your own PDF
 
-**Want to change what the particles spell?**
+**Changing Default Text:**
 - Open `src/config/constants.js`
 - Line 14: Change `DEFAULT_TEXT: 'Zachary Sluss'` to your name
 - Save and watch the particles rearrange ✨
@@ -516,8 +515,6 @@ Multi-layer 3D with independent particle motion based on depth
 </td>
 </tr>
 </table>
-
-**Every shader written from scratch in GLSL** - No third-party shader libraries used.
 
 </details>
 
@@ -829,10 +826,10 @@ Then pass the uniform from React:
 
 ---
 
-## Troubleshooting
+## Configuration Guide
 
 <details>
-<summary>🐛 <b>Common issues and solutions</b></summary>
+<summary>🔧 <b>Common configuration and solutions</b></summary>
 
 <br/>
 
@@ -1006,7 +1003,7 @@ const [showDebug, setShowDebug] = useState(true)
 
 <div align="center">
 
-**MIT License** - Fork it, customize it, ship it. No attribution required (but a ⭐ is appreciated!).
+**MIT License** - Fork and customize for your own use. No attribution required.
 
 This portfolio is 100% open source and free to use for personal or commercial projects.
 
@@ -1020,43 +1017,12 @@ Full license text in [LICENSE](LICENSE) file.
 
 ## Contributing
 
-Contributions are welcome! Whether it's bug fixes, new features, or documentation improvements.
+Contributions welcome! Fork this repo, make your changes, and submit a pull request.
 
-**How to contribute:**
-
-1. **Fork the repository**
-   ```bash
-   # Fork via GitHub UI, then clone your fork
-   git clone https://github.com/YOUR_USERNAME/portfolio.git
-   ```
-
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/amazing-feature
-   ```
-
-3. **Make your changes**
-   - Write clean, commented code
-   - Add tests for new features
-   - Update documentation as needed
-
-4. **Test your changes**
-   ```bash
-   npm test              # Run tests
-   npm run lint          # Check code quality
-   npm run build         # Verify production build works
-   ```
-
-5. **Submit a pull request**
-   - Describe your changes clearly
-   - Link any related issues
-   - Include screenshots for UI changes
-
-**Code Style:**
-- Use ESLint config (run `npm run lint`)
-- Write descriptive commit messages
-- Keep functions small and focused
-- Document complex shader math
+**Before submitting:**
+- Run `npm test` and `npm run lint`
+- Ensure production build works (`npm run build`)
+- Write clear commit messages
 
 **Found a bug?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) with reproduction steps.
 
@@ -1078,8 +1044,6 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 <div align="center">
 
 By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect** at Computershare, managing multi-million-dollar Salesforce ecosystems and enterprise integrations across 20+ countries. By night, I build projects like this.
-
-**Always learning, always building.**
 
 </div>
 
