@@ -12,7 +12,7 @@
 
 <!-- Main Action Buttons -->
 <p align="center">
-<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge&logo=" alt="Live Site"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge&logo=" alt="Download"/></a>
+<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Live Site"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download"/></a>
 </p>
 
 <!-- GitHub Stats Badges -->
@@ -1090,7 +1090,7 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 ### Let's Connect
 
 <a href="https://zacsluss.github.io/portfolio/">
-  <img src="https://img.shields.io/badge/🌐%20Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge&logo=vercel&logoColor=white"/>
 </a>
 <a href="https://github.com/Zacsluss">
   <img src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"/>
@@ -1099,10 +1099,10 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
   <img src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 <a href="mailto:zacharyjsluss@gmail.com">
-  <img src="https://img.shields.io/badge/✉️%20Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 <a href="https://zacsluss.github.io/portfolio/resume.pdf">
-  <img src="https://img.shields.io/badge/📄%20Resume-Download_PDF-7c3aed?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Resume-Download_PDF-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
 </a>
 
 <br/><br/>
