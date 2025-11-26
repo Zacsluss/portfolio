@@ -1010,7 +1010,7 @@ const [showDebug, setShowDebug] = useState(true)
 
 This portfolio is 100% open source and free to use for personal or commercial projects.
 
-<img src="https://img.shields.io/badge/License-MIT-555555?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
+<img src="https://img.shields.io/badge/📜%20License-MIT-555555?style=for-the-badge"/>
 
 Full license text in [LICENSE](LICENSE) file.
 
@@ -1090,19 +1090,19 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 ### Let's Connect
 
 <a href="https://zacsluss.github.io/portfolio/">
-  <img src="https://img.shields.io/badge/🌐%20Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/🌐%20Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge"/>
 </a>
 <a href="https://github.com/Zacsluss">
-  <img src="https://img.shields.io/badge/💼%20GitHub-@Zacsluss-181717?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 <a href="https://linkedin.com/in/zacharylsluss">
-  <img src="https://img.shields.io/badge/💼%20LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 <a href="mailto:zacharyjsluss@gmail.com">
-  <img src="https://img.shields.io/badge/✉️%20Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/✉️%20Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge"/>
 </a>
 <a href="https://zacsluss.github.io/portfolio/resume.pdf">
-  <img src="https://img.shields.io/badge/📄%20Resume-Download_PDF-7c3aed?style=for-the-badge&logoColor=white"/>
+  <img src="https://img.shields.io/badge/📄%20Resume-Download_PDF-7c3aed?style=for-the-badge"/>
 </a>
 
 <br/><br/>
