@@ -6,7 +6,7 @@
 <br/>
 
 <!-- Animated Typing Subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=$3M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+20%2B+Countries;60+FPS+Real-Time+3D+%E2%80%A2+Production-Grade+Architecture;AWS+%26+Tableau+Certified+%E2%80%A2+Enterprise+Technology+Leader;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=700&lines=$3M%2B+Platforms+%E2%80%A2+3K+Users+%E2%80%A2+20%2B+Countries;60+FPS+Real-Time+3D+%E2%80%A2+Production-Grade+Architecture;AWS+%26+Tableau+Certified+%E2%80%A2+Tech+Leader;Multi-Passionate+%E2%80%A2+Always+Learning+%E2%80%A2+Never+Settling" alt="Typing SVG" />
 
 <br/>
 
