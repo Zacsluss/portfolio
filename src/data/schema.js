@@ -10,7 +10,7 @@
  * @returns {boolean} true if valid
  */
 export function validatePortfolioData(data) {
-  // Validate personal info
+  // Validate personal information
   if (!data.personal) {
     throw new Error('Missing personal section')
   }

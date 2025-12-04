@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
 
-    // Gzip compression for production
+    // Gzip compression for production builds
     viteCompression({
       verbose: true,
       disable: false,

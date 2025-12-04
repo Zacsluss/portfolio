@@ -2,7 +2,7 @@ import { PARTICLE_CONFIG } from '../config/constants'
 
 /**
  * Sanitizes user input for the name field
- * Removes special characters, emoji, and control characters
+ * Removes special characters, emojis, and control characters
  *
  * @param {string} input - Raw user input
  * @returns {string} Sanitized string (alphanumeric, spaces, hyphens only)

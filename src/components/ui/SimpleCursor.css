@@ -3,7 +3,7 @@ body {
   cursor: none;
 }
 
-/* Simple glass cursor */
+/* Simple glass effect cursor */
 .simple-cursor {
   position: fixed;
   width: 30px;

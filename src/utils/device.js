@@ -10,7 +10,7 @@ export function isMobileDevice() {
 
 /**
  * Returns optimal particle count based on device capabilities
- * @returns {number} Particle count (10K for mobile, 30K for desktop)
+ * @returns {number} Particle count - 10K for mobile, 30K for desktop
  */
 export function getOptimalParticleCount() {
   return isMobileDevice()
@@ -20,7 +20,7 @@ export function getOptimalParticleCount() {
 
 /**
  * Returns target FPS based on device capabilities
- * @returns {number} Target FPS (30 for mobile, 60 for desktop)
+ * @returns {number} Target FPS - 30 for mobile, 60 for desktop
  */
 export function getTargetFPS() {
   return isMobileDevice()

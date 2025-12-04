@@ -61,7 +61,7 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Legend */}
+        {/* Skills Legend */}
         <div className="skills-legend">
           <span className="legend-label">Skill Level:</span>
           <div className="legend-item">

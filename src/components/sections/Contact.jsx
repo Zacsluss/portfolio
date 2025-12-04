@@ -19,7 +19,7 @@ export function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards */}
+        {/* Contact Information Cards */}
         <div className="contact-cards">
           {/* Email */}
           <a href={`mailto:${personal.email}`} className="contact-card">

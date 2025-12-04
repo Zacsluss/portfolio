@@ -19,7 +19,7 @@ const LOG_LEVELS = {
   ERROR: 3,
 }
 
-// Set log level based on environment (only errors in production)
+// Set log level based on environment - only errors in production
 const CURRENT_LEVEL = import.meta.env.MODE === 'production'
   ? LOG_LEVELS.ERROR
   : LOG_LEVELS.DEBUG
