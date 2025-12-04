@@ -215,7 +215,7 @@ function App() {
             }}
             maxLength={PARTICLE_CONFIG.MAX_TEXT_LENGTH}
           />
-          <p className="input-hint">Type your name then press ENTER to see it form in particles</p>
+          <p className="input-hint">Type your name and press ENTER to see it form in particles</p>
         </div>
 
         {/* Easter egg hint */}

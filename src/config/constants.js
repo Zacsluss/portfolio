@@ -26,7 +26,7 @@ export const DEVICE = {
 
 // ===== ANIMATION TIMING =====
 export const ANIMATION = {
-  // Konami code easter egg
+  // Konami code easter egg duration
   KONAMI_DURATION_MS: 5000,
 
   // Scroll behavior

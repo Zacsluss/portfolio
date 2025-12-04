@@ -19,7 +19,7 @@
 }
 
 html {
-  /* Removed smooth scroll - conflicts with Canvas wheel handler */
+  /* Smooth scrolling disabled to prevent conflicts with Canvas wheel handler */
   /* scroll-behavior: smooth; */
 }
 

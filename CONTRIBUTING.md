@@ -15,7 +15,7 @@ npm install
 npm run dev
 ```
 
-The development server will start at `http://localhost:2945/portfolio/`
+The development server will start at `http://localhost:2945/portfolio/` by default
 
 ## Project Structure
 

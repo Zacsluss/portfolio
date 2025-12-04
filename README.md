@@ -299,7 +299,7 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 
 <div align="center">
 
-### Quick Start Guide
+### Quick Start Instructions
 
 </div>
 
