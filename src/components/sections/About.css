@@ -39,6 +39,14 @@
   margin: 0;
   text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-arrow {
+  font-size: 0.8em;
+  color: #ffffff;
 }
 
 .title-line {
@@ -506,4 +514,138 @@
 .story-card:hover,
 .story-card-highlight:hover {
   backdrop-filter: blur(15px) !important;
+}
+
+/* New About & Connect Styles */
+.about-main-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-main-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-tagline {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.connect-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.connect-title {
+  color: #00ff88;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.connect-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.connect-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.connect-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+  font-size: 1.2em;
+}
+
+.btn-label {
+  font-weight: 700;
+}
+
+.btn-username,
+.btn-value {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Button Colors to Match Image */
+.portfolio-btn {
+  background: #555555;
+  border-color: #666666;
+}
+
+.portfolio-btn:hover {
+  background: #666666;
+  box-shadow: 0 10px 30px rgba(85, 85, 85, 0.5);
+}
+
+.github-btn {
+  background: #22863a;
+  border-color: #2ea043;
+}
+
+.github-btn:hover {
+  background: #2ea043;
+  box-shadow: 0 10px 30px rgba(34, 134, 58, 0.5);
+}
+
+.linkedin-btn {
+  background: #0077b5;
+  border-color: #0a66c2;
+}
+
+.linkedin-btn:hover {
+  background: #0a66c2;
+  box-shadow: 0 10px 30px rgba(0, 119, 181, 0.5);
+}
+
+.email-btn {
+  background: #d93025;
+  border-color: #ea4335;
+}
+
+.email-btn:hover {
+  background: #ea4335;
+  box-shadow: 0 10px 30px rgba(217, 48, 37, 0.5);
+}
+
+.resume-btn {
+  background: #7c3aed;
+  border-color: #8b5cf6;
+}
+
+.resume-btn:hover {
+  background: #8b5cf6;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
 }
