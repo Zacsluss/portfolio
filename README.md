@@ -984,8 +984,6 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 
 <div align="center">
 
-<summary><b>📬 About & Connect</b></summary>
-
 <br/>
 
 <a href="https://zacsluss.github.io/portfolio/">
