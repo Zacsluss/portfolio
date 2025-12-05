@@ -69,13 +69,11 @@ export function About() {
               href="https://zacsluss.github.io/portfolio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="badge-link"
+              className="badge-link portfolio-badge"
             >
-              <img
-                src="https://img.shields.io/badge/🌐%20Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge"
-                alt="Portfolio"
-                className="badge-img"
-              />
+              <span className="badge-icon">🌐</span>
+              <span className="badge-label">Portfolio</span>
+              <span className="badge-value">zacsluss.github.io</span>
             </a>
 
             {/* GitHub Badge */}
@@ -83,13 +81,10 @@ export function About() {
               href="https://github.com/Zacsluss"
               target="_blank"
               rel="noopener noreferrer"
-              className="badge-link"
+              className="badge-link github-badge"
             >
-              <img
-                src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"
-                alt="GitHub"
-                className="badge-img"
-              />
+              <span className="badge-label">GitHub</span>
+              <span className="badge-value">@Zacsluss</span>
             </a>
 
             {/* LinkedIn Badge */}
@@ -97,27 +92,29 @@ export function About() {
               href={portfolioData.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="badge-link"
+              className="badge-link linkedin-badge"
             >
-              <img
-                src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"
-                alt="LinkedIn"
-                className="badge-img"
-              />
+              <span className="badge-label">LinkedIn</span>
+              <span className="badge-value">Zachary Sluss</span>
             </a>
 
             {/* Email Badge */}
             <a
               href={`mailto:${personal.email}`}
-              className="badge-link"
+              className="badge-link email-badge"
             >
-              <img
-                src="https://img.shields.io/badge/✉️%20Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge"
-                alt="Email"
-                className="badge-img"
-              />
+              <span className="badge-icon">✉️</span>
+              <span className="badge-label">Email</span>
+              <span className="badge-value">zacharyjsluss@gmail.com</span>
             </a>
           </div>
+        </div>
+
+        {/* Footer Text */}
+        <div className="about-footer">
+          <p>Found this helpful? Give it a ⭐ to show support!</p>
+          <p>Want to contribute? See <a href="#contributing" className="footer-link">contributing guidelines</a> above.</p>
+          <p>Need help? Feel free to email me.</p>
         </div>
       </div>
     </section>
