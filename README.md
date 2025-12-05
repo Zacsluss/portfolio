@@ -12,8 +12,10 @@
 
 <!-- Main Action Buttons -->
 <p align="center">
-<!-- Portfolio links will be added after deployment -->
+<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20LAUNCH%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Launch interactive portfolio with 30K GPU-accelerated particles"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download portfolio template source code"/></a>
 </p>
+
+<!-- Note: Portfolio deployment pending - Launch button will work after GitHub Pages is configured -->
 
 <!-- GitHub Stats Badges -->
 <p align="center">
@@ -303,7 +305,7 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 </div>
 
 ```bash
-# Clone command will be available after repository is created
+git clone https://github.com/Zacsluss/portfolio.git && cd portfolio && npm install && npm run dev
 ```
 
 <details>
@@ -338,8 +340,8 @@ Before running this project locally, ensure you have:
 
 ```bash
 # 1️⃣ Clone this repository
-# git clone [your-repository-url]
-# cd portfolio
+git clone https://github.com/Zacsluss/portfolio.git
+cd portfolio
 
 # 2️⃣ Install dependencies
 npm install
