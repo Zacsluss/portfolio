@@ -12,7 +12,7 @@
 
 <!-- Main Action Buttons -->
 <p align="center">
-<a href="https://zacsluss.github.io/portfolio/"><img src="https://img.shields.io/badge/🚀%20VIEW%20MY%20PORTFOLIO-2e8b57?style=for-the-badge" alt="Launch interactive portfolio with 30K GPU-accelerated particles"/></a> <a href="https://github.com/Zacsluss/portfolio/archive/refs/heads/main.zip"><img src="https://img.shields.io/badge/⬇️%20DOWNLOAD%20TEMPLATE-d97706?style=for-the-badge" alt="Download portfolio template source code"/></a>
+<!-- Portfolio links will be added after deployment -->
 </p>
 
 <!-- GitHub Stats Badges -->
@@ -167,7 +167,6 @@ Built with React 19, Three.js, and physics-based rendering.
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "gh-pages": "^6.3.0",
     "globals": "^16.3.0",
     "happy-dom": "^20.0.10",
     "jsdom": "^27.2.0",
@@ -304,7 +303,7 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 </div>
 
 ```bash
-git clone https://github.com/Zacsluss/portfolio.git && cd portfolio && npm install && npm run dev
+# Clone command will be available after repository is created
 ```
 
 <details>
@@ -339,8 +338,8 @@ Before running this project locally, ensure you have:
 
 ```bash
 # 1️⃣ Clone this repository
-git clone https://github.com/Zacsluss/portfolio.git
-cd portfolio
+# git clone [your-repository-url]
+# cd portfolio
 
 # 2️⃣ Install dependencies
 npm install
@@ -354,7 +353,6 @@ npm run dev
 - `npm run dev` — Start dev server with hot reload (port 2945)
 - `npm run build` — Build optimized production bundle
 - `npm run preview` — Preview production build locally
-- `npm run deploy` — Deploy to GitHub Pages
 - `npm run lint` — Run ESLint checks
 - `npm test` — Run Vitest unit tests
 - `npm run test:ui` — Open interactive test UI
@@ -386,28 +384,6 @@ npm run preview
 
 </details>
 
-<details>
-<summary>🚀 <b>Deploy to GitHub Pages</b></summary>
-
-<br/>
-
-**One-command deployment:**
-
-```bash
-npm run deploy
-```
-
-This will:
-1. Build the production bundle (`npm run build`)
-2. Push to `gh-pages` branch
-3. Deploy to: `https://[username].github.io/portfolio/`
-
-**Setup requirements:**
-- GitHub repo must be public (or have GitHub Pages enabled in settings)
-- Update `base` in `vite.config.js` if using custom domain or different repo name
-- Update `homepage` in `package.json` to match your GitHub Pages URL
-
-</details>
 
 <details>
 <summary>🔧 <b>Customize for Yourself</b></summary>
@@ -523,7 +499,7 @@ Multi-layer 3D with independent particle motion based on depth
 ## Performance Benchmarks
 
 <details>
-<summary>📈 <b>Real production numbers from live deployment</b></summary>
+<summary>📈 <b>Real production performance metrics</b></summary>
 
 <br/>
 
@@ -896,51 +872,6 @@ setTimeout(() => {
 
 ---
 
-### GitHub Pages Deployment
-
-<details>
-<summary>🚫 <b>Deployed site shows 404 error</b></summary>
-
-<br/>
-
-**Symptoms:** `https://username.github.io/portfolio/` returns 404 Not Found
-
-**Common Causes & Fixes:**
-
-1. **Base path mismatch**
-   ```javascript
-   // vite.config.js - ensure this matches your repo name
-   export default defineConfig({
-     base: '/portfolio/', // Must match repo name
-   })
-   ```
-
-2. **GitHub Pages not enabled**
-   - Go to repo Settings → Pages
-   - Source: Deploy from branch → `gh-pages` → `/ (root)`
-   - Save and wait 1-2 minutes
-
-3. **Branch doesn't exist**
-   ```bash
-   # Check if gh-pages branch exists
-   git branch -a
-
-   # If missing, create it:
-   npm run deploy
-   ```
-
-4. **Build path issues**
-   ```javascript
-   // package.json - verify homepage
-   "homepage": "https://username.github.io/portfolio/"
-   ```
-
-**Still broken?** Check GitHub Actions tab for deployment errors.
-
-</details>
-
----
-
 ### Performance Tuning
 
 <details>
@@ -1024,7 +955,7 @@ Contributions welcome! Fork this repo, make your changes, and submit a pull requ
 - Ensure production build works (`npm run build`)
 - Write clear commit messages
 
-**Found a bug?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) with reproduction steps.
+**Found a bug?** Please create an issue in the repository with reproduction steps.
 
 ---
 
@@ -1053,20 +984,11 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 
 ### Let's Connect
 
-<a href="https://zacsluss.github.io/portfolio/">
-  <img src="https://img.shields.io/badge/Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge&logo=vercel&logoColor=white"/>
-</a>
-<a href="https://github.com/Zacsluss">
-  <img src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
 <a href="https://linkedin.com/in/zacharylsluss">
   <img src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 <a href="mailto:zacharyjsluss@gmail.com">
   <img src="https://img.shields.io/badge/Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-<a href="https://zacsluss.github.io/portfolio/resume.pdf">
-  <img src="https://img.shields.io/badge/Resume-Download_PDF-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
 </a>
 
 <br/><br/>
@@ -1075,7 +997,7 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 
 **Want to contribute?** See [contributing guidelines](#contributing) above.
 
-**Need help?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) or email me.
+**Need help?** Feel free to email me.
 
 </div>
 

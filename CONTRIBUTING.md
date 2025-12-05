@@ -9,7 +9,7 @@ Thanks for your interest in this project! This is a personal portfolio, but I we
 ## Development Setup
 
 ```bash
-git clone https://github.com/Zacsluss/portfolio.git
+git clone [repository-url]
 cd portfolio
 npm install
 npm run dev

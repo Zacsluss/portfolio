@@ -43,4 +43,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Interactive 3D space environment with orbital controls
 - Konami Code easter egg with supernova effect
 
-[1.0.0]: https://github.com/Zacsluss/portfolio/releases/tag/v1.0.0
