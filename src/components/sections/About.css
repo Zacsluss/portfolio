@@ -553,99 +553,35 @@
   text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
 }
 
-.connect-buttons {
+/* Badge Container Styles */
+.badge-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
-}
-
-.connect-button {
-  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-family: 'Orbitron', monospace;
-  font-size: 0.9rem;
-  font-weight: 600;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.badge-link {
+  display: inline-block;
   text-decoration: none;
-  color: #ffffff;
-  border: 2px solid;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  min-width: 140px;
-  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.connect-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+.badge-link:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15) drop-shadow(0 8px 16px rgba(0, 255, 136, 0.4));
 }
 
-.btn-icon {
-  font-size: 1.2em;
+.badge-img {
+  height: 35px;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 
-.btn-label {
-  font-weight: 700;
-}
-
-.btn-username,
-.btn-value {
-  font-weight: 400;
-  opacity: 0.9;
-}
-
-/* Button Colors to Match Image */
-.portfolio-btn {
-  background: #555555;
-  border-color: #666666;
-}
-
-.portfolio-btn:hover {
-  background: #666666;
-  box-shadow: 0 10px 30px rgba(85, 85, 85, 0.5);
-}
-
-.github-btn {
-  background: #22863a;
-  border-color: #2ea043;
-}
-
-.github-btn:hover {
-  background: #2ea043;
-  box-shadow: 0 10px 30px rgba(34, 134, 58, 0.5);
-}
-
-.linkedin-btn {
-  background: #0077b5;
-  border-color: #0a66c2;
-}
-
-.linkedin-btn:hover {
-  background: #0a66c2;
-  box-shadow: 0 10px 30px rgba(0, 119, 181, 0.5);
-}
-
-.email-btn {
-  background: #d93025;
-  border-color: #ea4335;
-}
-
-.email-btn:hover {
-  background: #ea4335;
-  box-shadow: 0 10px 30px rgba(217, 48, 37, 0.5);
-}
-
-.resume-btn {
-  background: #7c3aed;
-  border-color: #8b5cf6;
-}
-
-.resume-btn:hover {
-  background: #8b5cf6;
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
+.badge-link:hover .badge-img {
+  box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
 }

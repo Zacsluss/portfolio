@@ -63,61 +63,59 @@ export function About() {
         <div className="connect-section">
           <h3 className="connect-title">Let's Connect</h3>
 
-          <div className="connect-buttons">
-            {/* Portfolio Button */}
+          <div className="badge-container">
+            {/* Portfolio Badge */}
             <a
               href="https://zacsluss.github.io/portfolio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="connect-button portfolio-btn"
+              className="badge-link"
             >
-              <span className="btn-icon">🌐</span>
-              <span className="btn-label">PORTFOLIO</span>
+              <img
+                src="https://img.shields.io/badge/🌐%20Portfolio-zacsluss.github.io-2e7d5a?style=for-the-badge"
+                alt="Portfolio"
+                className="badge-img"
+              />
             </a>
 
-            {/* GitHub Button */}
+            {/* GitHub Badge */}
             <a
               href="https://github.com/Zacsluss"
               target="_blank"
               rel="noopener noreferrer"
-              className="connect-button github-btn"
+              className="badge-link"
             >
-              <span className="btn-label">GITHUB</span>
-              <span className="btn-username">@ZACSLUSS</span>
+              <img
+                src="https://img.shields.io/badge/GitHub-@Zacsluss-181717?style=for-the-badge&logo=github&logoColor=white"
+                alt="GitHub"
+                className="badge-img"
+              />
             </a>
 
-            {/* LinkedIn Button */}
+            {/* LinkedIn Badge */}
             <a
               href={portfolioData.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="connect-button linkedin-btn"
+              className="badge-link"
             >
-              <span className="btn-label">LINKEDIN</span>
-              <span className="btn-username">ZACHARY SLUSS</span>
+              <img
+                src="https://img.shields.io/badge/LinkedIn-Zachary_Sluss-064789?style=for-the-badge&logo=linkedin&logoColor=white"
+                alt="LinkedIn"
+                className="badge-img"
+              />
             </a>
-          </div>
 
-          <div className="connect-buttons">
-            {/* Email Button */}
+            {/* Email Badge */}
             <a
               href={`mailto:${personal.email}`}
-              className="connect-button email-btn"
+              className="badge-link"
             >
-              <span className="btn-icon">✉</span>
-              <span className="btn-label">EMAIL</span>
-              <span className="btn-value">{personal.email.toUpperCase()}</span>
-            </a>
-
-            {/* Resume Button */}
-            <a
-              href={import.meta.env.BASE_URL + 'resume.pdf'}
-              download
-              className="connect-button resume-btn"
-            >
-              <span className="btn-icon">📄</span>
-              <span className="btn-label">RESUME</span>
-              <span className="btn-value">DOWNLOAD PDF</span>
+              <img
+                src="https://img.shields.io/badge/✉️%20Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge"
+                alt="Email"
+                className="badge-img"
+              />
             </a>
           </div>
         </div>
