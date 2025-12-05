@@ -1005,7 +1005,7 @@ const [showDebug, setShowDebug] = useState(true)
 
 **MIT License** - Fork and customize for your own use. No attribution required.
 
-This portfolio is 100% open source and free to use for personal or commercial projects.
+This portfolio is completely open source and free to use for personal or commercial projects.
 
 <img src="https://img.shields.io/badge/📜%20License-MIT-555555?style=for-the-badge"/>
 

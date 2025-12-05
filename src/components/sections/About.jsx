@@ -69,7 +69,7 @@ export function About() {
             <p className="headshot-caption">Zachary Sluss</p>
           </div>
 
-          {/* Bio */}
+          {/* Bio Section */}
           <div className="about-bio">
             <p className="bio-text">{personal.bio}</p>
 

@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom GLSL shaders for particle effects
 - Real-time text morphing with user input
 - Responsive design with mobile optimization (10K particles)
-- Portfolio sections: About, Skills, Experience, Leadership, Contact
+- Portfolio sections: About, Skills, Experience, Leadership, Contact.
 - Interactive 3D space environment with orbital controls
 - Konami Code easter egg with supernova effect
 

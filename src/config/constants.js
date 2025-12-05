@@ -42,7 +42,7 @@ export const ANIMATION = {
 // ===== CAMERA SETTINGS =====
 export const CAMERA = {
   POSITION: [0, 0, 28],
-  FOV: 85, // Field of view (degrees)
+  FOV: 85, // Field of view in degrees
   NEAR_CLIP: 0.1,
   FAR_CLIP: 1000,
 }

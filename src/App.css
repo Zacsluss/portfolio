@@ -197,7 +197,7 @@
   pointer-events: none;
   text-align: left;
   max-width: 384px;
-  /* Start hidden by default */
+  /* Initially hidden by default */
   opacity: 0;
   transform: translateY(15px);
 }

@@ -40,6 +40,6 @@ stats.html
 *.sln
 *.sw?
 
-# Development files
+# Development backup files
 *.backup
 src/data/*.txt
