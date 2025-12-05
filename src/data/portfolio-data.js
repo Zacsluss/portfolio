@@ -19,7 +19,7 @@ export const portfolioData = {
   experience: [
     {
       id: "exp-1",
-      company: "Computershare",
+      company: "",
       position: "Lead CRM Systems Analyst",
       startDate: "2023-07",
       description: "Serve as enterprise CRM and platforms architect and CRM platform owner for thousands of global users across 20+ countries. Oversee a $3M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives, setting architecture standards, roadmaps, and governance for the Salesforce-centric ecosystem.",
@@ -38,7 +38,7 @@ export const portfolioData = {
     },
     {
       id: "exp-2",
-      company: "Computershare",
+      company: "",
       position: "Sr. Sales Systems Analyst",
       startDate: "2022-12",
       endDate: "2023-07",
@@ -52,7 +52,7 @@ export const portfolioData = {
     },
     {
       id: "exp-3",
-      company: "Computershare",
+      company: "",
       position: "Sr. Sales Analyst",
       startDate: "2021-10",
       endDate: "2022-12",
@@ -126,7 +126,7 @@ export const portfolioData = {
       id: "proj-1",
       title: "Global Salesforce Multi-Cloud Transformation",
       description: "Enterprise-wide CRM modernization unifying 3,000+ users across 22 countries with integrated ERP, HCM, and analytics",
-      problem: "Computershare operated with 22 disconnected regional CRM instances across global markets, causing data silos, inconsistent reporting, and 40% slower sales cycles. Leadership lacked real-time visibility into global pipeline, forecasting required manual consolidation from disparate sources, and M&A integrations took 6+ months due to platform fragmentation.",
+      problem: "The organization operated with 22 disconnected regional CRM instances across global markets, causing data silos, inconsistent reporting, and 40% slower sales cycles. Leadership lacked real-time visibility into global pipeline, forecasting required manual consolidation from disparate sources, and M&A integrations took 6+ months due to platform fragmentation.",
       solution: "Architected comprehensive digital transformation program integrating Salesforce Multi-Cloud (Sales, Service, CPQ, Data Cloud) with Workday HCM and SAP ERP. Implemented API-led integration architecture using MuleSoft, established enterprise-wide governance framework ensuring SOX compliance, and built real-time executive dashboards for C-suite decision-making. Standardized business processes across 22 countries while maintaining regional flexibility.",
       impact: "40% increase in sales operational throughput • 1,000+ hours automated annually • $2M+ cost avoidance through platform consolidation • 100% SOX audit compliance with zero breaches • Real-time board-level visibility replacing 3-week manual reporting cycles",
       longDescription: "Led comprehensive digital transformation program integrating Salesforce Sales Cloud, Service Cloud, CPQ, and Data Cloud with Workday HCM and SAP ERP. Implemented API-led integration architecture using MuleSoft, established enterprise governance framework, and delivered real-time executive dashboards for C-suite decision-making.",
