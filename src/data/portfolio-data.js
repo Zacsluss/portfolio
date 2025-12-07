@@ -326,14 +326,6 @@ export const portfolioData = {
       image: "portfolio-images/crystalblitzpicture.png",
     },
     {
-      id: "link-12",
-      title: "DATAPHREAK",
-      description: "DATAPHREAK transforms impossible data challenges into 30-second solutions for analyzing CSV files and detecting patterns",
-      url: "#",
-      category: "Personal Projects",
-      image: "portfolio-images/dataphreakpicture.png",
-    },
-    {
       id: "link-15",
       title: "GitHub Profile",
       description: "Open source projects, code repositories, and software development work",
