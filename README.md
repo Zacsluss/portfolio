@@ -59,6 +59,7 @@ Built with React 19, Three.js, and physics-based rendering.
 
 <br/>
 
+- [👋 Hey, I'm Zac](#-hey-im-zac)
 - [⚡ What This Does](#-what-this-does)
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🏗️ How It Works - Architecture](#️-how-it-works---architecture)
@@ -77,8 +78,10 @@ Built with React 19, Three.js, and physics-based rendering.
 
 ---
 
+## ⚡ What This Does
+
 <details>
-<summary><b>⚡ What This Does</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -108,8 +111,10 @@ Built with React 19, Three.js, and physics-based rendering.
 
 ---
 
+## 🛠️ Tech Stack
+
 <details open>
-<summary><b>🛠️ Tech Stack</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -189,8 +194,10 @@ All shaders written from scratch in GLSL. No particle libraries, no animation fr
 
 ---
 
+## 🏗️ How It Works - Architecture
+
 <details open>
-<summary><b>🏗️ How It Works - Architecture</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -293,8 +300,10 @@ portfolio-data.js → validatePortfolioData() → Section components → Lazy lo
 
 ---
 
+## 🚀 Quick Start
+
 <details>
-<summary><b>🚀 Quick Start</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -417,8 +426,10 @@ npm run preview
 
 ---
 
+## 📊 Technical Deep Dive
+
 <details>
-<summary><b>📊 Technical Deep Dive</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -927,8 +938,10 @@ const [showDebug, setShowDebug] = useState(true)
 
 ---
 
+## 📄 License & Contributing
+
 <details>
-<summary><b>📄 License & Contributing</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -969,8 +982,10 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 ---
 
+## 📬 About & Connect
+
 <details open>
-<summary><b>📬 About & Connect</b></summary>
+<summary><b>Click to expand</b></summary>
 
 <br/>
 
@@ -998,7 +1013,7 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 <a href="mailto:zacharyjsluss@gmail.com">
   <img src="https://img.shields.io/badge/Email-zacharyjsluss@gmail.com-b91c1c?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
-<a href="https://zacsluss.github.io/ascii_3d_animator/public/resume.pdf">
+<a href="https://zacsluss.github.io/portfolio/resume.pdf">
   <img src="https://img.shields.io/badge/Resume-Download_PDF-7c3aed?style=for-the-badge&logo=adobeacrobatreader&logoColor=white"/>
 </a>
 
@@ -1009,7 +1024,7 @@ By day, I work as a **Principal CRM & Enterprise Platforms Solutions Architect**
 
 **Want to contribute?** See [contributing guidelines](#-license--contributing) above.
 
-**Need help?** [Open an issue](https://github.com/Zacsluss/ascii_3d_animator/issues) or email me.
+**Need help?** [Open an issue](https://github.com/Zacsluss/portfolio/issues) or email me.
 
 ---
 
