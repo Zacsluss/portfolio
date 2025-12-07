@@ -26,8 +26,7 @@ export default defineConfig({
     }),
   ],
 
-  // Remove base path since GitHub Pages serves from root of gh-pages branch
-  // base: '/portfolio/',
+  base: '/portfolio/',
 
   // Build optimizations
   build: {
