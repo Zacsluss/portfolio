@@ -1,4 +1,7 @@
+// Main portfolio data structure - centralized data store for all portfolio content
+// This object serves as the single source of truth for all professional information
 export const portfolioData = {
+  // Personal information section - core professional identity
   personal: {
     name: "Zachary Sluss",
     title: "Principal CRM & Enterprise Platforms Solutions Architect",
@@ -8,6 +11,7 @@ export const portfolioData = {
     email: "zacharyjsluss@gmail.com",
     phone: "(603) 515-6051",
   },
+  // Social media and professional networking links
   social: {
     github: "",
     linkedin: "https://linkedin.com/in/zacharyjsluss",
@@ -16,14 +20,16 @@ export const portfolioData = {
     youtube: "https://www.youtube.com/channel/UCjnD1inIRh9eKjrl4LfwLcQ",
     kuula: "https://www.kuula.co/profile/Drone_360_Aerial_Photography",
   },
+  // Professional experience history - chronologically ordered positions
+  // Each entry contains comprehensive role details including achievements and technologies
   experience: [
     {
-      id: "exp-1",
+      id: "exp-1", // Unique identifier for React key prop
       company: "",
       position: "Lead CRM Systems Analyst",
-      startDate: "2023-07",
+      startDate: "2023-07", // ISO date format for consistent parsing
       description: "Serve as enterprise CRM and platforms architect and CRM platform owner for thousands of global users across 20+ countries. Oversee a $3M+ annual CRM, analytics, and integration portfolio aligned to executive and board-level growth objectives, setting architecture standards, roadmaps, and governance for the Salesforce-centric ecosystem.",
-      achievements: [
+      achievements: [ // Key accomplishments demonstrating impact and value delivered
         "Define and govern the enterprise CRM reference architecture and multi-year roadmap spanning Salesforce Multi-Cloud, ERP, and analytics, standardizing solution designs and integration patterns to ensure interoperability, data integrity, and scalable growth across all business units",
         "Architect and lead a global digital transformation program that increased sales and operational throughput by 40%, automated 1,000+ hours annually, and enforced global process standardization through API-led integration across CRM, ERP, and analytics platforms",
         "Design and implement the enterprise governance and compliance model, aligning CRM, integration, and analytics platforms to SOX controls and privacy requirements (GDPR, CCPA) and sustaining 100% audit readiness with zero regulatory breaches across all markets",

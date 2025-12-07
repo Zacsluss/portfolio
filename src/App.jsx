@@ -42,10 +42,11 @@ function GlobalMouseTracker() {
 }
 
 function App() {
-  const [visitorName, setVisitorName] = useState(PARTICLE_CONFIG.DEFAULT_TEXT)
-  const [particlesFormed, setParticlesFormed] = useState(false)
-  const [konamiActivated, setKonamiActivated] = useState(false)
-  const [showScrollIndicator, setShowScrollIndicator] = useState(true)
+  // Core application state management
+  const [visitorName, setVisitorName] = useState(PARTICLE_CONFIG.DEFAULT_TEXT) // Dynamic text for particle animation
+  const [particlesFormed, setParticlesFormed] = useState(false) // Tracks when particle formation animation completes
+  const [konamiActivated, setKonamiActivated] = useState(false) // Easter egg activation state
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true) // Controls visibility of scroll hint
 
   // Hide scroll indicator when user scrolls down
   useEffect(() => {
@@ -62,9 +63,10 @@ function App() {
   }, [])
 
   // Smooth scroll handler for navigation links
+  // Provides seamless navigation between portfolio sections
   const handleSmoothScroll = (event) => {
     event.preventDefault()
-    const targetId = event.currentTarget.getAttribute('href').substring(1)
+    const targetId = event.currentTarget.getAttribute('href').substring(1) // Extract section ID from href
     const targetElement = document.getElementById(targetId)
 
     if (targetElement) {

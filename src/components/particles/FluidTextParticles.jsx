@@ -372,15 +372,16 @@ export function FluidTextParticles({
 
 
   // Helper function to generate positions for a given text
+  // Converts text into particle position data using Canvas API pixel sampling
   const generateTextPositions = (textString, canvas, ctx, size) => {
-    // Clear canvas
+    // Clear canvas with black background for pixel detection
     ctx.fillStyle = '#000000'
     ctx.fillRect(0, 0, canvas.width, canvas.height)
-    ctx.fillStyle = '#ffffff'
-    ctx.font = `bold ${size}px Orbitron, Arial`
+    ctx.fillStyle = '#ffffff' // White text for maximum contrast
+    ctx.font = `bold ${size}px Orbitron, Arial` // Primary font with fallback
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
-    ctx.fillText(textString, canvas.width / 2, canvas.height / 2)
+    ctx.fillText(textString, canvas.width / 2, canvas.height / 2) // Center text on canvas
 
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
     const pixels = imageData.data

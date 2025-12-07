@@ -2,6 +2,7 @@ import { portfolioData, formatDate, calculateDuration } from '../../data/portfol
 import './Experience.css'
 
 export function Experience() {
+  // Pull experience data from centralized portfolio data structure
   const { experience } = portfolioData
 
   return (
@@ -13,10 +14,10 @@ export function Experience() {
           <div className="title-line" />
         </div>
 
-        {/* Timeline */}
+        {/* Timeline - Visual representation of career progression */}
         <div className="timeline">
           {experience.map((exp) => (
-            <div key={exp.id} className="timeline-item">
+            <div key={exp.id} className="timeline-item"> {/* Each role in career history */}
               {/* Timeline dot */}
               <div className="timeline-dot" />
 
@@ -39,7 +40,7 @@ export function Experience() {
 
                 <p className="description">{exp.description}</p>
 
-                {/* Achievements */}
+                {/* Achievements - Key accomplishments and impact metrics */}
                 <ul className="achievements-list">
                   {exp.achievements.map((achievement, i) => (
                     <li key={i} className="achievement-item">
@@ -49,7 +50,7 @@ export function Experience() {
                   ))}
                 </ul>
 
-                {/* Technologies */}
+                {/* Technologies - Tech stack used in this role */}
                 <div className="tech-tags">
                   {exp.technologies.map((tech, i) => (
                     <span key={i} className="tech-tag">

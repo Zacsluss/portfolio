@@ -3,8 +3,9 @@ import { portfolioData } from '../../data/portfolio-data'
 import './Projects.css'
 
 export function Projects() {
+  // Track which project card is currently being hovered for interactive effects
   const [hoveredProject, setHoveredProject] = useState(null)
-  const { projects } = portfolioData
+  const { projects } = portfolioData // Extract projects array from portfolio data
 
   return (
     <div className="projects-wrapper">
@@ -17,9 +18,9 @@ export function Projects() {
           <div
             key={project.id}
             className={`project-card ${hoveredProject === project.id ? 'hovered' : ''}`}
-            onMouseEnter={() => setHoveredProject(project.id)}
-            onMouseLeave={() => setHoveredProject(null)}
-            style={{ '--accent-color': project.color }}
+            onMouseEnter={() => setHoveredProject(project.id)} // Trigger hover state
+            onMouseLeave={() => setHoveredProject(null)} // Reset hover state
+            style={{ '--accent-color': project.color }} // Dynamic CSS variable for theming
           >
             <div className="project-particles"></div>
             <h3 className="project-title">{project.title}</h3>

@@ -1,22 +1,25 @@
 import { portfolioData } from '../../data/portfolio-data'
 import './Skills.css'
 
+// Helper function to map skill proficiency levels to CSS classes for visual styling
+// Returns appropriate color class based on expertise level
 const getLevelColor = (level) => {
   switch (level) {
     case 'Expert':
-      return 'level-expert'
+      return 'level-expert' // Highest proficiency - typically green
     case 'Advanced':
-      return 'level-advanced'
+      return 'level-advanced' // High proficiency - typically blue
     case 'Intermediate':
-      return 'level-intermediate'
+      return 'level-intermediate' // Moderate proficiency - typically yellow
     case 'Beginner':
-      return 'level-beginner'
+      return 'level-beginner' // Learning phase - typically gray
     default:
       return ''
   }
 }
 
 export function Skills() {
+  // Extract skills data from centralized portfolio data store
   const { skills } = portfolioData
 
   return (
